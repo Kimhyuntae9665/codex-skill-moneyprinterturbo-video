@@ -1,0 +1,11 @@
+[project]
+name = "mcd-valuation-motion-smoke"
+version = "0.1.0"
+description = "Self-contained Manim Community smoke render for a 9:16 finance Short."
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "manim==0.21.0",
+]
+
+[tool.uv]
+package = false

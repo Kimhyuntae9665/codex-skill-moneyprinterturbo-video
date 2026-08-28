@@ -1,0 +1,19 @@
+# Local Python environment and package caches
+.venv/
+__pycache__/
+*.py[cod]
+
+# Manim render intermediates and local logs
+render-cache/
+.manim/
+media/
+*.log
+
+# Motion Canvas install artifacts (if its path is exercised locally)
+node_modules/
+motion-canvas-smoke/node_modules/
+motion-canvas-smoke/dist/
+
+# Temporary frame inspection exports
+qa/
+output/

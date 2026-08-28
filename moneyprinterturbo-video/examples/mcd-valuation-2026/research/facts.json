@@ -1,0 +1,758 @@
+{
+  "schema_version": "1.0",
+  "research_contracts": [
+    "EVIDENCE-ASOF-20260828",
+    "FACT-CALC-INFERENCE"
+  ],
+  "as_of": {
+    "research_as_of_kst": "2026-08-28",
+    "market_close_date": "2026-08-27",
+    "market_timezone": "America/New_York",
+    "company_facts_through": "2026-06-30",
+    "ticker": "MCD",
+    "company": "McDonald's Corporation",
+    "cik": "0000063908",
+    "currency": "USD",
+    "unit_convention": "SEC financial-statement amounts are USD millions unless stated otherwise; prices and per-share amounts are USD/share; volume is shares.",
+    "fact_label": "A reported issuer or dated secondary-source observation. It is not a calculation.",
+    "calculation_label": "A value recomputed from stored inputs. See calculations.csv.",
+    "inference_label": "An interpretation supported by facts and calculations. It is not an investment recommendation."
+  },
+  "source_policy": {
+    "company_and_reported_financials": "SEC EDGAR and McDonald's Investor Relations are primary sources.",
+    "prices_and_valuation": "Dated secondary sources are used for market prices, adjusted prices, and historical valuation context. They are not treated as official company facts.",
+    "price_basis": "raw_close is the like-for-like quote basis for the headline drawdown. adjusted_close is retained separately for total-return-like comparison and must not be mixed with raw_close.",
+    "retrieval_date": "2026-08-29"
+  },
+  "sources": [
+    {
+      "id": "sec_10q_2026q2",
+      "record_type": "primary_company",
+      "publisher": "SEC EDGAR",
+      "title": "McDonald's Corporation Form 10-Q for the quarter ended June 30, 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+      "filed_date": "2026-08-07",
+      "period_end": "2026-06-30",
+      "retrieved_date": "2026-08-29",
+      "role": "restaurant count, franchising, Q2/H1 income statement, cash flows, balance sheet, guest-count commentary and risk disclosures"
+    },
+    {
+      "id": "sec_xbrl_r26_2026q2",
+      "record_type": "primary_company",
+      "publisher": "SEC EDGAR",
+      "title": "McDonald's Q2 2026 XBRL revenue detail",
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/R26.htm",
+      "filed_date": "2026-08-07",
+      "period_end": "2026-06-30",
+      "retrieved_date": "2026-08-29",
+      "role": "franchise arrangement revenue table; the same table is visible in the filed 10-Q HTML"
+    },
+    {
+      "id": "mcd_q2_2026_ir",
+      "record_type": "primary_company",
+      "publisher": "McDonald's Investor Relations",
+      "title": "McDonald's Reports Second Quarter 2026 Results",
+      "url": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/Q2-2026-results.html",
+      "published_date": "2026-08-04",
+      "retrieved_date": "2026-08-29",
+      "role": "Q2 headline operating performance and comparable-sales context"
+    },
+    {
+      "id": "mcd_q3_2026_dividend_ir",
+      "record_type": "primary_company",
+      "publisher": "McDonald's Investor Relations",
+      "title": "McDonald's Announces Quarterly Cash Dividend",
+      "url": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/Q326%20Dividend%20Release.pdf",
+      "published_date": "2026-07-23",
+      "retrieved_date": "2026-08-29",
+      "role": "current quarterly dividend of 1.86 USD/share"
+    },
+    {
+      "id": "mcd_q4_2025_dividend_ir",
+      "record_type": "primary_company",
+      "publisher": "McDonald's Investor Relations",
+      "title": "McDonald's Raises Quarterly Cash Dividend by 5%",
+      "url": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/Q4_25_Dividend_Release.pdf",
+      "published_date": "2025-10-22",
+      "retrieved_date": "2026-08-29",
+      "role": "49 consecutive annual dividend increases wording and 7.44 USD annualized dividend"
+    },
+    {
+      "id": "sec_10k_2025",
+      "record_type": "primary_company",
+      "publisher": "SEC EDGAR",
+      "title": "McDonald's Corporation 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+      "filed_date": "2026-02-24",
+      "period_end": "2025-12-31",
+      "retrieved_date": "2026-08-29",
+      "role": "50 years of dividend payments through 2025, board discretion, land/building ownership and debt context"
+    },
+    {
+      "id": "yahoo_chart_mcd_2026-08-29",
+      "record_type": "secondary_market",
+      "publisher": "Yahoo Finance chart endpoint",
+      "title": "MCD daily chart response",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1756339200&period2=1787875200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_date": "2026-08-29",
+      "period_start": "2025-08-28",
+      "period_end": "2026-08-27",
+      "role": "251 daily raw OHLCV rows and vendor adjusted close; unofficial endpoint and subject to revisions"
+    },
+    {
+      "id": "chartexchange_mcd_daily",
+      "record_type": "secondary_market",
+      "publisher": "ChartExchange",
+      "title": "MCD Historical Prices",
+      "url": "https://chartexchange.com/symbol/nyse-mcd/historical/",
+      "retrieved_date": "2026-08-29",
+      "role": "raw OHLCV cross-check for 2026-02-27, 2026-03-02 and 2026-08-27; table date is EDT"
+    },
+    {
+      "id": "investing_mcd_daily",
+      "record_type": "secondary_market",
+      "publisher": "Investing.com Canada",
+      "title": "McDonald's Stock Price History",
+      "url": "https://ca.investing.com/equities/mcdonalds-historical-data",
+      "retrieved_date": "2026-08-29",
+      "role": "raw close cross-check for the 2026-08-27 market close"
+    },
+    {
+      "id": "digrin_mcd_monthly",
+      "record_type": "secondary_market",
+      "publisher": "Digrin",
+      "title": "McDonald's Corporation Price History",
+      "url": "https://www.digrin.com/stocks/detail/MCD/price",
+      "retrieved_date": "2026-08-29",
+      "role": "adjusted-versus-real monthly cross-check; February 2026 shows 336.88 adjusted versus 341.06 real"
+    },
+    {
+      "id": "fullratio_mcd_pe",
+      "record_type": "secondary_valuation",
+      "publisher": "FullRatio",
+      "title": "MCD PE ratio, current and historical analysis",
+      "url": "https://fullratio.com/stocks/nyse-mcd/pe-ratio",
+      "observation_date": "2026-08-27",
+      "retrieved_date": "2026-08-29",
+      "role": "current TTM EPS 12.36 and current P/E 21.04 based on 260.06 close"
+    },
+    {
+      "id": "stockresearch_mcd_valuation",
+      "record_type": "secondary_valuation",
+      "publisher": "StockResearch",
+      "title": "MCD Valuation: Multiples vs 5-Year History",
+      "url": "https://www.stockresearch.app/stocks/MCD/valuation",
+      "updated_date": "2026-08-28",
+      "retrieved_date": "2026-08-29",
+      "role": "weekly TTM P/E five-year median and range; computed from SEC filings and market prices"
+    },
+    {
+      "id": "tgmcharts_mcd_pe",
+      "record_type": "secondary_valuation",
+      "publisher": "TGMCharts",
+      "title": "McDonald's PE Ratio: History and Chart",
+      "url": "https://tgmcharts.com/stocks/MCD/pe-ratio",
+      "observation_date": "2026-08-27",
+      "retrieved_date": "2026-08-29",
+      "role": "20-year P/E low, median, high and vendor-reported lower-reading share; dynamic page can drift"
+    },
+    {
+      "id": "financecharts_mcd_dividend",
+      "record_type": "secondary_valuation",
+      "publisher": "FinanceCharts",
+      "title": "MCD Dividend Yield",
+      "url": "https://www.financecharts.com/compare/MCD/dividends/dividend-yield",
+      "observation_date": "2026-08-27",
+      "retrieved_date": "2026-08-29",
+      "role": "secondary cross-check for 2.86% forward yield; the stored result is recomputed from official dividend and price"
+    }
+  ],
+  "facts": [
+    {
+      "id": "restaurants_total",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Restaurant Information and MD&A Overview",
+      "period_end": "2026-06-30",
+      "value": 46028,
+      "unit": "restaurants",
+      "meaning": "Total systemwide McDonald's restaurants"
+    },
+    {
+      "id": "restaurants_conventional_franchised",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Note 2 Restaurant Information",
+      "period_end": "2026-06-30",
+      "value": 22722,
+      "unit": "restaurants",
+      "meaning": "Conventional franchised restaurants"
+    },
+    {
+      "id": "restaurants_developmental_licensed",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Note 2 Restaurant Information",
+      "period_end": "2026-06-30",
+      "value": 9833,
+      "unit": "restaurants",
+      "meaning": "Developmental licensed restaurants"
+    },
+    {
+      "id": "restaurants_foreign_affiliated",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Note 2 Restaurant Information",
+      "period_end": "2026-06-30",
+      "value": 11461,
+      "unit": "restaurants",
+      "meaning": "Foreign affiliated restaurants"
+    },
+    {
+      "id": "restaurants_total_franchised",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Note 2 Restaurant Information",
+      "period_end": "2026-06-30",
+      "value": 44016,
+      "unit": "restaurants",
+      "meaning": "Total franchised restaurants"
+    },
+    {
+      "id": "restaurants_company_owned",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Note 2 Restaurant Information",
+      "period_end": "2026-06-30",
+      "value": 2012,
+      "unit": "restaurants",
+      "meaning": "Company-owned and operated restaurants"
+    },
+    {
+      "id": "franchised_percentage_company_wording",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "MD&A Overview",
+      "period_end": "2026-06-30",
+      "value": 95,
+      "unit": "percent",
+      "meaning": "Company wording: approximately 95% of restaurants were franchised. The exact count ratio is separately calculated as 95.6287477188% and is not land ownership."
+    },
+    {
+      "id": "h1_franchised_revenue",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income and MD&A Revenues",
+      "period": "six_months_ended_2026-06-30",
+      "value": 8399,
+      "unit": "USD millions",
+      "meaning": "Revenues from franchised restaurants"
+    },
+    {
+      "id": "h1_company_owned_sales",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income",
+      "period": "six_months_ended_2026-06-30",
+      "value": 4842,
+      "unit": "USD millions",
+      "meaning": "Sales by company-owned and operated restaurants"
+    },
+    {
+      "id": "h1_other_revenue",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income",
+      "period": "six_months_ended_2026-06-30",
+      "value": 375,
+      "unit": "USD millions",
+      "meaning": "Other revenues"
+    },
+    {
+      "id": "h1_total_revenue",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income",
+      "period": "six_months_ended_2026-06-30",
+      "value": 13616,
+      "unit": "USD millions",
+      "meaning": "Total revenues"
+    },
+    {
+      "id": "h1_operating_income",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income",
+      "period": "six_months_ended_2026-06-30",
+      "value": 6292,
+      "unit": "USD millions",
+      "meaning": "Operating income"
+    },
+    {
+      "id": "h1_net_income",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income",
+      "period": "six_months_ended_2026-06-30",
+      "value": 4345,
+      "unit": "USD millions",
+      "meaning": "Net income"
+    },
+    {
+      "id": "h1_diluted_eps",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income and MD&A",
+      "period": "six_months_ended_2026-06-30",
+      "value": 6.1,
+      "unit": "USD/share",
+      "meaning": "GAAP diluted earnings per share"
+    },
+    {
+      "id": "h1_diluted_eps_2025_comparable",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income",
+      "period": "six_months_ended_2025-06-30",
+      "value": 5.74,
+      "unit": "USD/share",
+      "meaning": "Comparable GAAP diluted earnings per share"
+    },
+    {
+      "id": "h1_cash_from_operations",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Cash Flows",
+      "period": "six_months_ended_2026-06-30",
+      "value": 5222,
+      "unit": "USD millions",
+      "meaning": "Cash provided by operations"
+    },
+    {
+      "id": "h1_capex_outlay",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Cash Flows",
+      "period": "six_months_ended_2026-06-30",
+      "value": 1516,
+      "unit": "USD millions",
+      "meaning": "Capital expenditures stored as a positive outlay; the statement presents cash used as (1,516)"
+    },
+    {
+      "id": "h1_interest_expense",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income",
+      "period": "six_months_ended_2026-06-30",
+      "value": 809,
+      "unit": "USD millions",
+      "meaning": "Interest expense"
+    },
+    {
+      "id": "q2_total_revenue",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income",
+      "period": "quarter_ended_2026-06-30",
+      "value": 7099,
+      "unit": "USD millions",
+      "meaning": "Total revenues"
+    },
+    {
+      "id": "q2_net_income",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income",
+      "period": "quarter_ended_2026-06-30",
+      "value": 2362,
+      "unit": "USD millions",
+      "meaning": "Net income"
+    },
+    {
+      "id": "q2_diluted_eps",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Statement of Income and MD&A",
+      "period": "quarter_ended_2026-06-30",
+      "value": 3.32,
+      "unit": "USD/share",
+      "meaning": "GAAP diluted earnings per share"
+    },
+    {
+      "id": "h1_us_comparable_sales",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "MD&A Comparable Sales",
+      "period": "six_months_ended_2026-06-30",
+      "value": 2.3,
+      "unit": "percent",
+      "meaning": "U.S. comparable sales increase"
+    },
+    {
+      "id": "q2_us_comparable_sales",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "MD&A Comparable Sales",
+      "period": "quarter_ended_2026-06-30",
+      "value": 0.8,
+      "unit": "percent",
+      "meaning": "U.S. comparable sales increase"
+    },
+    {
+      "id": "h1_global_comparable_sales",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "MD&A Comparable Sales",
+      "period": "six_months_ended_2026-06-30",
+      "value": 2.5,
+      "unit": "percent",
+      "meaning": "Global comparable sales increase"
+    },
+    {
+      "id": "q2_global_comparable_sales",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "MD&A Comparable Sales",
+      "period": "quarter_ended_2026-06-30",
+      "value": 1.3,
+      "unit": "percent",
+      "meaning": "Global comparable sales increase"
+    },
+    {
+      "id": "us_comparable_guest_count_direction",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "MD&A Second Quarter and Six Months 2026 Financial Performance",
+      "period": "Q2_and_H1_2026",
+      "value": "negative",
+      "unit": "qualitative",
+      "meaning": "The filing says positive check growth was partly offset by negative comparable guest counts in the U.S."
+    },
+    {
+      "id": "h1_rents",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Note 5 Franchise Arrangements",
+      "period": "six_months_ended_2026-06-30",
+      "value": 5264,
+      "unit": "USD millions",
+      "meaning": "Rent revenue from franchised restaurants"
+    },
+    {
+      "id": "h1_royalties",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Note 5 Franchise Arrangements",
+      "period": "six_months_ended_2026-06-30",
+      "value": 3096,
+      "unit": "USD millions",
+      "meaning": "Royalty revenue from franchised restaurants"
+    },
+    {
+      "id": "h1_initial_fees",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Note 5 Franchise Arrangements",
+      "period": "six_months_ended_2026-06-30",
+      "value": 39,
+      "unit": "USD millions",
+      "meaning": "Initial fee revenue from franchised restaurants"
+    },
+    {
+      "id": "q2_franchised_revenue",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Note 5 Franchise Arrangements",
+      "period": "quarter_ended_2026-06-30",
+      "value": 4393,
+      "unit": "USD millions",
+      "meaning": "Quarterly franchised restaurant revenue"
+    },
+    {
+      "id": "h1_long_term_debt",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Condensed Consolidated Balance Sheet",
+      "period_end": "2026-06-30",
+      "value": 39863,
+      "unit": "USD millions",
+      "meaning": "Long-term debt"
+    },
+    {
+      "id": "h1_long_term_lease_liability",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Condensed Consolidated Balance Sheet",
+      "period_end": "2026-06-30",
+      "value": 14039,
+      "unit": "USD millions",
+      "meaning": "Long-term lease liability"
+    },
+    {
+      "id": "h1_cash_and_equivalents",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Condensed Consolidated Balance Sheet",
+      "period_end": "2026-06-30",
+      "value": 822,
+      "unit": "USD millions",
+      "meaning": "Cash and equivalents"
+    },
+    {
+      "id": "h1_shareholders_equity_deficit",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Condensed Consolidated Balance Sheet",
+      "period_end": "2026-06-30",
+      "value": -1023,
+      "unit": "USD millions",
+      "meaning": "Total shareholders' equity deficit"
+    },
+    {
+      "id": "h1_total_assets",
+      "record_type": "reported_fact",
+      "source_id": "sec_10q_2026q2",
+      "source_locator": "Condensed Consolidated Balance Sheet",
+      "period_end": "2026-06-30",
+      "value": 59920,
+      "unit": "USD millions",
+      "meaning": "Total assets"
+    },
+    {
+      "id": "land_owned_percentage_2025",
+      "record_type": "reported_fact",
+      "source_id": "sec_10k_2025",
+      "source_locator": "Restaurant Development and Capital Expenditures",
+      "period_end": "2025-12-31",
+      "value": 56,
+      "unit": "percent",
+      "meaning": "Approximate land ownership in consolidated markets; not all land"
+    },
+    {
+      "id": "building_owned_percentage_2025",
+      "record_type": "reported_fact",
+      "source_id": "sec_10k_2025",
+      "source_locator": "Restaurant Development and Capital Expenditures",
+      "period_end": "2025-12-31",
+      "value": 80,
+      "unit": "percent",
+      "meaning": "Approximate building ownership in consolidated markets"
+    },
+    {
+      "id": "quarterly_dividend_2026",
+      "record_type": "reported_fact",
+      "source_id": "mcd_q3_2026_dividend_ir",
+      "source_locator": "Investor Release dated 2026-07-23",
+      "period": "dividend_declared_for_2026-09-16_payment",
+      "value": 1.86,
+      "unit": "USD/share",
+      "meaning": "Quarterly cash dividend"
+    },
+    {
+      "id": "consecutive_annual_increases_wording",
+      "record_type": "reported_fact",
+      "source_id": "mcd_q4_2025_dividend_ir",
+      "source_locator": "Investor Release dated 2025-10-22",
+      "period_end": "2025-10-22",
+      "value": 49,
+      "unit": "years",
+      "meaning": "Company wording: raised its dividend for 49 consecutive years since paying its first dividend in 1976"
+    },
+    {
+      "id": "consecutive_dividend_payment_years_through_2025",
+      "record_type": "reported_fact",
+      "source_id": "sec_10k_2025",
+      "source_locator": "Share Repurchases and Dividends",
+      "period_end": "2025-12-31",
+      "value": 50,
+      "unit": "years",
+      "meaning": "The 10-K says dividends were paid for 50 consecutive years through 2025 and the amount increased every year; this is distinct from the 49 consecutive increases wording"
+    },
+    {
+      "id": "board_discretion_over_future_dividends",
+      "record_type": "reported_fact",
+      "source_id": "sec_10k_2025",
+      "source_locator": "Share Repurchases and Dividends",
+      "period_end": "2025-12-31",
+      "value": "future dividend amounts are considered after profitability expectations and financing needs and are declared at the Board's discretion",
+      "unit": "text",
+      "meaning": "Historical increases do not guarantee future payments or increases"
+    },
+    {
+      "id": "raw_close_2026_08_27",
+      "record_type": "secondary_fact",
+      "source_id": "yahoo_chart_mcd_2026-08-29",
+      "source_locator": "price_history.csv row date=2026-08-27; cross-checked by ChartExchange and Investing.com",
+      "period_end": "2026-08-27",
+      "value": 260.06,
+      "unit": "USD/share",
+      "meaning": "Unadjusted daily closing price"
+    },
+    {
+      "id": "raw_close_peak_2026_02_27",
+      "record_type": "secondary_fact",
+      "source_id": "yahoo_chart_mcd_2026-08-29",
+      "source_locator": "price_history.csv row date=2026-02-27; maximum raw_close in the requested window",
+      "period_end": "2026-02-27",
+      "value": 341.06,
+      "unit": "USD/share",
+      "meaning": "Maximum raw closing price in the 251-row window"
+    },
+    {
+      "id": "adjusted_close_peak_2026_02_27",
+      "record_type": "secondary_fact",
+      "source_id": "yahoo_chart_mcd_2026-08-29",
+      "source_locator": "price_history.csv row date=2026-02-27; Digrin monthly cross-check 336.88",
+      "period_end": "2026-02-27",
+      "value": 336.880554,
+      "unit": "USD/share",
+      "meaning": "Vendor adjusted close on the same date"
+    },
+    {
+      "id": "intraday_high_peak_2026_03_02",
+      "record_type": "secondary_fact",
+      "source_id": "yahoo_chart_mcd_2026-08-29",
+      "source_locator": "price_history.csv row date=2026-03-02; maximum raw high in the requested window",
+      "period_end": "2026-03-02",
+      "value": 341.75,
+      "unit": "USD/share",
+      "meaning": "Maximum intraday high; it is not the maximum closing price"
+    },
+    {
+      "id": "adjusted_close_2026_08_27",
+      "record_type": "secondary_fact",
+      "source_id": "yahoo_chart_mcd_2026-08-29",
+      "source_locator": "price_history.csv row date=2026-08-27",
+      "period_end": "2026-08-27",
+      "value": 260.059998,
+      "unit": "USD/share",
+      "meaning": "Vendor adjusted close; displayed as 260.06"
+    },
+    {
+      "id": "ttm_eps_2026_06",
+      "record_type": "secondary_fact",
+      "source_id": "fullratio_mcd_pe",
+      "source_locator": "Current P/E paragraph and formula",
+      "period": "TTM_ending_2026-06",
+      "value": 12.36,
+      "unit": "USD/share",
+      "meaning": "Secondary-source TTM diluted EPS input"
+    },
+    {
+      "id": "ttm_pe_2026_08_27_fullratio",
+      "record_type": "secondary_fact",
+      "source_id": "fullratio_mcd_pe",
+      "source_locator": "Current P/E paragraph",
+      "period_end": "2026-08-27",
+      "value": 21.04,
+      "unit": "multiple",
+      "meaning": "Secondary-source current TTM P/E; recomputed from stored price and EPS in calculations.csv"
+    },
+    {
+      "id": "pe_5y_median_stockresearch",
+      "record_type": "secondary_fact",
+      "source_id": "stockresearch_mcd_valuation",
+      "source_locator": "P/E (TTM) weekly 5y median",
+      "period": "five_year_weekly_window",
+      "value": 26.2,
+      "unit": "multiple",
+      "meaning": "Median of weekly TTM P/E readings"
+    },
+    {
+      "id": "pe_5y_range_low_stockresearch",
+      "record_type": "secondary_fact",
+      "source_id": "stockresearch_mcd_valuation",
+      "source_locator": "P/E (TTM) 5y range",
+      "period": "five_year_weekly_window",
+      "value": 21.1,
+      "unit": "multiple",
+      "meaning": "Lowest weekly TTM P/E reading in the source's five-year window"
+    },
+    {
+      "id": "pe_5y_range_high_stockresearch",
+      "record_type": "secondary_fact",
+      "source_id": "stockresearch_mcd_valuation",
+      "source_locator": "P/E (TTM) 5y range",
+      "period": "five_year_weekly_window",
+      "value": 35.6,
+      "unit": "multiple",
+      "meaning": "Highest weekly TTM P/E reading in the source's five-year window"
+    },
+    {
+      "id": "pe_5y_current_snapshot_stockresearch",
+      "record_type": "secondary_fact",
+      "source_id": "stockresearch_mcd_valuation",
+      "source_locator": "Current P/E at latest weekly close",
+      "observation_date": "2026-08-27",
+      "value": 21.1,
+      "unit": "multiple",
+      "meaning": "Source snapshot; it differs slightly from FullRatio because of source timing and methodology"
+    },
+    {
+      "id": "pe_20y_low_tgmcharts",
+      "record_type": "secondary_fact",
+      "source_id": "tgmcharts_mcd_pe",
+      "source_locator": "P/E vs its own history",
+      "period": "twenty_year_window",
+      "value": 13.2,
+      "unit": "multiple",
+      "meaning": "20-year low in the source's stored P/E history"
+    },
+    {
+      "id": "pe_20y_median_tgmcharts",
+      "record_type": "secondary_fact",
+      "source_id": "tgmcharts_mcd_pe",
+      "source_locator": "P/E vs its own history",
+      "period": "twenty_year_window",
+      "value": 23.7,
+      "unit": "multiple",
+      "meaning": "20-year median in the source's stored P/E history"
+    },
+    {
+      "id": "pe_20y_high_tgmcharts",
+      "record_type": "secondary_fact",
+      "source_id": "tgmcharts_mcd_pe",
+      "source_locator": "P/E vs its own history",
+      "period": "twenty_year_window",
+      "value": 37.4,
+      "unit": "multiple",
+      "meaning": "20-year high in the source's stored P/E history"
+    },
+    {
+      "id": "pe_20y_lower_readings_vendor_statement",
+      "record_type": "secondary_fact",
+      "source_id": "tgmcharts_mcd_pe",
+      "source_locator": "P/E vs its own history",
+      "period": "twenty_year_window",
+      "value": 39,
+      "unit": "percent",
+      "meaning": "Vendor wording says the current reading was higher than 39% of 20-year readings; no raw 20-year observation file was supplied for independent recomputation"
+    }
+  ],
+  "inference_boundary": [
+    {
+      "id": "five_year_value_context",
+      "record_type": "inference",
+      "statement": "The 21.04x current TTM P/E is materially below the 26.2x five-year weekly median and sits at or just below the reported five-year low range. A recent-five-year low-valuation statement is defensible.",
+      "supporting_fact_ids": [
+        "ttm_pe_2026_08_27_fullratio",
+        "pe_5y_median_stockresearch",
+        "pe_5y_range_low_stockresearch",
+        "pe_5y_range_high_stockresearch"
+      ],
+      "not_a_recommendation": true
+    },
+    {
+      "id": "twenty_year_counterevidence",
+      "record_type": "inference",
+      "statement": "The same 21.04x reading is below the 23.7x 20-year median but well above the 13.2x 20-year low. Therefore the data does not defend an extreme historical-bottom claim.",
+      "supporting_fact_ids": [
+        "ttm_pe_2026_08_27_fullratio",
+        "pe_20y_low_tgmcharts",
+        "pe_20y_median_tgmcharts",
+        "pe_20y_high_tgmcharts"
+      ],
+      "not_a_recommendation": true
+    }
+  ]
+}

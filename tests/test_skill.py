@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import csv
+import hashlib
 import importlib.util
 import json
 import os
@@ -177,6 +179,89 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertEqual(summary["duration"], 54.2)
         self.assertEqual(summary["video_codec"], "h264")
         self.assertEqual(summary["audio_codec"], "aac")
+
+    def test_professional_mcd_example_preserves_claim_limits(self) -> None:
+        example = SKILL_ROOT / "examples" / "mcd-valuation-2026"
+        narration = (example / "narration.ko.txt").read_text(encoding="utf-8")
+        sources = (example / "sources.md").read_text(encoding="utf-8")
+        self.assertIn("비조정 종가", narration)
+        self.assertIn("최근 5년", narration)
+        self.assertIn("20년", narration)
+        self.assertIn("임대료는 이익이 아니고", narration)
+        self.assertNotIn("지금 매수", narration)
+        self.assertNotIn("역사적 저평가", narration)
+        self.assertIn("260.06 / 341.06 - 1 = -23.7495%", sources)
+        self.assertIn("가맹 매출은 이익이나 현금흐름이 아니고", sources)
+
+    def test_professional_motion_uses_a_pinned_open_source_renderer(self) -> None:
+        motion = SKILL_ROOT / "examples" / "mcd-valuation-2026" / "motion"
+        project = (motion / "pyproject.toml").read_text(encoding="utf-8")
+        scene = (motion / "mcd_short.py").read_text(encoding="utf-8")
+        self.assertIn('"manim==0.21.0"', project)
+        self.assertIn("config.pixel_width = 1080", scene)
+        self.assertIn("config.pixel_height = 1920", scene)
+        self.assertIn("config.frame_rate = 30", scene)
+        self.assertIn("price_history.csv", scene)
+        self.assertIn("two rights-cleared building photos are required", scene)
+
+    def test_professional_research_packet_recomputes_displayed_drawdown(self) -> None:
+        research = SKILL_ROOT / "examples" / "mcd-valuation-2026" / "research"
+        facts = json.loads((research / "facts.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(facts["sources"]), 14)
+        self.assertEqual(len(facts["facts"]), 56)
+
+        with (research / "price_history.csv").open(
+            "r", encoding="utf-8-sig", newline=""
+        ) as handle:
+            rows = list(csv.DictReader(handle))
+        window = [
+            row for row in rows if "2026-02-27" <= row["date"] <= "2026-08-27"
+        ]
+        self.assertEqual(len(window), 126)
+        self.assertEqual(
+            (window[0]["date"], float(window[0]["raw_close"])),
+            ("2026-02-27", 341.06),
+        )
+        self.assertEqual(
+            (window[-1]["date"], float(window[-1]["raw_close"])),
+            ("2026-08-27", 260.06),
+        )
+        drawdown = (
+            float(window[-1]["raw_close"]) / float(window[0]["raw_close"]) - 1
+        ) * 100
+        self.assertAlmostEqual(drawdown, -23.7494868938, places=8)
+
+        with (research / "calculations.csv").open(
+            "r", encoding="utf-8-sig", newline=""
+        ) as handle:
+            calculations = {row["metric"]: row for row in csv.DictReader(handle)}
+        self.assertEqual(len(calculations), 30)
+        self.assertAlmostEqual(
+            float(calculations["raw_close_drawdown"]["result"]), drawdown, places=8
+        )
+
+    def test_professional_photo_assets_match_rights_manifest(self) -> None:
+        assets = SKILL_ROOT / "examples" / "mcd-valuation-2026" / "assets"
+        manifest = json.loads(
+            (assets / "asset-manifest.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(len(manifest["assets"]), 2)
+        for item in manifest["assets"]:
+            path = assets / item["filename"]
+            digest = hashlib.sha256(path.read_bytes()).hexdigest().upper()
+            self.assertEqual(digest, item["file"]["sha256"])
+            with Image.open(path) as image:
+                self.assertEqual(
+                    image.size,
+                    (item["file"]["width_px"], item["file"]["height_px"]),
+                )
+            self.assertIn(item["source"]["license"], {"CC0 1.0", "CC BY 4.0"})
+            self.assertTrue(item["source"]["author"])
+            self.assertTrue(
+                item["source"]["commons_page_url"].startswith(
+                    "https://commons.wikimedia.org/"
+                )
+            )
 
 
 class RepositoryHygieneTests(unittest.TestCase):

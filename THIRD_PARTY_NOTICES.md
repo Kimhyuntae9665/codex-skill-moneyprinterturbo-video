@@ -35,3 +35,19 @@ SOFTWARE.
 License source: https://github.com/google/fonts/blob/ade3d1533e06b2b1462ffcde8e08b129627ca360/ofl/notosanskr/OFL.txt
 
 Font project: https://github.com/notofonts/noto-cjk
+
+## Manim Community
+
+The `mcd-valuation-2026` example declares Manim Community 0.21.0 as a render-time dependency. Manim is installed from PyPI by `uv`; its package contents are not copied into this repository.
+
+Source: https://github.com/ManimCommunity/manim/tree/v0.21.0
+
+License: MIT
+
+Package author metadata: The Manim Community Developers and Grant Sanderson
+
+The full license is available in the source repository and installed Python package.
+
+## MCD example photographs
+
+Photograph-specific authors, source pages, licenses, hashes, and crop notes are recorded beside the files in `moneyprinterturbo-video/examples/mcd-valuation-2026/assets/ATTRIBUTION.md` and `asset-manifest.json`. The repository license does not replace those asset licenses or grant rights in depicted trademarks.

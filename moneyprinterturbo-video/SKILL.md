@@ -13,7 +13,7 @@ Produce the finished video, verify it, and return its path. Do not stop at setup
 - Use `topic-online` when MoneyPrinterTurbo must write the script or find online footage. Request only credentials reported by `MPT_NEEDS_INPUT`.
 - If factual or time-sensitive claims appear in the video, verify them with primary sources before freezing the script. Keep facts, interpretation, and unresolved limits distinct.
 
-Read [references/modes.md](references/modes.md) for exact input, credential, and recovery rules. For the bundled McDonald's example only, read the files under [examples/mcd-2025](examples/mcd-2025/).
+Read [references/modes.md](references/modes.md) for exact input, credential, and recovery rules. When the request calls for premium charts, real photography, or motion design, also read [references/professional-motion.md](references/professional-motion.md). For the current MCD valuation example, read the files under [examples/mcd-valuation-2026](examples/mcd-valuation-2026/). The older static-card example remains under [examples/mcd-2025](examples/mcd-2025/).
 
 ## Safety contract
 
@@ -28,7 +28,7 @@ Read [references/modes.md](references/modes.md) for exact input, credential, and
 Resolve this Skill directory, set the terminal working directory to its `scripts` folder, and invoke the helper by relative filename. Use a foreground command and allow at least 20 minutes:
 
 ```text
-uv run --no-project --python 3.11 python mpt_agent.py --subject "<topic>" --script-file "<utf8-script>" --materials-dir "<rights-cleared-materials>" --font-file "../assets/fonts/NotoSansKR-Bold.ttf" -- --video-source local --video-aspect 9:16 --video-concat-mode sequential --video-clip-duration 5 --voice-name ko-KR-SunHiNeural-Female --video-language ko-KR --bgm-type none --subtitle-enabled --subtitle-position custom --custom-position 70
+uv run --no-project --python 3.11 python mpt_agent.py --subject "<topic>" --script-file "<utf8-script>" --material "<rights-cleared-master-video>" --font-file "../assets/fonts/NotoSansKR-Bold.ttf" -- --video-source local --video-aspect 9:16 --video-count 1 --video-concat-mode sequential --video-clip-duration 60 --video-transition-mode none --voice-name ko-KR-SunHiNeural-Female --video-language ko-KR --bgm-type none --subtitle-enabled --subtitle-position custom --custom-position 70
 ```
 
 The helper checks out upstream commit `eb8c23757e098a07bbcd93b3b50e252fc8d1869a` into an isolated Codex runtime, verifies the commit, uses `uv sync --frozen`, forces a final video stage, and prints `MPT_RESULT` only for non-empty MP4 files.

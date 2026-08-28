@@ -26,7 +26,25 @@ $moneyprinterturbo-video 준비한 한국어 대본과 이미지로 55초짜리 
 
 필수 로컬 도구는 Git, uv, FFmpeg입니다. 첫 실행에는 upstream 체크아웃과 Python 의존성 설치, Edge TTS 접속을 위한 네트워크가 필요합니다.
 
-## MCD 예제
+## MCD 전문 모션그래픽 예제
+
+`moneyprinterturbo-video/examples/mcd-valuation-2026/`에는 현재 MCD 밸류에이션과 가맹 수익 구조를 함께 설명하는 59초대 한국어 Shorts 제작 패키지가 있습니다.
+
+- 비조정 종가끼리 계산한 고점 대비 하락률과 5년·20년 P/E 비교
+- SEC/IR 공시에 맞춘 매장 수, 가맹 매출, 임대료, 로열티, 배당, 부채 근거
+- 재사용 권리를 기록한 실제 매장 외관 사진과 원자료 기반 차트
+- 오픈소스 Manim Community 0.21.0으로 렌더링하는 1080×1920/30fps master 영상
+- SunHi 한국어 TTS 1.17배속 측정값에 맞춘 장면 타이밍과 MoneyPrinterTurbo 단일-master 합성
+
+전문 모션그래픽 렌더 예시:
+
+```powershell
+.\moneyprinterturbo-video\examples\mcd-valuation-2026\motion\render.ps1
+```
+
+이 예제의 결론은 `최근 5년 P/E 범위에서는 매우 낮지만 20년 전체의 극단적 바닥은 아니다`입니다. 가맹 매출은 이익이나 FCF로 표시하지 않으며, 배당 기록도 미래 지급 보장으로 표현하지 않습니다.
+
+## 이전 MCD 정적 예제
 
 `moneyprinterturbo-video/examples/mcd-2025/`에는 맥도날드의 가맹·부동산 연계 수익 구조를 설명하는 한국어 Shorts 예제가 있습니다.
 

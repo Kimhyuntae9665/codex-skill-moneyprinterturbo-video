@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "prepared_on": "2026-08-29",
+  "purpose": "Rights-cleared McDonald's building/exterior photographs for an educational Korean finance Short",
+  "source_policy": {
+    "preferred_repository": "Wikimedia Commons",
+    "preferred_licenses": [
+      "CC0 1.0",
+      "CC BY 4.0"
+    ],
+    "excluded": [
+      "unlicensed stock",
+      "unclear-provenance media",
+      "McDonald's official media-library assets with restrictive terms",
+      "copyrighted music"
+    ]
+  },
+  "contact_sheet": {
+    "filename": "contact-sheet.png",
+    "description": "Visual preview of both source images; red frames indicate the suggested 9:16 crops.",
+    "visually_inspected": true
+  },
+  "assets": [
+    {
+      "id": "mcd-downey-historic-cc0",
+      "filename": "mcd-downey-historic-cc0.jpg",
+      "media_type": "image/jpeg",
+      "source": {
+        "commons_page_url": "https://commons.wikimedia.org/wiki/File:Historic_Downey_McDonalds_and_Museum.jpg",
+        "direct_source_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Historic_Downey_McDonalds_and_Museum.jpg",
+        "author": "Northwalker",
+        "author_commons_url": "https://commons.wikimedia.org/wiki/User:Northwalker",
+        "source_type": "Own work, Wikimedia Commons",
+        "license": "CC0 1.0",
+        "license_name": "Creative Commons CC0 1.0 Universal Public Domain Dedication",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "commons_sha1": "60ed2c1e4be339d0f8114b2592f41535f3956c57"
+      },
+      "file": {
+        "width_px": 4662,
+        "height_px": 2622,
+        "size_bytes": 5104100,
+        "sha256": "371C3E1E46A28FE18A4AD66DEB1EED1F93BF41F82567CEE202E2AAAA6149A575",
+        "sha1": "60ed2c1e4be339d0f8114b2592f41535f3956c57"
+      },
+      "visual_review": {
+        "opened_and_inspected": true,
+        "crop_utility": "Sharp daylight historic exterior; the facade, readable sign, and roof arches survive a focused portrait crop.",
+        "recommended_vertical_crop": {
+          "aspect": "9:16",
+          "source_bbox_pixels": [
+            1600,
+            0,
+            3075,
+            2622
+          ],
+          "output_size_pixels": [
+            1475,
+            2622
+          ],
+          "treatment": "Slow push-in or small horizontal pan; optional neutral exposure/white-balance correction only; no retouching, logo extraction, recoloring, or animation."
+        },
+        "trademark_editorial_context": "Golden Arches and McDonald's wordmark are static, unmodified, contextual elements of the photographed restaurant. Informational identification only; no endorsement, standalone logo use, or advertising implication."
+      },
+      "publication_credit": "Photo: Northwalker, Wikimedia Commons (CC0 1.0)."
+    },
+    {
+      "id": "mcd-bethesda-modern-ccby4",
+      "filename": "mcd-bethesda-modern-ccby4.jpg",
+      "media_type": "image/jpeg",
+      "source": {
+        "commons_page_url": "https://commons.wikimedia.org/wiki/File:McDonalds_River_Rd_Bethesda_MD_2021-11-28_10-28-06_1.jpg",
+        "direct_source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/McDonalds_River_Rd_Bethesda_MD_2021-11-28_10-28-06_1.jpg",
+        "author": "G. Edward Johnson",
+        "author_commons_url": "https://commons.wikimedia.org/wiki/User:Lorax",
+        "source_type": "Own work, Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_name": "Creative Commons Attribution 4.0 International",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "commons_sha1": "515cbb958de34ba1f60aaf50bbb4fc8818651b15"
+      },
+      "file": {
+        "width_px": 7373,
+        "height_px": 4147,
+        "size_bytes": 27231148,
+        "sha256": "1806479B1640743956BC64BF0899E1E698DAB7A2080E70937E22831DA770CA1C",
+        "sha1": "515cbb958de34ba1f60aaf50bbb4fc8818651b15"
+      },
+      "visual_review": {
+        "opened_and_inspected": true,
+        "crop_utility": "High-resolution modern exterior with clean sky, readable facade, and roadside sign; the subject remains legible in a portrait crop.",
+        "recommended_vertical_crop": {
+          "aspect": "9:16",
+          "source_bbox_pixels": [
+            3400,
+            0,
+            5733,
+            4147
+          ],
+          "output_size_pixels": [
+            2333,
+            4147
+          ],
+          "treatment": "Gentle vertical pan from facade to sign; optional neutral exposure/white-balance correction only. Preserve the photograph and context; if published cropped, state that it was cropped for vertical framing."
+        },
+        "trademark_editorial_context": "Golden Arches and McDonald's wordmark are static, unmodified, contextual elements of the photographed restaurant. The photograph license does not grant trademark rights; use for accurate informational identification only, with no endorsement or advertising implication."
+      },
+      "publication_credit": "Photo: G. Edward Johnson (Wikimedia Commons), CC BY 4.0. Cropped for vertical framing."
+    }
+  ],
+  "verification": {
+    "verified_on": "2026-08-29",
+    "commons_pages_http_status": 200,
+    "direct_source_urls_http_status": 200,
+    "license_urls_http_status": 200,
+    "local_files_opened_as_jpeg": true,
+    "decoded_dimensions_match_manifest": true,
+    "sha256_recorded_from_local_files": true,
+    "commons_sha1_cross_checked": true,
+    "no_unlicensed_stock_or_music_in_asset_set": true
+  }
+}
