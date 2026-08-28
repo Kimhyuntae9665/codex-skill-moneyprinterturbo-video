@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+.env
+.env.*
+config.toml
+*.log
+*.mp4
+moneyprinterturbo-video/examples/*/generated-materials/
+moneyprinterturbo-video/examples/*/qa-frames/
+runtime/

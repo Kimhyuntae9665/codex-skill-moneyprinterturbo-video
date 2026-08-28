@@ -1,0 +1,198 @@
+from __future__ import annotations
+
+import importlib.util
+import json
+import os
+import subprocess
+import sys
+import tempfile
+import unittest
+from argparse import Namespace
+from pathlib import Path
+
+from fontTools.ttLib import TTFont
+from PIL import Image
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+SKILL_ROOT = REPO_ROOT / "moneyprinterturbo-video"
+
+
+def load_module(name: str, path: Path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"could not load {path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+MPT = load_module("mpt_agent", SKILL_ROOT / "scripts" / "mpt_agent.py")
+VALIDATOR = load_module(
+    "validate_video", SKILL_ROOT / "scripts" / "validate_video.py"
+)
+
+
+class RunnerSafetyTests(unittest.TestCase):
+    def test_upstream_is_pinned(self) -> None:
+        self.assertEqual(
+            MPT.UPSTREAM_COMMIT,
+            "eb8c23757e098a07bbcd93b3b50e252fc8d1869a",
+        )
+
+    def test_effective_source_uses_final_option(self) -> None:
+        args = ["--video-source", "pexels", "--video-source=local"]
+        self.assertEqual(MPT.selected_video_source(args), "local")
+
+    def test_prepared_local_needs_no_llm_or_stock_key(self) -> None:
+        config = "\n".join(
+            [
+                'llm_provider = "moonshot"',
+                'moonshot_api_key = ""',
+                "pexels_api_keys = []",
+                "pixabay_api_keys = []",
+                "coverr_api_keys = []",
+            ]
+        )
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "config.toml"
+            path.write_text(config, encoding="utf-8")
+            provider, missing = MPT.missing_config(
+                path,
+                [
+                    "--video-source",
+                    "local",
+                    "--video-script",
+                    "prepared narration",
+                    "--video-materials",
+                    "one.png",
+                ],
+            )
+        self.assertEqual(provider, "moonshot")
+        self.assertEqual(missing, [])
+
+    def test_online_mode_reports_llm_and_stock_keys(self) -> None:
+        config = "\n".join(
+            [
+                'llm_provider = "moonshot"',
+                'moonshot_api_key = ""',
+                "pexels_api_keys = []",
+            ]
+        )
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "config.toml"
+            path.write_text(config, encoding="utf-8")
+            _, missing = MPT.missing_config(path, [])
+        self.assertEqual(missing, ["moonshot_api_key", "pexels_api_keys"])
+
+    def test_upload_switches_are_forced_off(self) -> None:
+        config = "\n".join(
+            [
+                "upload_post_enabled = true",
+                "upload_post_auto_upload = true",
+                'upload_post_platforms = ["youtube"]',
+            ]
+        )
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "config.toml"
+            path.write_text(config, encoding="utf-8")
+            MPT.enforce_no_upload(path)
+            result = path.read_text(encoding="utf-8")
+        self.assertIn("upload_post_enabled = false", result)
+        self.assertIn("upload_post_auto_upload = false", result)
+        self.assertIn("upload_post_platforms = []", result)
+
+    def test_paid_provider_requires_confirmation(self) -> None:
+        args = Namespace(
+            cli_args=["--video-source", "volcengine_seedance"],
+            script_file=None,
+            material=[],
+            materials_dir=None,
+            font_file=None,
+            confirm_paid_provider=False,
+        )
+        with tempfile.TemporaryDirectory() as temp:
+            with self.assertRaisesRegex(MPT.SkillError, "explicit"):
+                MPT.build_forwarded_cli_args(args, Path(temp))
+
+    def test_materials_are_sorted_and_comma_paths_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "b.png").write_bytes(b"png")
+            (root / "a.jpg").write_bytes(b"jpg")
+            (root / "ignore.txt").write_text("ignored", encoding="utf-8")
+            materials = MPT.collect_local_materials([], root)
+            self.assertEqual([path.name for path in materials], ["a.jpg", "b.png"])
+            bad = root / "bad,name.png"
+            bad.write_bytes(b"png")
+            with self.assertRaisesRegex(MPT.SkillError, "commas"):
+                MPT.collect_local_materials([bad], None)
+
+
+class AssetAndExampleTests(unittest.TestCase):
+    def test_skill_markdown_is_ascii(self) -> None:
+        (SKILL_ROOT / "SKILL.md").read_text(encoding="ascii")
+
+    def test_font_covers_every_modern_hangul_syllable(self) -> None:
+        font = TTFont(SKILL_ROOT / "assets" / "fonts" / "NotoSansKR-Bold.ttf")
+        codepoints = set()
+        for table in font["cmap"].tables:
+            codepoints.update(table.cmap)
+        missing = [codepoint for codepoint in range(0xAC00, 0xD7A4) if codepoint not in codepoints]
+        self.assertEqual(missing, [])
+
+    def test_example_materials_are_reproducible_portrait_frames(self) -> None:
+        script = SKILL_ROOT / "examples" / "mcd-2025" / "make_materials.py"
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / "frames"
+            environment = os.environ.copy()
+            environment["PYTHONIOENCODING"] = "utf-8"
+            result = subprocess.run(
+                [sys.executable, str(script), "--output", str(output)],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                env=environment,
+                check=False,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            manifest = json.loads((output / "materials-manifest.json").read_text(encoding="utf-8"))
+            self.assertEqual(manifest["frame_count"], 8)
+            frames = sorted(output.glob("*-mcd-frame.png"))
+            self.assertEqual(len(frames), 8)
+            for frame in frames:
+                with Image.open(frame) as image:
+                    self.assertEqual(image.size, (1080, 1920))
+
+    def test_probe_summary_requires_video_and_audio(self) -> None:
+        summary = VALIDATOR.summarize_probe(
+            {
+                "streams": [
+                    {"codec_type": "video", "codec_name": "h264", "width": 1080, "height": 1920},
+                    {"codec_type": "audio", "codec_name": "aac"},
+                ],
+                "format": {"duration": "54.2"},
+            }
+        )
+        self.assertEqual(summary["duration"], 54.2)
+        self.assertEqual(summary["video_codec"], "h264")
+        self.assertEqual(summary["audio_codec"], "aac")
+
+
+class RepositoryHygieneTests(unittest.TestCase):
+    def test_no_runtime_outputs_or_credentials_are_committed(self) -> None:
+        forbidden_names = {"config.toml", ".env"}
+        forbidden_suffixes = {".mp4", ".log", ".pyc"}
+        violations = []
+        for path in REPO_ROOT.rglob("*"):
+            if any(part in {".git", ".venv", "__pycache__"} for part in path.parts):
+                continue
+            if path.is_file() and (
+                path.name in forbidden_names or path.suffix.lower() in forbidden_suffixes
+            ):
+                violations.append(str(path.relative_to(REPO_ROOT)))
+        self.assertEqual(violations, [])
+
+
+if __name__ == "__main__":
+    unittest.main()
