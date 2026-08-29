@@ -1,0 +1,15 @@
+key,value,unit,period,source_url,note
+fy2025_dividends,5115,USD_millions,FY2025,https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm,Common stock dividends in consolidated cash flows
+h1_2026_dividends,2640,USD_millions,H1_2026,https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm,Common stock dividends in condensed consolidated cash flows
+h1_2025_dividends,2530,USD_millions,H1_2025,https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm,Comparable prior-year common stock dividends
+fy2025_repurchases,2056,USD_millions,FY2025,https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm,Treasury stock purchases in consolidated cash flows
+h1_2026_repurchases,1251,USD_millions,H1_2026,https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm,Treasury stock purchases in condensed consolidated cash flows
+h1_2025_repurchases,982,USD_millions,H1_2025,https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm,Comparable prior-year treasury stock purchases
+fy2025_option_proceeds,285,USD_millions,FY2025,https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm,Proceeds from stock option exercises
+h1_2026_option_proceeds,142,USD_millions,H1_2026,https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm,Proceeds from stock option exercises
+h1_2025_option_proceeds,188,USD_millions,H1_2025,https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm,Comparable prior-year stock option proceeds
+shares_outstanding_2026_06_30,707641531,shares,2026-06-30,https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm,Exact cover-page shares outstanding
+price_2026_08_27,260.06,USD_per_share,2026-08-27,https://chartexchange.com/symbol/nyse-mcd/historical/,Unadjusted closing price used only for current market-cap denominator
+h1_2026_diluted_weighted_shares,712.3,shares_millions,H1_2026,https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm,Six-month diluted weighted-average shares
+h1_2025_diluted_weighted_shares,717.9,shares_millions,H1_2025,https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm,Comparable six-month diluted weighted-average shares
+dividend_increase_streak,50,years,through_2025,https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm,Company says dividends increased every year for 50 consecutive years

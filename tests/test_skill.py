@@ -5,6 +5,7 @@ import hashlib
 import importlib.util
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -32,6 +33,17 @@ def load_module(name: str, path: Path):
 MPT = load_module("mpt_agent", SKILL_ROOT / "scripts" / "mpt_agent.py")
 VALIDATOR = load_module(
     "validate_video", SKILL_ROOT / "scripts" / "validate_video.py"
+)
+BURN_SUBTITLES = load_module(
+    "burn_subtitles", SKILL_ROOT / "scripts" / "burn_subtitles.py"
+)
+V3_RESEARCH = load_module(
+    "mcd_v3_research",
+    SKILL_ROOT
+    / "examples"
+    / "mcd-valuation-2026"
+    / "research"
+    / "recompute_v3.py",
 )
 
 
@@ -262,6 +274,93 @@ class AssetAndExampleTests(unittest.TestCase):
                     "https://commons.wikimedia.org/"
                 )
             )
+
+    def test_v3_shareholder_return_and_market_sensitivity_recompute(self) -> None:
+        metrics = V3_RESEARCH.compute()
+        method = metrics["weekly_risk_method"]
+        risk = metrics["risk_metrics"]
+        shareholder = metrics["shareholder_return"]
+
+        self.assertEqual(method["price_rows"], 262)
+        self.assertEqual(method["return_observations"], 261)
+        self.assertAlmostEqual(risk["mcd_beta_vs_spy"], 0.4766795, places=6)
+        self.assertAlmostEqual(risk["qqq_beta_vs_spy"], 1.2516079, places=6)
+        self.assertAlmostEqual(risk["mcd_qqq_correlation"], 0.3273663, places=6)
+        self.assertEqual(shareholder["ttm_dividends_usd_millions"], 5225.0)
+        self.assertEqual(shareholder["ttm_net_cash_buybacks_usd_millions"], 2086.0)
+        self.assertEqual(
+            shareholder["ttm_cash_shareholder_return_usd_millions"], 7311.0
+        )
+        self.assertAlmostEqual(
+            shareholder["total_cash_shareholder_yield"], 0.039727, places=6
+        )
+        self.assertEqual(shareholder["dividend_increase_streak_years"], 50.0)
+
+    def test_v3_narration_preserves_market_risk_limits(self) -> None:
+        example = SKILL_ROOT / "examples" / "mcd-valuation-2026"
+        narration = (example / "narration.v3.ko.txt").read_text(encoding="utf-8")
+        sources = (example / "sources-v3.md").read_text(encoding="utf-8")
+        for claim in (
+            "순현금 자사주매입 21억 달러",
+            "배당은 50년 연속 인상",
+            "맥도날드 0.48",
+            "큐큐큐 1.25",
+            "상관은 0.33",
+            "반대로 움직인 게 아니라",
+            "낮은 베타가 낮은 위험을 보장하진 않습니다",
+        ):
+            self.assertIn(claim, narration)
+        self.assertNotIn("기술주보다 안전", narration)
+        self.assertNotIn("지금 매수", narration)
+        self.assertIn("회사가 공시한 공식 비율이 아니라", sources)
+        self.assertIn("반대로 움직임", sources)
+
+    def test_v3_motion_and_reviewed_subtitles_are_portrait_safe(self) -> None:
+        example = SKILL_ROOT / "examples" / "mcd-valuation-2026"
+        scene = (example / "motion" / "mcd_short_v3.py").read_text(encoding="utf-8")
+        for marker in (
+            "config.pixel_width = 1080",
+            "config.pixel_height = 1920",
+            "config.frame_rate = 30",
+            "MCDShareholderReturnShort",
+            "weekly_adjusted_prices_v3.csv",
+            "LOW BETA",
+        ):
+            self.assertIn(marker, scene)
+
+        subtitle_text = (example / "subtitle.v3.srt").read_text(encoding="utf-8")
+        blocks = [block for block in re.split(r"\r?\n\r?\n", subtitle_text.strip()) if block]
+        self.assertEqual(len(blocks), 21)
+        previous_end = 0.0
+        for block in blocks:
+            lines = block.splitlines()
+            self.assertGreaterEqual(len(lines), 3)
+            self.assertLessEqual(len(lines[2:]), 2)
+            timestamps = re.findall(r"(\d\d):(\d\d):(\d\d),(\d\d\d)", lines[1])
+            self.assertEqual(len(timestamps), 2)
+            start, end = [
+                int(hours) * 3600 + int(minutes) * 60 + int(seconds) + int(millis) / 1000
+                for hours, minutes, seconds, millis in timestamps
+            ]
+            self.assertGreaterEqual(start, previous_end)
+            self.assertGreater(end, start)
+            previous_end = end
+        self.assertAlmostEqual(previous_end, 57.42, places=2)
+
+    def test_subtitle_repair_filter_is_explicit_and_mobile_readable(self) -> None:
+        example = SKILL_ROOT / "examples" / "mcd-valuation-2026"
+        filter_text = BURN_SUBTITLES.subtitle_filter(
+            example / "subtitle.v3.srt",
+            SKILL_ROOT / "assets" / "fonts",
+            font_name="Noto Sans KR",
+            font_size=11,
+            margin_v=66,
+        )
+        self.assertIn("subtitles=filename=", filter_text)
+        self.assertIn("FontName=Noto Sans KR", filter_text)
+        self.assertIn("FontSize=11", filter_text)
+        self.assertIn("Alignment=2", filter_text)
+        self.assertIn("MarginV=66", filter_text)
 
 
 class RepositoryHygieneTests(unittest.TestCase):

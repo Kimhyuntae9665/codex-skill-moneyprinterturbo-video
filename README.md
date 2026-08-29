@@ -28,21 +28,31 @@ $moneyprinterturbo-video 준비한 한국어 대본과 이미지로 55초짜리 
 
 ## MCD 전문 모션그래픽 예제
 
-`moneyprinterturbo-video/examples/mcd-valuation-2026/`에는 현재 MCD 밸류에이션과 가맹 수익 구조를 함께 설명하는 59초대 한국어 Shorts 제작 패키지가 있습니다.
+`moneyprinterturbo-video/examples/mcd-valuation-2026/`에는 현재 MCD 밸류에이션, 가맹 수익 구조, 주주환원, 시장 민감도를 한 흐름으로 설명하는 58초대 한국어 Shorts v3 제작 패키지가 있습니다. 기존 v2 파일도 비교·회귀 검증용으로 보존합니다.
 
-- 비조정 종가끼리 계산한 고점 대비 하락률과 5년·20년 P/E 비교
-- SEC/IR 공시에 맞춘 매장 수, 가맹 매출, 임대료, 로열티, 배당, 부채 근거
-- 재사용 권리를 기록한 실제 매장 외관 사진과 원자료 기반 차트
-- 오픈소스 Manim Community 0.21.0으로 렌더링하는 1080×1920/30fps master 영상
-- SunHi 한국어 TTS 1.17배속 측정값에 맞춘 장면 타이밍과 MoneyPrinterTurbo 단일-master 합성
+- 비조정 종가 기준 6개월 하락률과 5년 P/E 저점권을 보여 주되 역사적 바닥으로 단정하지 않음
+- SEC 현금흐름으로 계산한 TTM 배당 52.25억 달러, 순현금 자사주매입 20.86억 달러, 현금 주주환원률 약 4.0%
+- 2025 Form 10-K 기준 50년 연속 배당 인상과 H1 2026 희석 가중평균 주식 수 감소를 함께 확인
+- 동일한 5년 주간 수정주가로 다시 계산한 MCD beta 0.48, SPY 1.00, QQQ beta 1.25, MCD–QQQ 상관 0.33
+- 재사용 권리를 기록한 실제 매장 외관 사진, 원자료 기반 차트, 이중 원호·beta rail·수익률 파형 모션
+- 오픈소스 Manim Community 0.21.0으로 렌더링하는 1080×1920/30fps 단일 master 영상
+- SunHi 한국어 TTS 1.17배속과 MoneyPrinterTurbo 합성, Whisper 타임코드 기반 검수 자막 복구, 전체 A/V 디코드 검증
 
 전문 모션그래픽 렌더 예시:
 
 ```powershell
-.\moneyprinterturbo-video\examples\mcd-valuation-2026\motion\render.ps1
+.\moneyprinterturbo-video\examples\mcd-valuation-2026\motion\render_v3.ps1
 ```
 
-이 예제의 결론은 `최근 5년 P/E 범위에서는 매우 낮지만 20년 전체의 극단적 바닥은 아니다`입니다. 가맹 매출은 이익이나 FCF로 표시하지 않으며, 배당 기록도 미래 지급 보장으로 표현하지 않습니다.
+계산 재현 예시:
+
+```powershell
+python .\moneyprinterturbo-video\examples\mcd-valuation-2026\research\recompute_v3.py --offline
+```
+
+현재 pinned upstream에서 한국어 Edge 자막 경계가 누락될 때는 `scripts/burn_subtitles.py`로 사람이 검수한 SRT를 같은 MoneyPrinterTurbo 결과물에 번인한 뒤 전체 검증을 다시 수행합니다. 자동 Whisper 교정 결과를 그대로 쓰지 않습니다.
+
+이 예제의 결론은 `최근 5년 P/E는 저점권이고 과거 beta·상관은 기술주 성향 자산과 다른 리듬을 보였지만, 역사적 바닥·미래 분산효과·낮은 총위험을 보장하지 않는다`입니다. 가맹 매출은 이익이나 FCF로 표시하지 않으며, 현금 주주환원률은 회사 공식 지표가 아닌 계산값으로 표시합니다.
 
 ## 이전 MCD 정적 예제
 

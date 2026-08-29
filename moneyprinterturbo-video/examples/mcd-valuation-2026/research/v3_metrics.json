@@ -1,0 +1,55 @@
+{
+  "as_of": "2026-08-27 US close",
+  "sources": {
+    "sec_inputs": "shareholder_return_inputs_v3.csv",
+    "adjusted_close_definition": "https://help.yahoo.com/kb/SLN28256.html",
+    "price_requests": {
+      "MCD": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1630022400&period2=1787875200&interval=1wk&events=history&includeAdjustedClose=true",
+      "SPY": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1630022400&period2=1787875200&interval=1wk&events=history&includeAdjustedClose=true",
+      "QQQ": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ?period1=1630022400&period2=1787875200&interval=1wk&events=history&includeAdjustedClose=true"
+    },
+    "spy_benchmark": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy",
+    "qqq_benchmark": "https://www.invesco.com/qqq-etf/en/home.html"
+  },
+  "weekly_risk_method": {
+    "requested_start": "2021-08-27",
+    "requested_end_inclusive": "2026-08-27",
+    "first_week_anchor_utc": "2021-08-23",
+    "last_week_anchor_utc": "2026-08-24",
+    "price_rows": 262,
+    "return_observations": 261,
+    "basis": "Yahoo Finance weekly adjusted close; simple returns; sample covariance and variance",
+    "beta_formula": "cov(asset_weekly_return, SPY_weekly_return) / var(SPY_weekly_return)",
+    "correlation_formula": "Pearson correlation of aligned weekly simple returns"
+  },
+  "risk_metrics": {
+    "mcd_beta_vs_spy": 0.4766795076815773,
+    "spy_beta_vs_spy": 1.0,
+    "qqq_beta_vs_spy": 1.2516078560055508,
+    "mcd_spy_correlation": 0.43349895019731133,
+    "mcd_qqq_correlation": 0.32736627567116455,
+    "qqq_spy_correlation": 0.9454740193086093,
+    "mcd_annualized_volatility": 0.1789742803944358,
+    "spy_annualized_volatility": 0.16276169084896808,
+    "qqq_annualized_volatility": 0.21546209283707624
+  },
+  "shareholder_return": {
+    "ttm_formula": "FY2025 + H1 2026 - H1 2025",
+    "ttm_dividends_usd_millions": 5225.0,
+    "ttm_treasury_stock_purchases_usd_millions": 2325.0,
+    "ttm_stock_option_proceeds_usd_millions": 239.0,
+    "ttm_net_cash_buybacks_usd_millions": 2086.0,
+    "ttm_cash_shareholder_return_usd_millions": 7311.0,
+    "market_cap_denominator_usd_millions": 184029.25655186002,
+    "dividend_cash_yield": 0.02839222468155534,
+    "net_buyback_cash_yield": 0.011335154198224773,
+    "total_cash_shareholder_yield": 0.03972737887978012,
+    "h1_diluted_weighted_share_change_yoy": -0.007800529321632554,
+    "dividend_increase_streak_years": 50.0,
+    "limitations": [
+      "The denominator combines June 30 shares outstanding with the August 27 unadjusted close.",
+      "Net cash buybacks subtract stock-option cash proceeds but do not capture every noncash dilution effect.",
+      "Historical beta and correlation are not forecasts and low beta does not guarantee low total risk."
+    ]
+  }
+}

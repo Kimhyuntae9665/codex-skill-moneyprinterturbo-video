@@ -33,6 +33,34 @@ uv run --no-project --python 3.11 python mpt_agent.py --subject "<topic>" --scri
 
 The helper checks out upstream commit `eb8c23757e098a07bbcd93b3b50e252fc8d1869a` into an isolated Codex runtime, verifies the commit, uses `uv sync --frozen`, forces a final video stage, and prints `MPT_RESULT` only for non-empty MP4 files.
 
+## Korean subtitle recovery
+
+Do not deliver a video when the log says that Edge subtitle aggregation did not
+produce a subtitle file. The current pinned upstream can lose Korean boundary
+characters around some decimals or acronyms even when the narration audio is
+correct.
+
+Use this bounded recovery path:
+
+1. Preserve the original MoneyPrinterTurbo task and audio.
+2. Use an explicitly selected, already available Whisper model only to recover
+   speech timestamps. Do not silently download a large model.
+3. Replace recognition errors with a human-reviewed SRT whose numbers and
+   claims match the locked narration and evidence.
+4. Burn that SRT into the MoneyPrinterTurbo MP4 with the bundled font:
+
+```text
+python burn_subtitles.py --video "<MPT_VIDEO>" --subtitle "<REVIEWED_SRT>" --output "<REPAIRED_MP4>"
+```
+
+5. Run `validate_video.py`, full audio/video decode, pronunciation review, and
+   representative-frame review again. Record that the final artifact is a
+   subtitle-repaired derivative of the same MoneyPrinterTurbo task.
+
+Do not use the upstream Whisper text correction output without review. A
+one-to-many sentence mismatch can shift later captions or create zero-length
+timestamps.
+
 ## Topic-online execution
 
 Run the same helper with `--subject` and the requested video options but without `--script-file` or local materials. If it exits with code 10, ask once for only the fields listed under `MISSING`. Pass supplied values through the documented `MPT_*` environment variables and retry once. Do not store secrets in this Skill repository.
