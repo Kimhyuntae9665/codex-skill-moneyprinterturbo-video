@@ -13,7 +13,7 @@ Produce the finished video, verify it, and return its path. Do not stop at setup
 - Use `topic-online` when MoneyPrinterTurbo must write the script or find online footage. Request only credentials reported by `MPT_NEEDS_INPUT`.
 - If factual or time-sensitive claims appear in the video, verify them with primary sources before freezing the script. Keep facts, interpretation, and unresolved limits distinct.
 
-Read [references/modes.md](references/modes.md) for exact input, credential, and recovery rules. When the request calls for premium charts, real photography, or motion design, also read [references/professional-motion.md](references/professional-motion.md). For the current MCD valuation example, read the files under [examples/mcd-valuation-2026](examples/mcd-valuation-2026/). The older static-card example remains under [examples/mcd-2025](examples/mcd-2025/).
+Read [references/modes.md](references/modes.md) for exact input, credential, and recovery rules. When the request calls for premium charts, real photography, or motion design, also read [references/professional-motion.md](references/professional-motion.md). For the current MCD valuation and historical dividend-yield example, read the v4 brief, storyboard, sources, research, motion, subtitle, and verification files under [examples/mcd-valuation-2026](examples/mcd-valuation-2026/). The older static-card example remains under [examples/mcd-2025](examples/mcd-2025/).
 
 ## Safety contract
 
@@ -74,6 +74,11 @@ python validate_video.py --video "<VIDEO_FILE>" --log-file "<LOG_FILE>" --frames
 ```
 
 Require the requested aspect, a decodable video stream, an audio stream, non-silent narration, readable subtitles, and representative-frame review. For a YouTube Short, default to 1080x1920, H.264, AAC, and 45-60 seconds unless the user specifies another target.
+
+When dense financial graphics and burned captions coexist, reserve a visibly
+quiet caption band in the master itself. Keep all essential chart labels,
+sources, and transition remnants above that boundary, then inspect every scene
+boundary and each dense two-line caption at original resolution.
 
 On failure, read only the reported error and relevant log tail. Repair one recoverable issue and retry once. If the final video still fails, return the failed stage, concise error, log path, and any completed script/storyboard; do not call it finished or Shorts-ready.
 

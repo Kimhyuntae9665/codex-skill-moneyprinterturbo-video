@@ -45,6 +45,14 @@ V3_RESEARCH = load_module(
     / "research"
     / "recompute_v3.py",
 )
+V4_RESEARCH = load_module(
+    "mcd_v4_research",
+    SKILL_ROOT
+    / "examples"
+    / "mcd-valuation-2026"
+    / "research"
+    / "recompute_v4.py",
+)
 
 
 class RunnerSafetyTests(unittest.TestCase):
@@ -346,6 +354,91 @@ class AssetAndExampleTests(unittest.TestCase):
             self.assertGreater(end, start)
             previous_end = end
         self.assertAlmostEqual(previous_end, 57.42, places=2)
+
+    def test_v4_historical_dividend_yield_recomputes_from_stored_months(self) -> None:
+        metrics = V4_RESEARCH.compute()
+        current = metrics["current"]
+        windows = metrics["windows"]
+
+        self.assertEqual(current["month_end"], "2026-08-27")
+        self.assertAlmostEqual(current["raw_close_usd"], 260.06, places=2)
+        self.assertAlmostEqual(current["ttm_dividend_usd"], 7.35, places=8)
+        self.assertAlmostEqual(current["ttm_yield_pct"], 2.8262708871, places=8)
+        self.assertEqual(windows["since_2010"]["observations"], 200)
+        self.assertEqual(windows["since_2010"]["current_rank_high_to_low"], 74)
+        self.assertAlmostEqual(windows["since_2010"]["top_share_pct"], 37.0)
+        self.assertAlmostEqual(windows["since_2010"]["median_yield_pct"], 2.50696, places=5)
+        self.assertEqual(windows["since_2020"]["current_rank_high_to_low"], 2)
+        self.assertEqual(windows["since_2020"]["observations"], 80)
+        self.assertEqual(windows["since_2023"]["current_rank_high_to_low"], 1)
+        self.assertEqual(windows["since_2010"]["peak_month_end"], "2015-08-31")
+        self.assertAlmostEqual(windows["since_2010"]["peak_yield_pct"], 3.578194, places=6)
+
+        chart = SKILL_ROOT / "examples" / "mcd-valuation-2026" / "research" / "dividend_yield_history_v4.png"
+        with Image.open(chart) as image:
+            self.assertEqual(image.size, (1600, 900))
+
+    def test_v4_narration_preserves_recent_and_long_history_limits(self) -> None:
+        example = SKILL_ROOT / "examples" / "mcd-valuation-2026"
+        narration = (example / "narration.v4.ko.txt").read_text(encoding="utf-8")
+        sources = (example / "sources-v4.md").read_text(encoding="utf-8")
+        for claim in (
+            "배당수익률 2.83퍼센트",
+            "2020년 이후 월말 80개 중 2위",
+            "2023년 이후 최고",
+            "2010년 이후는 상위 37퍼센트",
+            "2015년 3.58퍼센트보다는 낮습니다",
+            "낮은 베타가 낮은 위험은 아닙니다",
+        ):
+            self.assertIn(claim, narration)
+        self.assertNotIn("역사적 최고입니다", narration)
+        self.assertNotIn("지금 매수", narration)
+        self.assertIn("장기 역사 전체의 극단값이나 확정 매수 신호는 아니다", sources)
+        self.assertIn("adjusted close를 분모로 쓰지 않는다", sources)
+
+    def test_v4_caption_band_and_reviewed_subtitles_do_not_share_body_space(self) -> None:
+        example = SKILL_ROOT / "examples" / "mcd-valuation-2026"
+        scene = (example / "motion" / "mcd_short_v4.py").read_text(encoding="utf-8")
+        for marker in (
+            "MCDDividendYieldShort",
+            'CAPTION_BAND_TOP = -2.28',
+            'SOURCE_SAFE_Y = -1.42',
+            'source_chip_safe(',
+            '배당수익률, 최근엔 높다',
+            'dividend_yield_history_v4.csv',
+        ):
+            self.assertIn(marker, scene)
+
+        subtitle = example / "subtitle.v4.srt"
+        blocks = [
+            block
+            for block in re.split(r"\r?\n\r?\n", subtitle.read_text(encoding="utf-8").strip())
+            if block
+        ]
+        self.assertEqual(len(blocks), 24)
+        previous_end = 0.0
+        for block in blocks:
+            lines = block.splitlines()
+            self.assertLessEqual(len(lines[2:]), 2)
+            timestamps = re.findall(r"(\d\d):(\d\d):(\d\d),(\d\d\d)", lines[1])
+            self.assertEqual(len(timestamps), 2)
+            start, end = [
+                int(hours) * 3600 + int(minutes) * 60 + int(seconds) + int(millis) / 1000
+                for hours, minutes, seconds, millis in timestamps
+            ]
+            self.assertGreaterEqual(start, previous_end)
+            self.assertGreater(end, start)
+            previous_end = end
+        self.assertAlmostEqual(previous_end, 58.5, places=2)
+
+        filter_text = BURN_SUBTITLES.subtitle_filter(
+            subtitle,
+            SKILL_ROOT / "assets" / "fonts",
+            font_name="Noto Sans KR",
+            font_size=11,
+            margin_v=48,
+        )
+        self.assertIn("MarginV=48", filter_text)
 
     def test_subtitle_repair_filter_is_explicit_and_mobile_readable(self) -> None:
         example = SKILL_ROOT / "examples" / "mcd-valuation-2026"

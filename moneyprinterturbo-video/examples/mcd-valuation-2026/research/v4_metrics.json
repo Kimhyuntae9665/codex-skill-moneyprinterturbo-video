@@ -1,0 +1,62 @@
+{
+  "as_of": "2026-08-27 US close",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1199145600&period2=1787875200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "method": {
+    "frequency": "calendar-month final trading day",
+    "price_basis": "Yahoo Finance unadjusted/raw close",
+    "dividend_basis": "sum of the latest four cash-dividend events on or before each month-end",
+    "yield_formula": "latest four cash dividends per share / raw month-end close",
+    "interpretation": "historical cash dividend yield, not total return and not a forward guarantee"
+  },
+  "current": {
+    "month_end": "2026-08-27",
+    "raw_close_usd": 260.05999756,
+    "ttm_dividend_usd": 7.35,
+    "ttm_yield_pct": 2.82627089,
+    "forward_dividend_usd": 7.44,
+    "forward_yield_pct": 2.8608782857053874
+  },
+  "windows": {
+    "since_2010": {
+      "start": "2010-01-01",
+      "observations": 200,
+      "median_yield_pct": 2.506960005,
+      "current_rank_high_to_low": 74,
+      "top_share_pct": 37.0,
+      "percentile_lower_or_equal_pct": 63.5,
+      "peak_month_end": "2015-08-31",
+      "peak_yield_pct": 3.57819419
+    },
+    "since_2015": {
+      "start": "2015-01-01",
+      "observations": 140,
+      "median_yield_pct": 2.3402595049999997,
+      "current_rank_high_to_low": 25,
+      "top_share_pct": 17.857142857142858,
+      "percentile_lower_or_equal_pct": 82.85714285714286,
+      "peak_month_end": "2015-08-31",
+      "peak_yield_pct": 3.57819419
+    },
+    "since_2020": {
+      "start": "2020-01-01",
+      "observations": 80,
+      "median_yield_pct": 2.241435805,
+      "current_rank_high_to_low": 2,
+      "top_share_pct": 2.5,
+      "percentile_lower_or_equal_pct": 98.75,
+      "peak_month_end": "2020-03-31",
+      "peak_yield_pct": 2.91502862
+    },
+    "since_2023": {
+      "start": "2023-01-01",
+      "observations": 44,
+      "median_yield_pct": 2.26667655,
+      "current_rank_high_to_low": 1,
+      "top_share_pct": 2.272727272727273,
+      "percentile_lower_or_equal_pct": 100.0,
+      "peak_month_end": "2026-08-27",
+      "peak_yield_pct": 2.82627089
+    }
+  },
+  "video_conclusion": "The 2.83% TTM yield is unusually high versus recent years: second-highest among 80 month-ends since 2020 and highest since 2023. It is not an all-time extreme: it ranks 74th-highest of 200 month-ends since 2010, below the 2015 peak near 3.58%."
+}
