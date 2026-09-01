@@ -9,9 +9,9 @@ it does not refresh the dated financial claims in the MCD example.
 ## Skill package
 
 - Canonical source:
-  `plugins/mpt-video/skills/moneyprinterturbo-video`
+  `plugins/mpt/skills/mpt`
 - Installed Skill:
-  `$CODEX_HOME/skills/moneyprinterturbo-video`
+  `$CODEX_HOME/skills/mpt` (the frontmatter invocation remains `$moneyprinterturbo-video`)
 - `quick_validate.py`: PASS for both source and installed directories.
 - Source/install SHA-256 comparison: PASS for all synchronized files.
 - Python AST parsing: PASS for `validate_scene_manifest.py` and

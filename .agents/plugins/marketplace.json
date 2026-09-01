@@ -8,7 +8,7 @@
       "name": "mpt-video",
       "source": {
         "source": "local",
-        "path": "./plugins/mpt-video"
+        "path": "./plugins/mpt"
       },
       "policy": {
         "installation": "AVAILABLE",

@@ -34,7 +34,7 @@ codex plugin add mpt-video@mpt-video
 Codex에서 다음처럼 요청합니다.
 
 ```text
-$skill-installer Install the skill from https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.0.0/plugins/mpt-video/skills/moneyprinterturbo-video
+$skill-installer Install the skill from https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.0.0/plugins/mpt/skills/mpt
 ```
 
 ## 실행 전 검사

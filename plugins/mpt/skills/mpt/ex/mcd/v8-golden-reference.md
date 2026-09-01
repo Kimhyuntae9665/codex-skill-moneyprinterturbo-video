@@ -45,8 +45,8 @@ accept this frozen v8 manifest as well as new `shorts-scene-contract-v1`
 projects.
 
 ```text
-python validate_scene_manifest.py "../examples/mcd-v8/scene-manifest-v8.json"
-python probe_scene_frames.py "<MCD-v8-final.mp4>" "../examples/mcd-v8/scene-manifest-v8.json" --out-dir "<qa-dir>" --require-audio
+python validate_scene_manifest.py "../ex/mcd/scene-manifest-v8.json"
+python probe_scene_frames.py "<MCD-v8-final.mp4>" "../ex/mcd/scene-manifest-v8.json" --out-dir "<qa-dir>" --require-audio
 ```
 
 Do not copy the old values or dated output path into a new production. Copy the

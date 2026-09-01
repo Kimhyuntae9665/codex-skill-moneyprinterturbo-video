@@ -38,7 +38,7 @@ Font project: https://github.com/notofonts/noto-cjk
 
 ## Manim Community
 
-The `mcd-v8` example declares Manim Community 0.21.0 as a render-time dependency. Manim is installed from PyPI by `uv`; its package contents are not copied into this repository.
+The `ex/mcd` example declares Manim Community 0.21.0 as a render-time dependency. Manim is installed from PyPI by `uv`; its package contents are not copied into this repository.
 
 Source: https://github.com/ManimCommunity/manim/tree/v0.21.0
 
@@ -50,4 +50,4 @@ The full license is available in the source repository and installed Python pack
 
 ## MCD example photographs
 
-Photograph-specific authors, source pages, licenses, hashes, and crop notes are recorded beside the files in `examples/mcd-v8/assets/ATTRIBUTION.md` and `asset-manifest.json`. The repository license does not replace those asset licenses or grant rights in depicted trademarks.
+Photograph-specific authors, source pages, licenses, hashes, and crop notes are recorded beside the files in `ex/mcd/assets/ATTRIBUTION.md` and `asset-manifest.json`. The repository license does not replace those asset licenses or grant rights in depicted trademarks.

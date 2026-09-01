@@ -50,7 +50,7 @@ The release supports two forms:
 
 1. Plugin installation from the repository marketplace. This is preferred when
    sharing the ZIP or installing the whole release.
-2. Standalone Skill installation from the nested `skills/moneyprinterturbo-video`
+2. Standalone Skill installation from the nested `skills/mpt` directory. The installed Skill still exposes the `$moneyprinterturbo-video` invocation declared in its frontmatter.
    folder. This is useful for local Codex experimentation.
 
 Start a new Codex task after installation so the new Skill is discovered.

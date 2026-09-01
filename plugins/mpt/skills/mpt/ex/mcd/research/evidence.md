@@ -105,7 +105,7 @@ calculations.csv는 표시된 하락률·P/E·P/E 중앙값 대비 차이·배�
 
 실행한 검증 명령:
 
-    $r = Resolve-Path '.\plugins\mpt-video\skills\moneyprinterturbo-video\examples\mcd-v8\research'
+    $r = Resolve-Path '.\plugins\mpt\skills\mpt\ex\mcd\research'
     Get-Content -Raw (Join-Path $r 'facts.json') | ConvertFrom-Json | Out-Null
     $p = Import-Csv (Join-Path $r 'price_history.csv')
     $c = Import-Csv (Join-Path $r 'calculations.csv')
@@ -129,7 +129,7 @@ calculations.csv는 표시된 하락률·P/E·P/E 중앙값 대비 차이·배�
 
 검증·변경 대상은 다음 디렉터리로 제한했다.
 
-`plugins/mpt-video/skills/moneyprinterturbo-video/examples/mcd-v8/research`
+`plugins/mpt/skills/mpt/ex/mcd/research`
 
 - evidence.md
 - facts.json

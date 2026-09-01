@@ -21,9 +21,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SKILL_ROOT = (
     REPO_ROOT
     / "plugins"
-    / "mpt-video"
+    / "mpt"
     / "skills"
-    / "moneyprinterturbo-video"
+    / "mpt"
 )
 
 
@@ -46,16 +46,16 @@ BURN_SUBTITLES = load_module(
 V3_RESEARCH = load_module(
     "mcd_v3_research",
     SKILL_ROOT
-    / "examples"
-    / "mcd-v8"
+    / "ex"
+    / "mcd"
     / "research"
     / "recompute_v3.py",
 )
 V4_RESEARCH = load_module(
     "mcd_v4_research",
     SKILL_ROOT
-    / "examples"
-    / "mcd-v8"
+    / "ex"
+    / "mcd"
     / "research"
     / "recompute_v4.py",
 )
@@ -170,7 +170,7 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertEqual(missing, [])
 
     def test_example_materials_are_reproducible_portrait_frames(self) -> None:
-        script = SKILL_ROOT / "examples" / "mcd-2025" / "make_materials.py"
+        script = SKILL_ROOT / "ex" / "mcd-2025" / "make_materials.py"
         with tempfile.TemporaryDirectory() as temp:
             output = Path(temp) / "frames"
             environment = os.environ.copy()
@@ -207,7 +207,7 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertEqual(summary["audio_codec"], "aac")
 
     def test_professional_mcd_example_preserves_claim_limits(self) -> None:
-        example = SKILL_ROOT / "examples" / "mcd-v8"
+        example = SKILL_ROOT / "ex" / "mcd"
         narration = (example / "narration.ko.txt").read_text(encoding="utf-8")
         sources = (example / "sources.md").read_text(encoding="utf-8")
         self.assertIn("비조정 종가", narration)
@@ -220,7 +220,7 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertIn("가맹 매출은 이익이나 현금흐름이 아니고", sources)
 
     def test_professional_motion_uses_a_pinned_open_source_renderer(self) -> None:
-        motion = SKILL_ROOT / "examples" / "mcd-v8" / "motion"
+        motion = SKILL_ROOT / "ex" / "mcd" / "motion"
         project = (motion / "pyproject.toml").read_text(encoding="utf-8")
         scene = (motion / "mcd_short.py").read_text(encoding="utf-8")
         self.assertIn('"manim==0.21.0"', project)
@@ -231,7 +231,7 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertIn("two rights-cleared building photos are required", scene)
 
     def test_professional_research_packet_recomputes_displayed_drawdown(self) -> None:
-        research = SKILL_ROOT / "examples" / "mcd-v8" / "research"
+        research = SKILL_ROOT / "ex" / "mcd" / "research"
         facts = json.loads((research / "facts.json").read_text(encoding="utf-8"))
         self.assertEqual(len(facts["sources"]), 14)
         self.assertEqual(len(facts["facts"]), 56)
@@ -267,7 +267,7 @@ class AssetAndExampleTests(unittest.TestCase):
         )
 
     def test_professional_photo_assets_match_rights_manifest(self) -> None:
-        assets = SKILL_ROOT / "examples" / "mcd-v8" / "assets"
+        assets = SKILL_ROOT / "ex" / "mcd" / "assets"
         manifest = json.loads(
             (assets / "asset-manifest.json").read_text(encoding="utf-8")
         )
@@ -311,7 +311,7 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertEqual(shareholder["dividend_increase_streak_years"], 50.0)
 
     def test_v3_narration_preserves_market_risk_limits(self) -> None:
-        example = SKILL_ROOT / "examples" / "mcd-v8"
+        example = SKILL_ROOT / "ex" / "mcd"
         narration = (example / "narration.v3.ko.txt").read_text(encoding="utf-8")
         sources = (example / "sources-v3.md").read_text(encoding="utf-8")
         for claim in (
@@ -330,7 +330,7 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertIn("반대로 움직임", sources)
 
     def test_v3_motion_and_reviewed_subtitles_are_portrait_safe(self) -> None:
-        example = SKILL_ROOT / "examples" / "mcd-v8"
+        example = SKILL_ROOT / "ex" / "mcd"
         scene = (example / "motion" / "mcd_short_v3.py").read_text(encoding="utf-8")
         for marker in (
             "config.pixel_width = 1080",
@@ -380,12 +380,12 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertEqual(windows["since_2010"]["peak_month_end"], "2015-08-31")
         self.assertAlmostEqual(windows["since_2010"]["peak_yield_pct"], 3.578194, places=6)
 
-        chart = SKILL_ROOT / "examples" / "mcd-v8" / "research" / "dividend_yield_history_v4.png"
+        chart = SKILL_ROOT / "ex" / "mcd" / "research" / "dividend_yield_history_v4.png"
         with Image.open(chart) as image:
             self.assertEqual(image.size, (1600, 900))
 
     def test_v4_narration_preserves_recent_and_long_history_limits(self) -> None:
-        example = SKILL_ROOT / "examples" / "mcd-v8"
+        example = SKILL_ROOT / "ex" / "mcd"
         narration = (example / "narration.v4.ko.txt").read_text(encoding="utf-8")
         sources = (example / "sources-v4.md").read_text(encoding="utf-8")
         for claim in (
@@ -403,7 +403,7 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertIn("adjusted close를 분모로 쓰지 않는다", sources)
 
     def test_v4_caption_band_and_reviewed_subtitles_do_not_share_body_space(self) -> None:
-        example = SKILL_ROOT / "examples" / "mcd-v8"
+        example = SKILL_ROOT / "ex" / "mcd"
         scene = (example / "motion" / "mcd_short_v4.py").read_text(encoding="utf-8")
         for marker in (
             "MCDDividendYieldShort",
@@ -447,7 +447,7 @@ class AssetAndExampleTests(unittest.TestCase):
         self.assertIn("MarginV=48", filter_text)
 
     def test_subtitle_repair_filter_is_explicit_and_mobile_readable(self) -> None:
-        example = SKILL_ROOT / "examples" / "mcd-v8"
+        example = SKILL_ROOT / "ex" / "mcd"
         filter_text = BURN_SUBTITLES.subtitle_filter(
             example / "subtitle.v3.srt",
             SKILL_ROOT / "assets" / "fonts",
