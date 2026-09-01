@@ -47,9 +47,7 @@
 ## 제작·조사 참고자료
 
 - [MoneyPrinterTurbo pinned upstream](https://github.com/harry0703/MoneyPrinterTurbo/tree/eb8c23757e098a07bbcd93b3b50e252fc8d1869a): prepared-local 조립 경로. 영상·음성·SRT·MCD 상표 권리는 별도다.
-- `research/hf-reddit-tool-scan-v8/integrated-hf-reddit-tool-report-v8.md`: Hugging Face·Reddit·GitHub 도구 조사 통합본. 생성 모델은 2~4초 무문자 plate에만 사용하고 수치·자막·로고를 후합성하라는 제작 원칙을 참고한다.
-- `research/hf-reddit-tool-scan-v8/hf-models-spaces-collab-v8.md`: HF 모델·Space·라이선스·VRAM·Windows snapshot. [SCoPE model](https://huggingface.co/TencentARC/SCoPE), [SCoPE Space](https://huggingface.co/spaces/TencentARC/scope-camera-video-generation), [Wan2.2 TI2V-5B](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B) 등은 선택적 외부 GPU plate 후보이며, 이번 패키지에서 실행하지 않는다.
-- `research/hf-reddit-tool-scan-v8/research-ledger-v8.md`: 조사 시간·검수·링크·실행 경계를 기록한 ledger.
+- `research/tool-report.md`: Hugging Face·Reddit·GitHub 도구 조사 통합본. 생성 모델은 2~4초 무문자 plate에만 사용하고 수치·자막·로고를 후합성하라는 제작 원칙을 참고한다. 선택적 외부 GPU 후보는 패키지에서 실행하지 않는다.
 
 ## 표시·권리·게시 경계
 

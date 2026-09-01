@@ -18,7 +18,7 @@ must be refreshed before reuse.
   Golden Arches with code instead of asking an image model to draw exact data.
 - `qa/layout_qa_v8.py` and `qa/frame_probe_v8.py`: frozen project-specific gates.
 - `verification/verification-v8.md`: final artifact facts and review record.
-- `research/hf-reddit-tool-scan-v8/integrated-hf-reddit-tool-report-v8.md`:
+- `research/tool-report.md`:
   research-to-production decisions and rejected tool uses.
 
 ## Reusable decisions
@@ -45,8 +45,8 @@ accept this frozen v8 manifest as well as new `shorts-scene-contract-v1`
 projects.
 
 ```text
-python validate_scene_manifest.py "../examples/mcd-valuation-2026/scene-manifest-v8.json"
-python probe_scene_frames.py "<MCD-v8-final.mp4>" "../examples/mcd-valuation-2026/scene-manifest-v8.json" --out-dir "<qa-dir>" --require-audio
+python validate_scene_manifest.py "../examples/mcd-v8/scene-manifest-v8.json"
+python probe_scene_frames.py "<MCD-v8-final.mp4>" "../examples/mcd-v8/scene-manifest-v8.json" --out-dir "<qa-dir>" --require-audio
 ```
 
 Do not copy the old values or dated output path into a new production. Copy the

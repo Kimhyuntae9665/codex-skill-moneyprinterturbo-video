@@ -1,14 +1,14 @@
 {
-  "name": "moneyprinterturbo-video",
+  "name": "mpt-video",
   "interface": {
     "displayName": "MoneyPrinterTurbo Video"
   },
   "plugins": [
     {
-      "name": "moneyprinterturbo-video",
+      "name": "mpt-video",
       "source": {
         "source": "local",
-        "path": "./plugins/moneyprinterturbo-video"
+        "path": "./plugins/mpt-video"
       },
       "policy": {
         "installation": "AVAILABLE",

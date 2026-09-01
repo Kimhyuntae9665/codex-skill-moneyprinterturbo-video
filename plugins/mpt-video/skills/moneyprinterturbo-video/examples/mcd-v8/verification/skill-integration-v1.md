@@ -9,7 +9,7 @@ it does not refresh the dated financial claims in the MCD example.
 ## Skill package
 
 - Canonical source:
-  `plugins/moneyprinterturbo-video/skills/moneyprinterturbo-video`
+  `plugins/mpt-video/skills/moneyprinterturbo-video`
 - Installed Skill:
   `$CODEX_HOME/skills/moneyprinterturbo-video`
 - `quick_validate.py`: PASS for both source and installed directories.

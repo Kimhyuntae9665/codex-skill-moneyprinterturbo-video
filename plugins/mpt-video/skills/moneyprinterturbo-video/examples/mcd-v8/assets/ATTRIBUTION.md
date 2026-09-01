@@ -1,7 +1,7 @@
 # McDonald's exterior image assets
 
 Prepared on 2026-08-29 for the educational Korean finance Short in
-`examples/mcd-valuation-2026`. Both files are photographer-uploaded works
+`examples/mcd-v8`. Both files are photographer-uploaded works
 from Wikimedia Commons. They are not McDonald's official media-library
 assets, paid stock, or advertising creatives. No music or other audio is
 included in this asset set.
