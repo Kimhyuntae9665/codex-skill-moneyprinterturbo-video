@@ -1,0 +1,137 @@
+# MCD 근거 패킷
+
+기준일은 2026-08-28 KST다. 주가 기준은 미국 시장 2026-08-27 종가이며 회사 공시는 2026-06-30까지 반영했다. 이 문서는 45~60초 한국어 Short 제작용 근거 정리이며 투자 권유가 아니다.
+
+## 결론
+
+2026-08-27 MCD raw close는 260.06달러다. 요청한 251개 거래일 안에서 raw closing peak는 2026-02-27의 341.06달러이고, 같은 raw close끼리 계산한 하락률은 **-23.7494868938%**, 영상 표시는 **-23.8%**다.
+
+최근 5년 P/E 비교에서는 낮은 구간이라는 주장이 방어된다. FullRatio의 TTM EPS 12.36달러와 260.06달러를 재계산한 현재 P/E는 21.0404530744배이고, StockResearch의 주간 5년 중앙값 26.2배 대비 **-19.6929271968%**다. 다만 20년 P/E 범위는 13.2~37.4배, 중앙값 23.7배이므로 **20년 전체의 극단적 바닥이라고 말할 근거는 없다**. 현재 P/E는 20년 중앙값보다 11.2217169855% 낮을 뿐 20년 저점 13.2배와는 거리가 있다.
+
+## 기준일·출처 경계
+
+| 구분 | 고정 기준 | 출처 처리 |
+|---|---|---|
+| 회사 사실 | 2026-06-30 분기·상반기 | SEC 10-Q와 McDonald's IR 우선 |
+| 배당 | 2026-07-23 최신 1.86달러/분기 선언 | McDonald's IR; 연환산과 수익률은 계산 |
+| 가격 | 2026-08-27 미국장 종가 | Yahoo 일별 raw/adjusted 원장; ChartExchange·Investing.com으로 주요 행 교차 확인 |
+| 5년 P/E | StockResearch 업데이트 2026-08-28 | 주간 TTM 관측치의 중앙값·범위 |
+| 20년 P/E | TGMCharts가 2026-08-27 기준으로 표시한 저장 히스토리 | 저점·중앙값·고점만 사용; 동적 현재값은 섞지 않음 |
+
+전체 URL과 수집일은 facts.json의 sources에 있다. CSV의 모든 가격 행은 source_id=yahoo_chart_mcd_2026-08-29와 원본 URL을 갖는다.
+
+## 회사가 보고한 사업·재무 사실
+
+SEC 2026 Q2 Form 10-Q(2026-08-07 제출)의 단위는 별도 표기가 없으면 USD 백만 달러다.
+
+| 항목 | Q2 2026 | H1 2026 | 성격 |
+|---|---:|---:|---|
+| 총 시스템 매장 | — | 46,028개(6/30) | reported_fact |
+| 총 가맹 매장 | — | 44,016개(6/30) | reported_fact |
+| 회사 소유·운영 매장 | — | 2,012개 | reported_fact |
+| 회사 표현의 가맹 비중 | — | 약 95% | reported_fact; 매장 수 기준 |
+| 가맹 레스토랑 매출 | 4,393 | 8,399 | reported_fact |
+| 회사 소유·운영 매출 | 2,525 | 4,842 | reported_fact |
+| 기타 매출 | 182 | 375 | reported_fact |
+| 총매출 | 7,099 | 13,616 | reported_fact |
+| 영업이익 | 3,338 | 6,292 | reported_fact |
+| 순이익 | 2,362 | 4,345 | reported_fact |
+| GAAP 희석 EPS | 3.32 | 6.10 | reported_fact; USD/share |
+| 영업활동 현금흐름 | 2,807 | 5,222 | reported_fact |
+| 자본적 지출 | 831 | 1,516 | reported_fact; 현금 유출을 양수 outlay로 저장 |
+| 이자비용 | 409 | 809 | reported_fact |
+
+가맹 매출의 H1 세부 구성은 **임대료 5,264백만 달러, 로열티 3,096백만 달러, 초기 수수료 39백만 달러**다. 세 항목 합계 8,399백만 달러는 calculations.csv에서 재합산했다. 이는 회사가 인식한 가맹 매출이지 가맹점 전체 시스템 매출·이익·FCF가 아니다. SEC는 가맹 매출에 임대료와 매출 연동 로열티 및 최소 임대료·초기 수수료가 포함된다고 설명한다.
+
+Q2 미국 comparable sales는 +0.8%, H1은 +2.3%였고 글로벌 comparable sales는 각각 +1.3%, +2.5%였다. 그러나 같은 10-Q는 미국 수치가 긍정적인 check growth에 힘입었으며 **negative comparable guest counts**가 일부 상쇄했다고 명시한다. 가격·제품 믹스가 매출을 지지해도 방문/거래량 약세가 사라졌다는 뜻은 아니다.
+
+## 부채·부동산·배당의 반대 증거
+
+- 2026-06-30 장기부채는 39,863백만 달러, 장기 리스부채는 14,039백만 달러, 현금·현금성자산은 822백만 달러였다.
+- 같은 날 총 주주지분은 **-1,023백만 달러**로 자본구조가 단순한 무차입 부동산 보유 사례가 아니다. H1 이자비용도 809백만 달러였다.
+- 2025 Form 10-K의 연결시장 기준 토지 소유는 약 56%, 건물 소유는 약 80%다(계산 로그의 reported_fact 행). 따라서 ‘모든 매장의 땅을 소유한다’고 말하면 안 된다.
+- H1 FCF는 5,222 - 1,516 = 3,706백만 달러로 재계산되고, H1 순이익 대비 FCF 전환율은 85.2934407365%다. 이것은 배당의 과거·현재 현금 여력을 보는 보조 지표이지 미래 배당 보장이 아니다.
+- 2026-07-23 IR은 분기 배당 1.86달러를 선언했다. 2025-10-22 IR의 정확한 표현은 **49년 연속 연간 배당 인상**이다. 반면 2025 10-K는 2025년까지 **50년 연속 배당 지급** 및 매년 금액 인상을 말한다. ‘49년 인상’과 ‘50년 지급’을 혼동하지 않는다. 10-K는 미래 배당액이 수익성·자금조달 필요를 검토한 이사회 재량이라고도 밝힌다.
+
+## 가격 원장과 raw/adjusted reconciliation
+
+price_history.csv는 Yahoo chart 응답에서 받은 2025-08-28~2026-08-27 일별 251개 행이다. 가격 단위는 USD/share, 거래량 단위는 shares다. raw_close와 adjusted_close를 함께 저장했지만 하락률은 동일한 열 안에서만 계산한다.
+
+| 기준 | 시작 | 종료 | 계산 결과 | 용도 |
+|---|---:|---:|---:|---|
+| raw close → raw close | 341.06 (2026-02-27) | 260.06 (2026-08-27) | -23.7494868938% | 영상의 -23.8% |
+| adjusted close → adjusted close | 336.880554 (2026-02-27) | 260.059998 (2026-08-27) | -22.8034996642% | 배당 조정 비교 |
+
+2026-02-27의 341.06달러는 raw 종가이고 336.880554달러는 Yahoo의 배당조정 종가다. Digrin도 2026년 2월을 adjusted 336.88달러와 real 341.06달러로 분리해 보여준다. adjusted close는 이후 현금배당을 과거 가격에 소급 반영하는 vendor 계열값이므로 raw quote가 4.18달러 낮아진 것이 아니다. 반대로 2026-03-02 장중 high는 341.75달러지만 그날 종가는 334.82달러다. 따라서 ‘고점’은 문맥상 종가 고점 341.06달러로 고정했다.
+
+재현 명령:
+
+    $u = 'https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1756339200&period2=1787875200&interval=1d&events=div%2Csplits&includeAdjustedClose=true'
+    $j = (Invoke-WebRequest -Uri $u -UseBasicParsing -Headers @{'User-Agent'='Mozilla/5.0'}).Content | ConvertFrom-Json
+
+선택 행의 raw close는 ChartExchange 표에서 2026-02-27 341.0600달러와 2026-08-27 260.0600달러, Investing.com 표에서 2026-08-27 260.06달러로 교차 확인했다. ChartExchange 상단 실시간 요약에 260.08달러가 나타날 수 있으나 날짜별 표의 종가는 260.06달러이며, 본 원장은 날짜별 표와 Yahoo 응답을 사용한다.
+
+## 밸류에이션·배당 계산
+
+| 지표 | 저장된 입력·출처 | 재계산 결과 |
+|---|---|---:|
+| 현재 TTM P/E | 260.06 / FullRatio TTM EPS 12.36 | 21.0404530744x → 21.04x |
+| 5년 P/E 중앙값 | StockResearch 주간 TTM 중앙값 26.2x | 현재 대비 -19.6929271968% |
+| 5년 P/E 범위 | StockResearch 주간 TTM | 21.1x~35.6x |
+| 20년 P/E 범위 | TGMCharts가 저장한 히스토리 | 13.2x~37.4x |
+| 20년 P/E 중앙값 | TGMCharts 저장 히스토리 23.7x | 현재 대비 -11.2217169855% |
+| 연환산 배당 | 1.86 × 4 | 7.44달러/share |
+| 단순 선행 배당수익률 | 7.44 / 260.06 | 2.8608782809% → 2.86% |
+
+StockResearch의 5년 수치는 주간 TTM 관측치이고 TGMCharts의 20년 수치는 별도 vendor의 저장 히스토리다. FullRatio·StockResearch·TGMCharts 사이의 현재 P/E가 21.04~21.13배로 조금 다른 이유는 가격 시점·EPS 반영 시점·관측 빈도 차이다. 따라서 영상에서는 ‘약 21배’라고 말하고 소수점 비교를 공식 수치처럼 과장하지 않는다. TGMCharts가 표시한 ‘현재보다 낮은 20년 관측치 39%’는 vendor 문구로 calculations.csv에 독립 재계산 불가라고 표시했다.
+
+## 5년 저평가와 20년 바닥 주장의 판정
+
+**방어 가능한 부분:** 21.04배는 StockResearch의 5년 중앙값 26.2배보다 약 19.69% 낮고, 5년 범위의 하단 21.1배와 거의 같은 수준이다. ‘최근 5년 비교에서 낮다’는 문장은 기간·산식·자료원을 함께 밝히면 defensible하다.
+
+**방어할 수 없는 부분:** 20년의 실제 범위는 13.2~37.4배이며 중앙값은 23.7배다. 현재는 중앙값보다 낮지만 13.2배 저점은 아니다. 장기부채·리스부채·negative guest counts·부정적 주주지분·이사회 배당 재량을 함께 보면 ‘역사적 저평가’, ‘역대 최저’, ‘지금 매수’로 확장할 근거가 없다.
+
+## 영상용 안전 문장
+
+- “최근 5년 P/E 범위에서는 매우 낮은 구간입니다.”
+- “하지만 20년 전체의 극단적 바닥은 아니고, 13.2배까지 내려간 관측도 있었습니다.”
+- “가맹 매출은 임대료·로열티·초기 수수료 매출이지 곧바로 이익이나 현금흐름은 아닙니다.”
+- “매장 수 기준 약 95%가 가맹이며, 토지 소유 비중은 아닙니다.”
+- “49년 연속 인상은 과거 기록이고 미래 배당을 보장하지 않습니다.”
+
+## 계산·검증·한계
+
+calculations.csv는 표시된 하락률·P/E·P/E 중앙값 대비 차이·배당수익률·가맹 비중·FCF·구성비·보고된 comparable-sales·토지·건물 퍼센트를 record_type으로 구분한다. JSON은 UTF-8 valid JSON, CSV는 헤더와 단위·기간·source_id를 보존한다.
+
+실행한 검증 명령:
+
+    $r = Resolve-Path '.\plugins\moneyprinterturbo-video\skills\moneyprinterturbo-video\examples\mcd-valuation-2026\research'
+    Get-Content -Raw (Join-Path $r 'facts.json') | ConvertFrom-Json | Out-Null
+    $p = Import-Csv (Join-Path $r 'price_history.csv')
+    $c = Import-Csv (Join-Path $r 'calculations.csv')
+    $p.Count
+    $p[0].date
+    $p[-1].date
+    $c.Count
+
+기대·확인 결과는 JSON parse pass, 가격 251행, 날짜 2025-08-28→2026-08-27, 계산 로그 30행이다. 추가로 MAX(raw_close)=341.06(2026-02-27), MAX(high)=341.75(2026-03-02), MAX(ABS(raw_close - adjusted_close)) 확인과 위 수식 재계산을 수행한다.
+
+한계:
+
+- 가격과 P/E는 SEC 공식 수치가 아닌 secondary/vendor 자료다. Yahoo adjusted close와 historical P/E는 향후 수정될 수 있다.
+- 5년 P/E는 주간 TTM, 20년 P/E는 다른 vendor의 저장 관측치이므로 두 기간의 원시 표본·산식을 하나의 시계열처럼 결합하지 않았다.
+- 20년 percentile 39%는 vendor가 말한 값이며 원시 20년 P/E 파일이 없어 독립적으로 다시 세지 못했다.
+- H1 금액은 SEC 표의 반올림 백만 달러다. 계산 로그의 성장률은 그 반올림 금액에서 다시 계산했기 때문에 회사의 보고된 정수 성장률과 소폭 다를 수 있다.
+- 배당수익률은 이사회 선언 배당을 4배한 단순 선행 수익률이며 세금·원천징수·배당 중단·주가 변동을 반영하지 않는다.
+- 이 패킷은 사업·밸류에이션 설명용이며 매수·매도 또는 목표가를 제시하지 않는다.
+
+## 소유 범위 파일
+
+검증·변경 대상은 다음 디렉터리로 제한했다.
+
+`plugins/moneyprinterturbo-video/skills/moneyprinterturbo-video/examples/mcd-valuation-2026/research`
+
+- evidence.md
+- facts.json
+- price_history.csv
+- calculations.csv

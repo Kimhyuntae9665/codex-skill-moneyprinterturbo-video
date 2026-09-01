@@ -18,7 +18,13 @@ from PIL import Image
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-SKILL_ROOT = REPO_ROOT / "moneyprinterturbo-video"
+SKILL_ROOT = (
+    REPO_ROOT
+    / "plugins"
+    / "moneyprinterturbo-video"
+    / "skills"
+    / "moneyprinterturbo-video"
+)
 
 
 def load_module(name: str, path: Path):
@@ -461,13 +467,18 @@ class RepositoryHygieneTests(unittest.TestCase):
         forbidden_names = {"config.toml", ".env"}
         forbidden_suffixes = {".mp4", ".log", ".pyc"}
         violations = []
-        for path in REPO_ROOT.rglob("*"):
-            if any(part in {".git", ".venv", "__pycache__"} for part in path.parts):
+        tracked = subprocess.run(
+            ["git", "ls-files", "-z"],
+            cwd=REPO_ROOT,
+            check=True,
+            capture_output=True,
+        ).stdout.decode("utf-8").split("\0")
+        for relative in tracked:
+            if not relative:
                 continue
-            if path.is_file() and (
-                path.name in forbidden_names or path.suffix.lower() in forbidden_suffixes
-            ):
-                violations.append(str(path.relative_to(REPO_ROOT)))
+            path = Path(relative)
+            if path.name in forbidden_names or path.suffix.lower() in forbidden_suffixes:
+                violations.append(relative)
         self.assertEqual(violations, [])
 
 

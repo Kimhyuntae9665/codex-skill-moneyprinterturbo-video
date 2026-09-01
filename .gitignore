@@ -11,3 +11,6 @@ config.toml
 moneyprinterturbo-video/examples/*/generated-materials/
 moneyprinterturbo-video/examples/*/qa-frames/
 runtime/
+/moneyprinterturbo-video/
+/.playwright-cli/
+/luna-team-*-manifest.json

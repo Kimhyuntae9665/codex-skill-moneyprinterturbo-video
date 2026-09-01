@@ -1,0 +1,164 @@
+{
+  "schema_version": "shorts-scene-contract-v1",
+  "title": "Replace with project title",
+  "purpose": "Evidence-led 9:16 explainer",
+  "as_of": "YYYY-MM-DD",
+  "canvas": {
+    "logical": {"width": 720, "height": 1280},
+    "output": {"width": 1080, "height": 1920},
+    "fps": 30,
+    "duration_s": 12.0
+  },
+  "timeline": {
+    "boundaries_s": [0.0, 4.0, 8.0, 12.0],
+    "scene_count": 3,
+    "sample_policy": "every boundary and every midpoint"
+  },
+  "reserved_bboxes": {
+    "header": [0, 0, 720, 236],
+    "content": [48, 250, 624, 750],
+    "source": [48, 930, 624, 50],
+    "caption_platform": [0, 1000, 720, 240]
+  },
+  "safe_bboxes": {
+    "header": [32, 16, 656, 204],
+    "content": [48, 250, 624, 750],
+    "source": [48, 930, 624, 50],
+    "caption_platform": [48, 1000, 624, 240]
+  },
+  "zone_parents": {"source": "content"},
+  "qa_contract": {
+    "overlap_epsilon_px2": 0.01,
+    "require_claim_for_each_scene": true,
+    "require_state_change_for_each_scene": true,
+    "require_source_for_claims": true,
+    "require_text_line_fields": true,
+    "require_font_px": true,
+    "require_text_role": true,
+    "min_font_px_by_role": {
+      "headline": 36,
+      "key_metric": 46,
+      "body": 26,
+      "product_name": 28,
+      "product_category": 20,
+      "caption": 36,
+      "eyebrow": 18,
+      "utility": 16,
+      "source": 14
+    },
+    "require_primary_visual_bbox": true,
+    "min_primary_visual_width_ratio": 0.75,
+    "min_primary_visual_height_ratio": 0.55,
+    "max_caption_lines": 2,
+    "fail_on_unmapped_claim": true,
+    "fail_on_out_of_bounds": true,
+    "fail_on_illegal_overlap": true
+  },
+  "claims": {
+    "example.metric": {
+      "display": "42%",
+      "value": 42.0,
+      "unit": "percent",
+      "as_of": "YYYY-MM-DD",
+      "source_url": "https://replace.example/primary-source",
+      "definition": "Replace with the exact denominator, sampling method, and limitation."
+    }
+  },
+  "assets": {
+    "example.subject": {
+      "kind": "deterministic_vector",
+      "origin": "local renderer",
+      "rights_note": "Replace with the actual rights and trademark context."
+    }
+  },
+  "fixed_elements": [
+    {
+      "id": "fixed.brand",
+      "zone": "header",
+      "kind": "text",
+      "bbox": [32, 16, 360, 36],
+      "text": "SUBJECT · EVIDENCE CASE",
+      "lines": 1,
+      "max_lines": 1,
+      "text_role": "utility",
+      "font_px": 20
+    },
+    {
+      "id": "fixed.date",
+      "zone": "header",
+      "kind": "text",
+      "bbox": [500, 16, 188, 36],
+      "text": "DATA YYYY.MM.DD",
+      "lines": 1,
+      "max_lines": 1,
+      "text_role": "utility",
+      "font_px": 16
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "start_s": 0.0,
+      "end_s": 4.0,
+      "label": "HOOK",
+      "primary_visual_bbox": [72, 300, 576, 600],
+      "claim_ids": ["example.metric"],
+      "state_changes": [
+        {"id": "s01.chart", "at_s": 0.2, "from": "hidden", "to": "drawn", "motion": "line_reveal"},
+        {"id": "s01.metric", "at_s": 1.4, "from": "small", "to": "settled", "motion": "eased_scale"}
+      ],
+      "elements": [
+        {"id": "s01.eyebrow", "zone": "header", "kind": "text", "bbox": [48, 88, 624, 24], "text": "HOOK", "lines": 1, "max_lines": 1, "text_role": "eyebrow", "font_px": 18},
+        {"id": "s01.title", "zone": "header", "kind": "text", "bbox": [48, 122, 624, 52], "text": "한 장면에 한 가지 핵심 주장", "lines": 1, "max_lines": 1, "text_role": "headline", "font_px": 36},
+        {"id": "s01.chart", "zone": "content", "kind": "chart", "bbox": [72, 300, 576, 410], "claim_ids": ["example.metric"]},
+        {"id": "s01.metric_card", "zone": "content", "kind": "card", "bbox": [210, 760, 300, 140], "claim_ids": ["example.metric"]},
+        {"id": "s01.metric", "zone": "content", "kind": "text", "parent_id": "s01.metric_card", "bbox": [250, 795, 220, 70], "text": "42%", "lines": 1, "max_lines": 1, "text_role": "key_metric", "font_px": 52, "claim_ids": ["example.metric"]},
+        {"id": "s01.source", "zone": "source", "kind": "source", "bbox": [48, 950, 624, 26], "text": "Primary source · YYYY-MM-DD", "lines": 1, "max_lines": 1, "text_role": "source", "font_px": 14},
+        {"id": "s01.caption", "zone": "caption_platform", "kind": "caption", "bbox": [80, 1060, 560, 92], "text": "핵심 수치를 먼저 보여줍니다.", "lines": 1, "max_lines": 2, "text_role": "caption", "font_px": 36}
+      ]
+    },
+    {
+      "id": "s02",
+      "start_s": 4.0,
+      "end_s": 8.0,
+      "label": "MECHANISM",
+      "primary_visual_bbox": [72, 300, 576, 600],
+      "claim_ids": ["example.metric"],
+      "state_changes": [
+        {"id": "s02.subject", "at_s": 4.2, "from": "flat", "to": "assembled", "motion": "eased_build"},
+        {"id": "s02.flow", "at_s": 5.3, "from": "empty", "to": "flowing", "motion": "path_reveal"}
+      ],
+      "elements": [
+        {"id": "s02.eyebrow", "zone": "header", "kind": "text", "bbox": [48, 88, 624, 24], "text": "MECHANISM", "lines": 1, "max_lines": 1, "text_role": "eyebrow", "font_px": 18},
+        {"id": "s02.title", "zone": "header", "kind": "text", "bbox": [48, 122, 624, 52], "text": "주장과 연결된 구조를 움직입니다", "lines": 1, "max_lines": 1, "text_role": "headline", "font_px": 36},
+        {"id": "s02.subject_card", "zone": "content", "kind": "card", "bbox": [150, 310, 420, 430], "claim_ids": ["example.metric"]},
+        {"id": "s02.subject", "zone": "content", "kind": "asset", "parent_id": "s02.subject_card", "bbox": [210, 360, 300, 280], "asset_id": "example.subject"},
+        {"id": "s02.flow", "zone": "content", "kind": "chart", "bbox": [90, 790, 540, 110], "claim_ids": ["example.metric"]},
+        {"id": "s02.source", "zone": "source", "kind": "source", "bbox": [48, 950, 624, 26], "text": "Primary source · exact definition", "lines": 1, "max_lines": 1, "text_role": "source", "font_px": 14},
+        {"id": "s02.caption", "zone": "caption_platform", "kind": "caption", "bbox": [80, 1060, 560, 92], "text": "움직임은 장식이 아니라 원인을 설명합니다.", "lines": 1, "max_lines": 2, "text_role": "caption", "font_px": 36}
+      ]
+    },
+    {
+      "id": "s03",
+      "start_s": 8.0,
+      "end_s": 12.0,
+      "label": "LIMIT",
+      "primary_visual_bbox": [72, 320, 576, 520],
+      "claim_ids": ["example.metric"],
+      "state_changes": [
+        {"id": "s03.rule", "at_s": 8.2, "from": "hidden", "to": "visible", "motion": "eased_rise"},
+        {"id": "s03.limit", "at_s": 9.6, "from": "muted", "to": "emphasized", "motion": "color_settle"}
+      ],
+      "elements": [
+        {"id": "s03.eyebrow", "zone": "header", "kind": "text", "bbox": [48, 88, 624, 24], "text": "LIMIT", "lines": 1, "max_lines": 1, "text_role": "eyebrow", "font_px": 18},
+        {"id": "s03.title", "zone": "header", "kind": "text", "bbox": [48, 122, 624, 52], "text": "마지막에는 조건과 한계를 둡니다", "lines": 1, "max_lines": 1, "text_role": "headline", "font_px": 36},
+        {"id": "s03.rule", "zone": "content", "kind": "card", "bbox": [90, 360, 540, 190], "claim_ids": ["example.metric"]},
+        {"id": "s03.rule_text", "zone": "content", "kind": "text", "parent_id": "s03.rule", "bbox": [130, 410, 460, 86], "text": "확인되면 확대", "lines": 1, "max_lines": 1, "text_role": "key_metric", "font_px": 46, "claim_ids": ["example.metric"]},
+        {"id": "s03.limit", "zone": "content", "kind": "card", "bbox": [90, 610, 540, 190], "claim_ids": ["example.metric"]},
+        {"id": "s03.limit_text", "zone": "content", "kind": "text", "parent_id": "s03.limit", "bbox": [130, 660, 460, 86], "text": "훼손되면 취소", "lines": 1, "max_lines": 1, "text_role": "key_metric", "font_px": 46, "claim_ids": ["example.metric"]},
+        {"id": "s03.source", "zone": "source", "kind": "source", "bbox": [48, 950, 624, 26], "text": "Educational example · not personalized advice", "lines": 1, "max_lines": 1, "text_role": "source", "font_px": 14},
+        {"id": "s03.caption", "zone": "caption_platform", "kind": "caption", "bbox": [80, 1060, 560, 92], "text": "추천이 아니라 판단 규칙으로 끝냅니다.", "lines": 1, "max_lines": 2, "text_role": "caption", "font_px": 36}
+      ]
+    }
+  ]
+}

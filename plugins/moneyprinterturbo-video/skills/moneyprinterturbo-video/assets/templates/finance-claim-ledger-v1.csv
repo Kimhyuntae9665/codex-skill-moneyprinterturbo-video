@@ -1,0 +1,2 @@
+claim_id,display,value,unit,as_of,source_url,definition,calculation_path,caveat,evidence_tier,verification_status,secondary_check
+example.metric,42%,42.0,percent,YYYY-MM-DD,https://replace.example/primary-source,"Exact numerator denominator and sampling method",research/recompute.py,"Historical observation; not a forecast",primary_calculated,verified,not_relevant

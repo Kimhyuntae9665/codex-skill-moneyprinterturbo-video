@@ -1,84 +1,82 @@
-# MoneyPrinterTurbo Video Codex Skill
+# MoneyPrinterTurbo Video v1.0.0
 
-[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)를 이용해 세로형 숏폼 영상을 실제 MP4로 만들고 검증하는 개인용 Codex Skill입니다. 단순 설치 안내가 아니라 대본, 영상 소재, 한국어 음성, 자막, 최종 파일과 검증 결과까지 완성하는 흐름을 제공합니다.
+MoneyPrinterTurbo를 이용해 한국어 YouTube Shorts·Reels용 9:16 MP4를 만들고, 자막·오디오·프레임·데이터 근거까지 검증하는 Codex Plugin/Skill입니다.
 
-## 설계 원칙
+이 저장소는 두 가지 설치 방식을 동시에 제공합니다.
 
-- 검토한 upstream 커밋 `eb8c23757e098a07bbcd93b3b50e252fc8d1869a`만 별도 런타임에 체크아웃합니다.
-- 준비된 대본과 권리 문제가 없는 로컬 소재를 쓰면 LLM 및 스톡 영상 API 키 없이 실행합니다.
-- 자동 소셜 업로드를 강제로 끄며, 유료 영상 공급자는 사용자가 비용을 명시적으로 승인해야 합니다.
-- 최종 MP4는 해상도, 길이, 코덱, 전체 디코딩, 음성 볼륨, 대표 프레임까지 검사합니다.
-- upstream 전체를 복제하지 않는 얇은 래퍼입니다. MoneyPrinterTurbo 자체 라이선스와 업데이트는 upstream을 따릅니다.
+- Plugin: ZIP 전체 또는 GitHub Marketplace로 설치
+- Standalone Skill: `$skill-installer`로 Skill 폴더만 설치
 
-## 설치
+## ZIP으로 설치
 
-Codex에서 다음처럼 요청합니다.
+Release의 `MoneyPrinterTurbo-Video-Plugin-v1.0.0.zip`을 원하는 폴더에 압축 해제합니다. 압축을 푼 최상위 폴더를 Marketplace로 등록한 다음 Plugin을 설치합니다.
 
-```text
-$skill-installer https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/main/moneyprinterturbo-video 를 설치해줘
+```powershell
+codex plugin marketplace add "C:\path\to\MoneyPrinterTurbo-Video-Plugin-v1.0.0"
+codex plugin add moneyprinterturbo-video@moneyprinterturbo-video
 ```
 
-설치 후 새 Codex 세션을 열고 다음처럼 사용합니다.
+설치 후 새 Codex 작업을 열고 다음처럼 사용합니다.
 
 ```text
 $moneyprinterturbo-video 준비한 한국어 대본과 이미지로 55초짜리 YouTube Shorts 영상을 만들어줘.
 ```
 
-필수 로컬 도구는 Git, uv, FFmpeg입니다. 첫 실행에는 upstream 체크아웃과 Python 의존성 설치, Edge TTS 접속을 위한 네트워크가 필요합니다.
-
-## MCD 전문 모션그래픽 예제
-
-`moneyprinterturbo-video/examples/mcd-valuation-2026/`에는 현재 MCD 밸류에이션, 가맹 수익 구조, 주주환원, 역사적 배당수익률, 시장 민감도를 한 흐름으로 설명하는 59초대 한국어 Shorts v4 제작 패키지가 있습니다. 기존 v2·v3 파일도 비교·회귀 검증용으로 보존합니다.
-
-- 비조정 종가 기준 6개월 하락률과 5년 P/E 저점권을 보여 주되 역사적 바닥으로 단정하지 않음
-- SEC 현금흐름으로 계산한 TTM 배당 52.25억 달러, 순현금 자사주매입 20.86억 달러, 현금 주주환원률 약 4.0%
-- 2025 Form 10-K 기준 50년 연속 배당 인상과 H1 2026 희석 가중평균 주식 수 감소를 함께 확인
-- 2026-08-27 TTM 배당수익률 2.83%가 2020년 이후 월말 80개 중 2위·2023년 이후 최고지만, 2010년 이후에는 상위 37%이고 2015년 3.58%보다 낮다는 장단기 비교
-- 동일한 5년 주간 수정주가로 다시 계산한 MCD beta 0.48, SPY 1.00, QQQ beta 1.25, MCD–QQQ 상관 0.33
-- 재사용 권리를 기록한 실제 매장 외관 사진, 배당수익률 선·면적 차트, 이중 원호·beta rail·수익률 파형 모션
-- 오픈소스 Manim Community 0.21.0으로 렌더링하는 1080×1920/30fps 단일 master 영상
-- 본문과 자막을 물리적으로 분리한 446px 전용 영역, SunHi 한국어 TTS 1.17배속, Whisper 타임코드 기반 검수 자막 복구, 전체 A/V 디코드 검증
-
-전문 모션그래픽 렌더 예시:
+## GitHub에서 Plugin 설치
 
 ```powershell
-.\moneyprinterturbo-video\examples\mcd-valuation-2026\motion\render_v4.ps1
+codex plugin marketplace add Kimhyuntae9665/codex-skill-moneyprinterturbo-video --ref v1.0.0
+codex plugin add moneyprinterturbo-video@moneyprinterturbo-video
 ```
 
-계산 재현 예시:
+## Standalone Skill 설치
+
+Codex에서 다음처럼 요청합니다.
+
+```text
+$skill-installer Install the skill from https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.0.0/plugins/moneyprinterturbo-video/skills/moneyprinterturbo-video
+```
+
+## 실행 전 검사
+
+필수 도구는 Git, Python 3.11+, uv, FFmpeg/FFprobe입니다. 최초 실행에는 pinned MoneyPrinterTurbo checkout, Python 의존성, Edge TTS를 위한 네트워크가 필요합니다.
 
 ```powershell
-python .\moneyprinterturbo-video\examples\mcd-valuation-2026\research\recompute_v4.py --offline
+python .\plugins\moneyprinterturbo-video\skills\moneyprinterturbo-video\scripts\check_environment.py --json
 ```
 
-현재 pinned upstream에서 한국어 Edge 자막 경계가 누락될 때는 `scripts/burn_subtitles.py`로 사람이 검수한 SRT를 같은 MoneyPrinterTurbo 결과물에 번인한 뒤 전체 검증을 다시 수행합니다. 자동 Whisper 교정 결과를 그대로 쓰지 않습니다.
-
-이 예제의 결론은 `최근 5년 P/E와 최근 구간 배당수익률은 매력적이고 과거 beta·상관은 기술주 성향 자산과 다른 리듬을 보였지만, 장기 역사적 극단값·미래 분산효과·낮은 총위험을 보장하지 않는다`입니다. 가맹 매출은 이익이나 FCF로 표시하지 않으며, 현금 주주환원률과 배당수익률 순위는 회사 공식 지표가 아닌 계산값으로 표시합니다.
-
-## 이전 MCD 정적 예제
-
-`moneyprinterturbo-video/examples/mcd-2025/`에는 맥도날드의 가맹·부동산 연계 수익 구조를 설명하는 한국어 Shorts 예제가 있습니다.
-
-- `narration.ko.txt`: 2025 Form 10-K에 맞춘 한국어 내레이션
-- `brief.md`, `storyboard.md`, `sources.md`: 표현 범위, 장면 구성, 1차 출처
-- `make_materials.py`: 로고와 상업 사진 없이 1080x1920 인포그래픽 8장을 재현
-- `verification.md`: 실제 생성 결과와 기술·시각 검증 기록
-
-화면 생성 예시:
+미국주식 영상은 다음처럼 companion Skill까지 확인합니다.
 
 ```powershell
-uv run --project . python .\moneyprinterturbo-video\examples\mcd-2025\make_materials.py
+python .\plugins\moneyprinterturbo-video\skills\moneyprinterturbo-video\scripts\check_environment.py --mode us-equity --json
 ```
 
-생성된 소재, MP4, 런타임 설정과 로그는 의도적으로 Git에 포함하지 않습니다. 예제는 교육용 설명이며 투자 조언이 아닙니다.
+`us-stock-research`는 미국주식 근거 확정에 필요합니다. `infographic-creator`는 인포그래픽 장면에 사용합니다. Unusual Whales는 선택적 보조 확인 수단이며, 설치되지 않은 경우 `unavailable`로 기록하도록 설계했습니다.
+
+## 포함 기능
+
+- 준비된 로컬 영상·이미지와 대본을 사용하는 API-key-free 모드
+- MoneyPrinterTurbo upstream commit `eb8c23757e098a07bbcd93b3b50e252fc8d1869a` 고정
+- 한국어 Edge TTS와 검수된 SRT 복구 경로
+- SEC·issuer IR 중심 claim ledger와 13F 표현 규칙
+- AntV 인포그래픽 또는 deterministic chart 모션
+- 큰 모바일 글자, 빈 공간·겹침·잘림·전환 잔상 검수
+- MP4 해상도·코덱·오디오·전체 디코딩·장면 경계 검사
+- MCD v8 골든 예제와 재현 가능한 계산·레이아웃 자료
 
 ## 검증
 
 ```powershell
-uv run --project . python -m unittest discover -s tests -v
-python C:\Users\<USER>\.codex\skills\.system\skill-creator\scripts\quick_validate.py .\moneyprinterturbo-video
+uv sync --frozen
+uv run --frozen python -m unittest discover -s tests -v
+python "$env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_validate.py" .\plugins\moneyprinterturbo-video\skills\moneyprinterturbo-video
+python "$env:USERPROFILE\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py" .\plugins\moneyprinterturbo-video
 ```
+
+## 배포 제외 항목
+
+가상환경, API 키, `.env`, 생성된 MP4, QA 프레임 묶음, 브라우저 캐시, 로컬 로그와 절대경로는 Release/ZIP에 포함하지 않습니다.
 
 ## 라이선스
 
-이 저장소의 자체 작성 코드는 [MIT License](LICENSE)입니다. 수정한 upstream helper와 Noto Sans KR 글꼴의 별도 조건은 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 및 글꼴 폴더의 `OFL.txt`를 확인하세요.
+자체 작성 코드는 MIT License입니다. MoneyPrinterTurbo, Noto Sans KR, 예제 사진과 수정 helper의 별도 조건은 `THIRD_PARTY_NOTICES.md`, Skill 내부 `THIRD_PARTY_NOTICES.md`, 폰트 `OFL.txt`, 예제 asset manifest를 확인하세요.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MoneyPrinterTurbo Video"
+  short_description: "Create verified evidence-led Shorts with MoneyPrinterTurbo"
+  default_prompt: "Use $moneyprinterturbo-video to create and verify a finished Short, including evidence, scene-layout, and boundary-frame QA when the content uses data or directed motion."

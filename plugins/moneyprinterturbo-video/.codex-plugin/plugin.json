@@ -1,0 +1,36 @@
+{
+  "name": "moneyprinterturbo-video",
+  "version": "1.0.0",
+  "description": "Create and verify Korean Shorts, Reels, and evidence-led finance videos with a pinned MoneyPrinterTurbo workflow.",
+  "author": {
+    "name": "Kimhyuntae9665",
+    "url": "https://github.com/Kimhyuntae9665"
+  },
+  "homepage": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video",
+  "repository": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video",
+  "license": "MIT",
+  "keywords": [
+    "moneyprinterturbo",
+    "shorts",
+    "reels",
+    "korean-tts",
+    "finance-video",
+    "video-qa"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "MoneyPrinterTurbo Video",
+    "shortDescription": "Verified Korean Shorts and finance explainers",
+    "longDescription": "Creates finished 9:16 videos with Korean narration, deterministic data graphics, evidence gates, subtitle recovery, and frame-level quality assurance.",
+    "developerName": "Kimhyuntae9665",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video",
+    "defaultPrompt": [
+      "Use $moneyprinterturbo-video to create a verified Korean YouTube Short.",
+      "Use $moneyprinterturbo-video to turn a prepared script and local media into a 9:16 MP4.",
+      "Use $moneyprinterturbo-video to create an evidence-led US-stock Short with readable charts."
+    ],
+    "brandColor": "#111827"
+  }
+}

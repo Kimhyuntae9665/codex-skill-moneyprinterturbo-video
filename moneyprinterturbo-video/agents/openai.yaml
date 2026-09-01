@@ -1,4 +1,0 @@
-interface:
-  display_name: "MoneyPrinterTurbo Video"
-  short_description: "Create verified short videos with MoneyPrinterTurbo"
-  default_prompt: "Use $moneyprinterturbo-video to create a finished short video from my topic or prepared script."

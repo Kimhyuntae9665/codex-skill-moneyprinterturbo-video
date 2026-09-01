@@ -1,0 +1,20 @@
+{
+  "name": "moneyprinterturbo-video",
+  "interface": {
+    "displayName": "MoneyPrinterTurbo Video"
+  },
+  "plugins": [
+    {
+      "name": "moneyprinterturbo-video",
+      "source": {
+        "source": "local",
+        "path": "./plugins/moneyprinterturbo-video"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
