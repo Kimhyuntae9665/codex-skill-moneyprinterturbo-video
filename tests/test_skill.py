@@ -467,12 +467,19 @@ class RepositoryHygieneTests(unittest.TestCase):
         forbidden_names = {"config.toml", ".env"}
         forbidden_suffixes = {".mp4", ".log", ".pyc"}
         violations = []
-        tracked = subprocess.run(
-            ["git", "ls-files", "-z"],
-            cwd=REPO_ROOT,
-            check=True,
-            capture_output=True,
-        ).stdout.decode("utf-8").split("\0")
+        if (REPO_ROOT / ".git").exists():
+            tracked = subprocess.run(
+                ["git", "ls-files", "-z"],
+                cwd=REPO_ROOT,
+                check=True,
+                capture_output=True,
+            ).stdout.decode("utf-8").split("\0")
+        else:
+            tracked = [
+                path.relative_to(REPO_ROOT).as_posix()
+                for path in REPO_ROOT.rglob("*")
+                if path.is_file()
+            ]
         for relative in tracked:
             if not relative:
                 continue
