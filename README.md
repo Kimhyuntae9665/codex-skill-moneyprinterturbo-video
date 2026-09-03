@@ -1,4 +1,4 @@
-# MoneyPrinterTurbo Video v1.0.0
+# MoneyPrinterTurbo Video v1.1.0
 
 MoneyPrinterTurbo를 이용해 한국어 YouTube Shorts·Reels용 9:16 MP4를 만들고, 자막·오디오·프레임·데이터 근거까지 검증하는 Codex Plugin/Skill입니다.
 
@@ -9,10 +9,10 @@ MoneyPrinterTurbo를 이용해 한국어 YouTube Shorts·Reels용 9:16 MP4를 �
 
 ## ZIP으로 설치
 
-Release의 `MoneyPrinterTurbo-Video-Plugin-v1.0.0.zip`을 원하는 폴더에 압축 해제합니다. 압축을 푼 최상위 폴더를 Marketplace로 등록한 다음 Plugin을 설치합니다.
+Release의 `MoneyPrinterTurbo-Video-Plugin-v1.1.0.zip`을 원하는 폴더에 압축 해제합니다. 압축을 푼 최상위 폴더를 Marketplace로 등록한 다음 Plugin을 설치합니다.
 
 ```powershell
-codex plugin marketplace add "C:\path\to\MoneyPrinterTurbo-Video-Plugin-v1.0.0"
+codex plugin marketplace add "C:\path\to\MoneyPrinterTurbo-Video-Plugin-v1.1.0"
 codex plugin add mpt-video@mpt-video
 ```
 
@@ -25,7 +25,7 @@ $moneyprinterturbo-video 준비한 한국어 대본과 이미지로 55초짜리 
 ## GitHub에서 Plugin 설치
 
 ```powershell
-codex plugin marketplace add Kimhyuntae9665/codex-skill-moneyprinterturbo-video --ref v1.0.0
+codex plugin marketplace add Kimhyuntae9665/codex-skill-moneyprinterturbo-video --ref v1.1.0
 codex plugin add mpt-video@mpt-video
 ```
 
@@ -34,7 +34,7 @@ codex plugin add mpt-video@mpt-video
 Codex에서 다음처럼 요청합니다.
 
 ```text
-$skill-installer Install the skill from https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.0.0/plugins/mpt/skills/mpt
+$skill-installer Install the skill from https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.1.0/plugins/mpt/skills/mpt
 ```
 
 ## 실행 전 검사
@@ -42,13 +42,13 @@ $skill-installer Install the skill from https://github.com/Kimhyuntae9665/codex-
 필수 도구는 Git, Python 3.11+, uv, FFmpeg/FFprobe입니다. 최초 실행에는 pinned MoneyPrinterTurbo checkout, Python 의존성, Edge TTS를 위한 네트워크가 필요합니다.
 
 ```powershell
-python .\plugins\mpt-video\skills\moneyprinterturbo-video\scripts\check_environment.py --json
+python .\plugins\mpt\skills\mpt\scripts\check_environment.py --json
 ```
 
 미국주식 영상은 다음처럼 companion Skill까지 확인합니다.
 
 ```powershell
-python .\plugins\mpt-video\skills\moneyprinterturbo-video\scripts\check_environment.py --mode us-equity --json
+python .\plugins\mpt\skills\mpt\scripts\check_environment.py --mode us-equity --json
 ```
 
 `us-stock-research`는 미국주식 근거 확정에 필요합니다. `infographic-creator`는 인포그래픽 장면에 사용합니다. Unusual Whales는 선택적 보조 확인 수단이며, 설치되지 않은 경우 `unavailable`로 기록하도록 설계했습니다.
@@ -69,8 +69,8 @@ python .\plugins\mpt-video\skills\moneyprinterturbo-video\scripts\check_environm
 ```powershell
 uv sync --frozen
 uv run --frozen python -m unittest discover -s tests -v
-python "$env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_validate.py" .\plugins\mpt-video\skills\moneyprinterturbo-video
-python "$env:USERPROFILE\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py" .\plugins\mpt-video
+python "$env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_validate.py" .\plugins\mpt\skills\mpt
+python "$env:USERPROFILE\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py" .\plugins\mpt
 ```
 
 ## 배포 제외 항목

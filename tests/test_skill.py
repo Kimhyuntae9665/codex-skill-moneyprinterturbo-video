@@ -463,6 +463,24 @@ class AssetAndExampleTests(unittest.TestCase):
 
 
 class RepositoryHygieneTests(unittest.TestCase):
+    def test_release_version_and_documented_paths_are_consistent(self) -> None:
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        manifest = json.loads(
+            (
+                REPO_ROOT
+                / "plugins"
+                / "mpt"
+                / ".codex-plugin"
+                / "plugin.json"
+            ).read_text(encoding="utf-8")
+        )
+        version = manifest["version"]
+        self.assertIn(f"MoneyPrinterTurbo Video v{version}", readme)
+        self.assertIn(f"--ref v{version}", readme)
+        self.assertIn(f"tree/v{version}/plugins/mpt/skills/mpt", readme)
+        self.assertIn(r".\plugins\mpt\skills\mpt\scripts\check_environment.py", readme)
+        self.assertNotIn(r".\plugins\mpt-video", readme)
+
     def test_no_runtime_outputs_or_credentials_are_committed(self) -> None:
         forbidden_names = {"config.toml", ".env"}
         forbidden_suffixes = {".mp4", ".log", ".pyc"}
