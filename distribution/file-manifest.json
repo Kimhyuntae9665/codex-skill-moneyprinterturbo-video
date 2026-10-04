@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.2.1",
   "algorithm": "SHA-256",
   "excludes": [
     "This manifest itself; Git metadata; caches and virtual environments"
@@ -27,18 +27,18 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1763,
-      "sha256": "b92c70be6764373071e43a1ee1371a64377ae0253d87d2cdd9e00e0d95d8169b"
+      "bytes": 1945,
+      "sha256": "1817ca51b7312529d82b2f6bf4164a1d154b54601ef7b4b235b8b98f50c7ac5a"
     },
     {
       "path": "distribution/reference-catalog.json",
       "bytes": 99702,
-      "sha256": "e06e36de53677a16c335d769df01a7e562caf25bdf1533c635c508f801efdc89"
+      "sha256": "2b9ed02d2dd8d41c2d15e84cb0d0a6704aff4e18289c7f0416348b7e7d9e5298"
     },
     {
       "path": "distribution/source-inventory.json",
       "bytes": 489907,
-      "sha256": "be0f3bea8674c9f720fcc9bbcc454c02decb0e58a77274fe8296d6b177ed80ca"
+      "sha256": "1aa6898bee73872b337cbe4335e15c4d1d3d89778f36aec8d0e8361251576085"
     },
     {
       "path": "docs/EXTERNAL_DEPENDENCIES.md",
@@ -48,7 +48,7 @@
     {
       "path": "docs/INSTALL.md",
       "bytes": 5180,
-      "sha256": "f29ec00cd549e6587229cbd323d38bc2f953213819317c5ac8a9cddce6d4fc81"
+      "sha256": "5ace22921a854cc455cca0162c1577770df58dd4ea60e4ace1844c50487e1170"
     },
     {
       "path": "docs/SKILLS.md",
@@ -63,7 +63,7 @@
     {
       "path": "plugins/mpt/.codex-plugin/plugin.json",
       "bytes": 1507,
-      "sha256": "8e97398d35b08326d3716bf0a01234d831c685e9d960c602d022460d6eeb70a1"
+      "sha256": "77df982775509a9dc3b456d6d5d6405833e8bd634e592810c36942ea83adb9c1"
     },
     {
       "path": "plugins/mpt/LICENSE",
@@ -7178,7 +7178,7 @@
     {
       "path": "README.md",
       "bytes": 6650,
-      "sha256": "2e8b61a22f49395cc7910a560552e1e4f942309e10c4143c64026444d5adfe6f"
+      "sha256": "1b7cfe20b7b208997ad94f29e6d4d2ecc2b41afaccce8bf413a2286f603ad5d9"
     },
     {
       "path": "scripts/audit_bundle.py",
@@ -7197,8 +7197,8 @@
     },
     {
       "path": "tests/test_skill.py",
-      "bytes": 21823,
-      "sha256": "39b077c896005bf1b4544de74c797db366374b8d821d088cf34f707617c1e00e"
+      "bytes": 21978,
+      "sha256": "af9aa7f091fd96aac895b32d69e28b2238edc957796db0b0eab15e56bf93909a"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",

@@ -1,4 +1,4 @@
-# MoneyPrinterTurbo Video v1.2.0
+# MoneyPrinterTurbo Video v1.2.1
 
 **근거를 확인하고 공식 시연 영상을 적극 활용하는 한국어 Shorts 제작 스킬 묶음입니다.**
 조사 → 대본 → 자료 선정 → 움직이는 화면 → 한국어 음성·자막 → 검수까지 연결합니다.
@@ -28,7 +28,7 @@
 Git과 Python 3.11+가 필요합니다. Windows에서는 짧은 경로에 복제하세요.
 
 ```text
-git clone --branch v1.2.0 https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video.git mpt-video
+git clone --branch v1.2.1 https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video.git mpt-video
 cd mpt-video
 python scripts/install_bundle.py --profile core --dry-run
 python scripts/install_bundle.py --profile core
@@ -51,12 +51,12 @@ python scripts/install_bundle.py --profile all --with-external
 지원하는 Codex 버전에서는 플러그인으로 동봉한 53개를 설치할 수 있습니다:
 
 ```text
-codex plugin marketplace add Kimhyuntae9665/codex-skill-moneyprinterturbo-video --ref v1.2.0
+codex plugin marketplace add Kimhyuntae9665/codex-skill-moneyprinterturbo-video --ref v1.2.1
 codex plugin add mpt-video@mpt-video
 ```
 
 개별 스킬 경로는
-[plugins/mpt/skills/mpt](https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.2.0/plugins/mpt/skills/mpt)입니다.
+[plugins/mpt/skills/mpt](https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.2.1/plugins/mpt/skills/mpt)입니다.
 [설치·교체·환경 준비](docs/INSTALL.md)를 읽고 한 가지 설치 방식을 선택하세요.
 개별 스킬 설치는 관련 스킬을 자동으로 설치하지 않습니다.
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.1 - 2026-10-04
+
+- Correct ZIP-install test hygiene: verify declared package files rather than
+  caches created by the tests themselves. Preserve all v1.2.0 bundle content.
+
+
 ## v1.2.0 - 2026-10-04
 
 - Publish the current main skill, 20 references, eight helpers and complete examples.
