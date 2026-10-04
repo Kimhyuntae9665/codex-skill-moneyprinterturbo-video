@@ -1,0 +1,63 @@
+{
+  "schema_version": "wallstreet-edge-story-scout-v2",
+  "as_of": "YYYY-MM-DD",
+  "issuer": "Company Name",
+  "ticker": "TICKER",
+  "discovery_execution": {
+    "model_tier": "economy",
+    "actual_model": null,
+    "reasoning_effort": "low",
+    "verification_model_tier": "stronger_only_for_finalists",
+    "pass_one_budget": "Set time or token cap",
+    "pass_one_scope": "Metadata and snippets only",
+    "pass_two_deep_read_target": "3-5 promoted items",
+    "notes": "Wide discovery only; no claim approval or valuation"
+  },
+  "x_scan": {
+    "status": "used",
+    "query_families": [],
+    "raw_items_examined": 0,
+    "unique_authors": 0,
+    "posts": []
+  },
+  "reddit_scan": {
+    "status": "used",
+    "query_families": [],
+    "raw_items_examined": 0,
+    "communities": [],
+    "items": []
+  },
+  "fallbacks_used": [],
+  "filtering": {
+    "raw_metadata_items": 0,
+    "deduplicated_clusters": 0,
+    "deep_read_items": 0,
+    "engagement_role": "tie_breaker_only",
+    "ranking_dimensions": [
+      "company_specificity",
+      "novelty",
+      "source_traceability",
+      "visual_potential",
+      "recency",
+      "independent_repetition",
+      "counterargument_quality"
+    ]
+  },
+  "story_clusters": [
+    {
+      "id": "S01",
+      "title": "Candidate mechanism",
+      "one_line_hook": "Conversational curiosity hook",
+      "origins": ["x", "reddit"],
+      "unique_source_count": 0,
+      "novelty_score": 0,
+      "company_specificity_score": 0,
+      "visual_potential_score": 0,
+      "source_traceability_score": 0,
+      "primary_proof_target": "Specific filing, transcript, contract, or metric",
+      "status": "promote|hold|reject"
+    }
+  ],
+  "promoted_candidate_ids": [],
+  "access_or_sparsity_limitations": []
+}

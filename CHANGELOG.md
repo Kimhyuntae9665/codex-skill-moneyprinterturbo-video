@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.2.0 - 2026-10-04
+
+- Publish the current main skill, 20 references, eight helpers and complete examples.
+- Require 60% official-video runtime, source-aligned demos, authentic logos, current
+  financial evidence, historical valuation checks and truthful production review.
+- Bundle 53 licensed skills with support files; map 12 official Remotion skills to
+  a pinned, optional upstream installation without redistributing unlicensed text.
+- Add core/all installer, hash verification, conflict refusal and replacement backups.
+- Include source inventory, dependency graph, reference catalog and per-skill licenses.
+- Replace author-specific Windows paths, repair local documentation links and discover
+  plugin sibling skills during preflight. Keep the user's installed source intact.
+- Replace audioop RMS with standard-library PCM handling for Python 3.13 compatibility
+  and correct unsigned 8-bit WAV silence detection.
+
+
 ## v1.1.0 - 2026-09-03
 
 - Added the Disconnect narrative contract for evidence-led finance Shorts.

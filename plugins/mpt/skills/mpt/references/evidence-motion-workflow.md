@@ -14,23 +14,31 @@ frozen evidence packet and do not replace it.
 
 Create these artifacts before calling a video finished:
 
-1. `brief.md` — audience, hook, thesis, counterpoint, target duration, and
-   dated data scope.
+1. `brief.md` — audience, exact opening line and visual, question and payoff,
+   thesis, counterpoint, target duration, dated data scope, shot plan with
+   explanatory changes, numeric explanation, and sound plan. Apply the
+   pre-render opening review in `../SKILL.md` before full production.
 2. `sources.md` — primary-source links, market-data vendor links, asset rights,
    retrieval dates, and calculation scripts or formulas.
 3. `narration.ko.txt` — final spoken Korean. Use the same display values as the
    graphics.
 4. `subtitle.srt` — reviewed timing and copy. Do not use raw speech recognition
    as final financial copy.
-5. infographic DSL, exported SVG, and full-resolution preview for each scene
-   routed through `infographic-creator`.
+5. editable graph JSON, asset/source manifest with hashes, exported SVG, and
+   full-resolution PNG preview for each scene routed through `logo-flow-infographics`.
 6. `scene-manifest.json` — executable geometry, timeline, state-change, claim,
    and asset contract.
 7. one deterministic renderer and its exact render command.
 8. one directed visual master, one MoneyPrinterTurbo narrated output, and one
    final reviewed-subtitle derivative.
-9. `verification.md` plus JSON reports from layout, stream, frame, freeze, and
-   visual review gates.
+9. `verification.md` with the editorial and listening statuses in `../SKILL.md`,
+   plus automated JSON reports from layout, stream, frame, and freeze checks.
+   Record visual and audio observations, timestamps, and reviewer separately.
+10. `official-video-report.json` — attributable official assets, source in/out
+    and reviewed final output intervals, union duration, full MP4 duration,
+    share, and PASS/HOLD against the minimum 60% gate in `../SKILL.md`.
+    Plan the share in `brief.md`; natural source reading/waiting moments count,
+    while stills, self-made animation, and editor-added freeze/loop padding do not.
 
 Missing evidence or a failed gate is a HOLD, not a stylistic suggestion.
 
@@ -53,17 +61,20 @@ betas. Put the definition on screen when the distinction changes the meaning.
 Use language such as `조건부 후보`, `역사적 비교`, and `개인화된 조언 아님`
 when appropriate. A drawdown or high yield is not proof of undervaluation.
 
-## Design data scenes with infographic-creator
+## Design relationship scenes with logo-flow-infographics
 
 After the ledger is frozen and before the scene contract is finalized, read
 [`infographic-motion-bridge.md`](infographic-motion-bridge.md). Invoke the
-installed `infographic-creator` Skill for editorial trend, comparison,
-composition, sequence, relation, and compact ownership scenes. Save its DSL,
-render a pinned AntV SVG, and inspect a full-resolution preview. Use custom
-deterministic charts for dense multi-series plots or finance-specific geometry
-that the available infographic templates cannot represent faithfully.
+installed `logo-flow-infographics` Skill for verified company relationships,
+service architecture, partner roles, and workflows. Use authentic approved
+local identities in white rounded cards on a dark dotted canvas, short names
+beneath them, and thin curved directed connectors. Keep interpretation and
+conditions outside the graph. Save graph JSON, an asset/source manifest with
+hashes, SVG, and a full-resolution PNG preview. Use custom deterministic charts
+for trends, numeric comparisons, compositions, ownership figures, and other
+finance-specific geometry that needs an accurate quantitative scale.
 
-The infographic receives frozen values; it never researches or updates them.
+The graph receives frozen relationships and claims; it never researches or updates them.
 The renderer may animate masks, paths, bars, nodes, and callouts, but it must not
 change labels, values, order, scale meaning, or source association.
 
@@ -118,8 +129,10 @@ impossible geometry before use.
 - Make motion reveal causality: lines draw, locations activate, rent flows from
   land to company, cash separates into dividends and net buybacks, and risk
   counters interrupt the positive thesis.
-- Keep the main object moving gently even during narration holds. A one-second
-  static frame can feel broken in a fast Short.
+- Follow the explanatory beat and shot-plan rules in `../SKILL.md`. A pan over
+  the same photo or a caption entrance alone is not a new explanatory beat.
+  Keep reading holds intentional; never add arbitrary motion just to defeat
+  freeze detection. Review technical continuity and editorial pacing separately.
 - Restrict flashes and wipes to the content zone. Do not wash out the header,
   source, or caption.
 - Do not use transition presets that leave a line, underline, or ghost card in
@@ -133,7 +146,9 @@ impossible geometry before use.
 
 Use the directed master as a single local material. Set sequential concat,
 `video-count 1`, transition mode `none`, and a clip duration not shorter than
-the narration. Keep BGM off unless a rights-cleared track is explicitly chosen.
+the narration. Apply the sound plan in `../SKILL.md`: use a quiet, cleared
+instrumental bed when suitable, or record the reason for silence. A narration-only
+assembly is intermediate when the plan calls for BGM; verify the final mix.
 Use MoneyPrinterTurbo for the pinned execution, narration, and final assembly;
 do not let its generic material splitter restructure the directed timeline.
 
@@ -146,8 +161,9 @@ bundled Noto Sans KR font.
 
 Run gates in this order so later checks never hide an earlier failure:
 
-1. claim-ledger review;
-2. infographic DSL, SVG export, claim match, and full-resolution preview review;
+1. claim-ledger and numeric-explanation review, then opening TTS/visual preview
+   and shot/sound-plan review before the full render;
+2. logo-flow graph/asset manifests, SVG export, claim match, and full-resolution preview review (or scale-accurate custom-chart review);
 3. `validate_scene_manifest.py`;
 4. renderer execution and full visual-master decode;
 5. MoneyPrinterTurbo prepared-local log check;
@@ -155,8 +171,15 @@ Run gates in this order so later checks never hide an earlier failure:
 7. `validate_video.py`;
 8. `probe_scene_frames.py` with audio required;
 9. original-resolution contact-sheet and individual-frame review;
-10. Korean narration pronunciation review;
+10. playback review of the first three seconds, full explanatory sequence,
+    and actual final audio mix, including Korean pronunciation and cadence;
+    verify official-video interval union is at least 60% of full MP4 duration
+    and record `OFFICIAL_VIDEO_QA`; missing measurement or a lower share is HOLD;
 11. SHA-256, byte size, exact output path, and no-upload statement.
+
+ASR and loudness checks do not replace listening. If playback or listening is
+unavailable, mark the affected gate incomplete and report a review draft, not
+a finished or fully verified video, following `../SKILL.md`.
 
 The MCD v8 reference demonstrates the intended standard: it uses a dated claim
 ledger, contextual Golden Arches geometry, a deterministic world map, separate

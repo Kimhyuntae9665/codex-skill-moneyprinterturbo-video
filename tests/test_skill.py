@@ -158,8 +158,9 @@ class RunnerSafetyTests(unittest.TestCase):
 
 
 class AssetAndExampleTests(unittest.TestCase):
-    def test_skill_markdown_is_ascii(self) -> None:
-        (SKILL_ROOT / "SKILL.md").read_text(encoding="ascii")
+    def test_skill_markdown_is_utf8_with_public_entrypoint(self) -> None:
+        text = (SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8")
+        self.assertTrue(text.startswith("---\nname: moneyprinterturbo-video\n"))
 
     def test_font_covers_every_modern_hangul_syllable(self) -> None:
         font = TTFont(SKILL_ROOT / "assets" / "fonts" / "NotoSansKR-Bold.ttf")
@@ -484,6 +485,12 @@ class RepositoryHygieneTests(unittest.TestCase):
     def test_no_runtime_outputs_or_credentials_are_committed(self) -> None:
         forbidden_names = {"config.toml", ".env"}
         forbidden_suffixes = {".mp4", ".log", ".pyc"}
+        licensed_examples = {
+            "plugins/mpt/skills/greybox-harness/examples/boutique/out/model.mp4",
+            "plugins/mpt/skills/greybox-harness/examples/boutique/out/review.mp4",
+            "plugins/mpt/skills/greybox-harness/examples/pair/generated.mp4",
+            "plugins/mpt/skills/greybox-harness/examples/pair/greybox.mp4",
+        }
         violations = []
         if (REPO_ROOT / ".git").exists():
             tracked = subprocess.run(
@@ -502,6 +509,9 @@ class RepositoryHygieneTests(unittest.TestCase):
             if not relative:
                 continue
             path = Path(relative)
+            if relative in licensed_examples:
+                self.assertTrue((REPO_ROOT / "plugins/mpt/skills/greybox-harness/LICENSE").is_file())
+                continue
             if path.name in forbidden_names or path.suffix.lower() in forbidden_suffixes:
                 violations.append(relative)
         self.assertEqual(violations, [])

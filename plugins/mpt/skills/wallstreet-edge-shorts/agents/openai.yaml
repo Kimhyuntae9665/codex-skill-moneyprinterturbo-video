@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wall Street Edge Shorts"
+  short_description: "Create dynamic X and Reddit company-story Shorts"
+  default_prompt: "Use $wallstreet-edge-shorts to run a metadata-first X and Reddit scout, deeply verify only the strongest three to five leads, and produce a dynamic Korean company-story Short. Default to deterministic 2D or 2.5D explanatory animation; lengthen connected dossiers by story count and add valuation only when I request investment analysis."

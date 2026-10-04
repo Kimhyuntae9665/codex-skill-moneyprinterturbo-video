@@ -1,109 +1,76 @@
-# Infographic-to-motion bridge
+# Logo-flow-to-motion bridge
 
-Use this bridge when a Short contains an information-rich chart, comparison,
-composition, process, hierarchy, or ownership summary. It connects the
-installed `infographic-creator` Skill to the evidence-motion renderer without
-weakening the claim ledger or scene contract.
+Use this bridge for company relationships, service architecture, partner roles,
+and workflows. It connects the installed `logo-flow-infographics` Skill to the
+evidence-motion renderer. The reference filename is retained for existing links.
+Read that skill's `SKILL.md`, input contract, and export checks before authoring.
 
-## Routing rule
+## Route the frozen scene
 
-After the claim ledger is frozen, classify every data scene:
+- `logo_flow`: verified nodes, directed relationships, branches, and process paths.
+- `custom_chart`: numerical trends, ranked comparisons, compositions, valuation,
+  drawdowns, and ownership figures requiring exact scales and definitions.
+- `non_chart`: actual product demonstrations, interfaces, photographs, maps,
+  transitions, and end cards.
 
-- `infographic`: editorial trend, ranked comparison, binary comparison,
-  composition, sequence, process, hierarchy, or compact 13F summary;
-- `custom_chart`: multi-series finance chart, candlestick, drawdown panel,
-  confidence band, dense axis work, or any plot whose meaning depends on exact
-  scale control not supported by the available AntV Infographic templates;
-- `non_chart`: brand architecture, product, store, map, physical metaphor,
-  transition, or end card.
+Use `logo-flow-infographics` for the first class. Real shopping, approval, and
+checkout footage takes priority when the viewer should see an observable action.
+Do not turn every scene into a logo diagram or replace financial scales with logos.
 
-Use `infographic-creator` by default for the first class. Do not force a dense
-financial plot into a decorative template merely to claim Skill usage.
+## Handoff and editable exports
 
-## Frozen-data handoff
+Give the companion only verified node identities, edges and their directions,
+branch meaning, supporting claim IDs, intended content bounds, and approved
+local assets. Logos are identities, not evidence of integration. A payment-choice
+branch must stay a choice, not become a Stripe-to-PayPal processing chain.
+Label proposed or synthetic relationships outside the graph.
 
-Give `infographic-creator` only the rows needed for one scene:
+Use the companion's graph JSON and asset manifest. Each asset records its source,
+name, local path, SHA-256, and license/trademark note. Preserve original colors
+and proportions. Do not invent, trace, or extract a restricted mark to bypass
+its use conditions. Record a concrete fallback if an authentic identity cannot
+be used. Asset acquisition and publishing follow the user's existing scope and
+authorization; the companion itself grants no additional permissions.
 
-- claim IDs and exact display labels;
-- values, units, period order, and comparison labels;
-- one Korean title and, only when necessary, one short description;
-- the scene's signal, comparison, neutral, and background colors;
-- the intended logical content box.
+Save `assets/logo-flows/<scene-id>.json`, its manifest, editable SVG, and a
+full-resolution PNG preview. Keep nodes/edges and asset hashes in the production
+source. The companion's local helper fits compact forward left-to-right graphs;
+use another already available renderer for portrait routing, loops, or mixed
+image assets while preserving style and semantics. Do not install an engine
+just to force the helper. Follow the export checks for embedded image dimensions,
+SVG safety, Korean glyphs, and proportional wide/tall marks.
 
-Do not ask it to research, round, reinterpret, or update values. Preserve the
-language of the finished Korean Short. Pure numeric series may omit icons;
-semantic comparisons and process items should use restrained, relevant icons.
+## Visual and motion contract
 
-Save the returned plain DSL as `assets/infographics/<scene-id>.infographic`.
-Wrap it in an HTML renderer pinned to `@antv/infographic@0.2.20`, export SVG,
-and save a full-resolution PNG preview for visual QA. Record the package
-version, DSL path, SVG path, source claim IDs, and file hashes in the asset
-manifest. The video renderer consumes the exported SVG or local raster, not a
-live CDN page.
+Use a restrained dark dotted canvas, white rounded logo cards, short accurate
+names beneath the marks, clear spacing, and thin gray curved directed connectors.
+Keep function paragraphs, feature lists, dashboards, and oversized headings out
+of the graph. Put one necessary explanation, condition, and source/date strip
+outside its bounds. Keep these readable at phone size.
 
-## Template mapping
+Fit the meaningful graph to the portrait content zone, separate from captions
+and the platform band. Shorten names or split a crowded graph into successive
+shots before shrinking it. Declare the parent box, logo/card boxes, labels, and
+connector lanes in `scene-manifest.json`. No edge may cross a card or its label;
+arrowheads must visibly connect the intended branches.
 
-- one ordered time series: `chart-line-plain-text`;
-- one ranked numeric comparison: `chart-bar-plain-text` or
-  `chart-column-simple`;
-- shareholder-return or revenue composition: `chart-pie-donut-plain-text` or
-  `chart-pie-donut-pill-badge`;
-- two-sided valuation or risk comparison:
-  `compare-binary-horizontal-simple-fold` or
-  `compare-binary-horizontal-badge-card-arrow`;
-- research or decision sequence: `sequence-*`;
-- company cash-flow or business-model relationship: `relation-*`;
-- compact manager/holding hierarchy: `hierarchy-*` only when the labels remain
-  readable in the vertical content zone.
+The SVG defines composition; the deterministic video renderer defines time.
+Reveal or activate nodes and curved paths in the narrated order, highlighting
+actual alternatives separately. Preserve topology, values, colors, mark geometry,
+and source association during motion. Let the completed branch remain readable.
+Do not use bouncing logos, arbitrary zooms, or drifting stills as a substitute
+for explanatory action. Quantitative scenes animate only their accurate chart
+geometry, without borrowing a decorative relationship layout.
 
-Do not use a pie chart when parts do not share one denominator. Do not use a
-line chart for unordered categories. Keep time-series labels in chronological
-order.
+## Review
 
-## Shorts layout rules
+Inspect the SVG, native PNG, and final video at phone size: authentic recognizable
+marks, accurate names, no broken images, clipped glyphs or collisions, visible
+arrowheads, connected branches, and exact agreement with the frozen evidence.
+Review entry, path activation, settled reading hold, and exit in motion. Keep a
+text description of relationships outside the minimal composition for accessibility.
+File existence and renderer success alone do not pass visual review.
 
-- Treat the infographic as one parent asset inside the scene content zone.
-- Keep the header, source strip, and platform-caption zone outside its box.
-- Target at most one headline, one chart, one direct takeaway, and one source
-  line per scene.
-- Before sizing the parent asset, crop the exported SVG or raster to its actual
-  content bounds. Remove uniform white or transparent export margins and record
-  the crop. Scale the meaningful infographic, not its empty export canvas.
-- When the infographic is the only main visual, let its meaningful bounds fill
-  about 75-90% of the usable panel width and 55-80% of its usable height. Do not
-  nest a small full-page infographic screenshot inside another oversized card.
-- Prefer 3-6 visible categories or 4-8 time points. If more are necessary,
-  reveal them across multiple scenes or use a custom chart.
-- Use Korean fonts with verified glyph coverage and tabular numerals.
-- Keep small labels at a size that remains readable after 1080x1920 export and
-  phone-scale playback; shorten copy before reducing font size.
-- Preserve quiet negative space. Remove template decorations, redundant
-  legends, duplicate titles, and unrelated icons.
-
-## Motion integration
-
-The static infographic defines composition; the deterministic renderer defines
-time. Use motion to explain the comparison:
-
-- line: clip-path draw followed by one endpoint callout;
-- bar or column: baseline-to-value growth in comparison order;
-- donut: restrained sweep followed by direct labels;
-- binary comparison: alternate-side reveal, then highlight the deciding metric;
-- sequence or relation: activate nodes and connectors in causal order;
-- 13F summary: reveal the disclosure date before manager names and holdings.
-
-Keep exact labels stationary during their reading hold. Add gentle parallax or
-camera drift only after the main chart settles. Avoid continuous bouncing,
-glows, confetti, generic coins, and decorative motion unrelated to the claim.
-
-## QA and fallback
-
-Before importing an infographic asset, inspect the SVG and the full-resolution
-preview for Korean glyphs, clipping, overlap, contrast, axis/order correctness,
-and exact agreement with the frozen ledger. Declare the infographic parent box
-and every externally animated label/callout in `scene-manifest.json`.
-
-If the chosen template cannot pass the content box or readability gate after
-one simplification and content-crop pass, switch that scene to `custom_chart`.
-Record the reason in `verification.md`; do not shrink text until it becomes
-technically present but visually useless.
+If a graph cannot fit after one simplification, split it or revise the layout
+without silently changing topology. Record unavailable assets or renderers and
+their reviewed fallback in `verification.md`; do not call an unresolved graph PASS.

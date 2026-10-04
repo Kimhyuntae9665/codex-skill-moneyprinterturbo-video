@@ -1,0 +1,30 @@
+{
+  "alpha": {
+    "name": "Alpha",
+    "path": "glyph-1.svg",
+    "sha256": "f21a6deb03c57f4ad23d7aba503cea1d3dc514d61bd1e272228ced60398d25e5",
+    "source": "Original synthetic glyph authored for this skill",
+    "license_note": "Original example asset; no third-party brand mark"
+  },
+  "beta": {
+    "name": "Beta",
+    "path": "glyph-2.svg",
+    "sha256": "9e4c54e991f3c69498b8eed61b720105fadaa4bc655be07873fe9918ba2ef083",
+    "source": "Original synthetic glyph authored for this skill",
+    "license_note": "Original example asset; no third-party brand mark"
+  },
+  "gamma": {
+    "name": "Gamma",
+    "path": "glyph-3.svg",
+    "sha256": "05ee7d5f4491a2b9d9b1b373c7a8ad1cfd315d15919026e557beb8d639e2620c",
+    "source": "Original synthetic glyph authored for this skill",
+    "license_note": "Original example asset; no third-party brand mark"
+  },
+  "delta": {
+    "name": "Delta",
+    "path": "glyph-4.svg",
+    "sha256": "b4fb4eafa4ec155b1a5b986cbb1ee84b99b9162f8cafdd11b3f36197bd6fd73c",
+    "source": "Original synthetic glyph authored for this skill",
+    "license_note": "Original example asset; no third-party brand mark"
+  }
+}

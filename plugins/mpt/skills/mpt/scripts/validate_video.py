@@ -23,6 +23,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--video", required=True, type=Path)
     parser.add_argument("--log-file", type=Path)
     parser.add_argument("--frames-dir", type=Path)
+    parser.add_argument("--report", type=Path, help="write the machine-readable JSON result")
     parser.add_argument("--width", type=int, default=1080)
     parser.add_argument("--height", type=int, default=1920)
     parser.add_argument("--min-duration", type=float, default=45.0)
@@ -262,6 +263,7 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     payload = {
+        "pass": True,
         "status": "valid",
         "video": str(video),
         **summary,
@@ -271,6 +273,10 @@ def main(argv: list[str] | None = None) -> int:
     }
     print("MPT_VIDEO_VALID")
     print(json.dumps(payload, ensure_ascii=False, indent=2))
+    if args.report:
+        report = args.report.expanduser().resolve()
+        report.parent.mkdir(parents=True, exist_ok=True)
+        report.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return 0
 
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Luna Team Build"
+  short_description: "Adaptive Sol-only, ready-wave, or rolling-DAG Luna build"
+  default_prompt: "Use $luna-team-build to apply five compact in-thread planning lenses, compare k=0..7, automatically choose a v1 ready wave or opt-in v2 rolling DAG, then integrate and verify. Run a full $council only when I explicitly invoke it."
+
+policy:
+  allow_implicit_invocation: false

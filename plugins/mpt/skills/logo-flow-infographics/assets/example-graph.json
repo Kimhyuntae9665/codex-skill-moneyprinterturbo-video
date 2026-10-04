@@ -1,0 +1,54 @@
+{
+  "title": "Synthetic logo-first style example",
+  "status": "synthetic",
+  "basis": "Original layout example only",
+  "description": "Fictional Alpha branches visually to Beta and Gamma; both merge into Delta. This is a layout example with no operational meaning.",
+  "asset_manifest": "example-assets.json",
+  "width": 800,
+  "height": 510,
+  "nodes": [
+    {
+      "id": "alpha",
+      "asset": "alpha",
+      "x": 90,
+      "y": 190
+    },
+    {
+      "id": "beta",
+      "asset": "beta",
+      "x": 340,
+      "y": 95
+    },
+    {
+      "id": "gamma",
+      "asset": "gamma",
+      "x": 340,
+      "y": 285
+    },
+    {
+      "id": "delta",
+      "asset": "delta",
+      "x": 590,
+      "y": 190
+    }
+  ],
+  "edges": [
+    {
+      "source": "alpha",
+      "target": "beta"
+    },
+    {
+      "source": "alpha",
+      "target": "gamma"
+    },
+    {
+      "source": "beta",
+      "target": "delta"
+    },
+    {
+      "source": "gamma",
+      "target": "delta"
+    }
+  ],
+  "disclaimer": "Synthetic layout example \u00b7 no deployed architecture"
+}

@@ -25,9 +25,12 @@ Invoke the installed `us-stock-research` Skill and define these items before dra
 - dividend-yield definition and payment/cut/suspension treatment;
 - benchmark, sampling interval, currency, and period for performance, beta, and correlation;
 - peer or historical comparison method;
+- why the chosen peer set is economically comparable; when revenue model, capital intensity, cyclicality, or accounting denominator differs materially, prefer a consistent self-history comparison or state that the peer comparison is contextual only;
 - thesis, counterpoint, invalidation rule, and unresolved questions.
 
 Save a short research note and a source inventory. Separate issuer-reported facts, calculations, secondary context, interpretation, and unresolved items.
+
+For every company Short, also run the targeted X discovery pass in `company-signature-thesis.md`. Store the reviewed post URLs, dates, authors, candidate causal ideas, and the primary evidence needed to verify them. X supplies thesis discovery and audience language only; it does not replace SEC, issuer IR, or official counterparty evidence. The final `SIGNATURE_THESIS` must map to primary claim IDs and be specific enough that swapping in another ticker would make it false.
 
 ## 2. Lock SEC and issuer-IR evidence
 
@@ -50,6 +53,8 @@ Apply these source rules:
 - Dividends: issuer declaration history and SEC filings. State whether yield is indicated, trailing, or forward and which price date is used.
 - Repurchases: SEC cash-flow/share-repurchase disclosures and share-count reconciliation. Distinguish authorization from actual purchases and gross repurchases from net share-count change.
 - Valuation: pair a dated price basis with the aligned SEC-derived denominator. Label trailing versus forward and reported versus adjusted.
+- Historical valuation: keep source, denominator, sampling frequency, timestamp convention, and treatment of negative or abnormal earnings consistent. Record all plotted values and calculate the mean, median, range, and current rank from the displayed series. Annual year-end observations are snapshots, not a claim about the full year's typical valuation.
+- User economics: preserve the issuer's exact active-user definition, deduplication method, frequency, geography, and product scope. Never sum app-level MAUs when users can overlap. Mark stale app-specific counts with their original date and prefer issuer-reported unique family metrics for the current total.
 - Historical price, drawdown, beta, correlation, and benchmark returns: use a named price source, adjusted-price basis where distributions/splits matter, explicit dates, and a reproducible calculation path.
 - 13F: use SEC Form 13F filings or SEC-derived filing data. Show manager, issuer/security, quarter end, filing date, reported value or shares, and the delayed long-only disclosure limitation. Never call a 13F row a current trade or current position.
 

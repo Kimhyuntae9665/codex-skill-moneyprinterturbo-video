@@ -1,0 +1,126 @@
+{
+  "schema_version": "wallstreet-edge-story-packet-v2",
+  "story_id": "issuer-topic-date",
+  "as_of": "YYYY-MM-DD",
+  "issuer": "Company Name",
+  "ticker": "TICKER",
+  "viewer_question": "What surprising mechanism will this Short answer?",
+  "editorial_mode": "company_story",
+  "story_mode": "focused_reveal",
+  "duration_plan": {
+    "target_seconds": 60,
+    "shared_hook_and_payoff_seconds": 12,
+    "minimum_seconds_per_dossier_item": 20,
+    "item_count_rule": "focused 45-70; dossier 2=75-100, 3=100-140, 4=130-180 or split"
+  },
+  "discovery_execution": {
+    "model_tier": "economy",
+    "reasoning_effort": "low",
+    "x_items_examined": 0,
+    "x_unique_authors": 0,
+    "reddit_items_examined": 0,
+    "reddit_communities": 0,
+    "unique_story_clusters": 0
+  },
+  "x_scan": {
+    "status": "used",
+    "authorized_personal_surface": false,
+    "posts": [
+      {
+        "url": "https://x.com/example/status/1",
+        "author": "example",
+        "published_at": "YYYY-MM-DD",
+        "claim_summary": "Discovery lead only",
+        "status": "lead"
+      }
+    ]
+  },
+  "reddit_scan": {
+    "status": "used",
+    "communities": ["r/stocks"],
+    "items": [
+      {
+        "url": "https://www.reddit.com/r/stocks/comments/example/",
+        "author": "example",
+        "published_at": "YYYY-MM-DD",
+        "claim_summary": "Discovery lead only",
+        "status": "lead"
+      }
+    ]
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "text": "Atomic factual claim",
+      "grade": "A",
+      "claim_type": "disclosed",
+      "period": "exact period",
+      "unit": "unit or NA",
+      "primary_urls": ["https://www.sec.gov/example"],
+      "secondary_urls": [],
+      "calculation": null,
+      "status": "approved"
+    },
+    {
+      "id": "C02",
+      "text": "Economic interpretation",
+      "grade": "B",
+      "claim_type": "inference",
+      "period": "as of date",
+      "unit": "NA",
+      "primary_urls": ["https://www.sec.gov/example"],
+      "secondary_urls": ["https://example.com/context"],
+      "calculation": null,
+      "status": "approved"
+    }
+  ],
+  "rejected_claims": [
+    {
+      "text": "Popular extension not supported by the source",
+      "reason": "Undisclosed precise percentage"
+    }
+  ],
+  "selected_story": {
+    "hook": "Conversational three-second mystery",
+    "signature_thesis": "Company-specific causal sentence",
+    "mechanism_steps": ["C01 premise", "C02 consequence", "measurable KPI"],
+    "economic_consequence": "Revenue, margin, cash flow, moat, or risk",
+    "counterpoint": "Strongest evidence-backed bear case",
+    "closing_payoff": "Answer the opening question and redefine the company or mechanism",
+    "valuation_bridge": null,
+    "verdict_requirement": "not_required",
+    "invalidation_condition": null
+  },
+  "dossier_items": [],
+  "visuals": [
+    {
+      "scene_id": "S03",
+      "type": "mechanism",
+      "claim_ids": ["C01", "C02"],
+      "persistent_subject": "company-specific physical or visual subject",
+      "states": [
+        "surprising visible state",
+        "hidden layer revealed",
+        "economic flow and consequence"
+      ],
+      "camera_path": [
+        "wide establish",
+        "matched cutaway",
+        "tracked consequence"
+      ],
+      "transition_purpose": "Preserve the subject while revealing the causal mechanism",
+      "objects": ["company", "partner", "capacity"],
+      "arrows": ["capacity: company -> partner", "cash: partner -> company"]
+    }
+  ],
+  "production_handoff": {
+    "story_motion_master_required": true,
+    "motion_renderer": "2d_2.5d_default",
+    "new_3d_requires_blockout_gate": true,
+    "three_d_fallback": "deterministic_2d_2.5d",
+    "moneyprinterturbo_role": "audio_caption_assembly_optional",
+    "ten_year_pe_required": false,
+    "standalone_thumbnail_required": true
+  }
+}
+

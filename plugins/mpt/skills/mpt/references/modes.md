@@ -44,7 +44,7 @@ Ask only for fields named by `MPT_NEEDS_INPUT`. Never echo values or put them in
 
 The helper treats `volcengine_seedance`, `wavespeed`, and `loomloom` as paid video sources. A paid source requires the top-level `--confirm-paid-provider` flag after the user explicitly confirms the charge. Volcengine Seedance additionally requires the upstream `--confirm-seedance-charge` flag. Do not infer consent from a topic, an existing key, or a prior unrelated task.
 
-Sonilo and other paid music providers are not selected by this Skill. Use `--bgm-type none` unless the user supplies a rights-cleared local track or explicitly authorizes a supported paid music provider.
+Do not select Sonilo or another paid music provider without explicit charge authorization. Follow the sound plan in `../SKILL.md`: a user-provided, owned, or verified license-compatible no-cost local track may supply the bed. `--bgm-type none` produces a narration-only assembly; if BGM is planned, configure a verified local-track option or mix it afterward and verify the actual final file. Do not infer music rights from an upstream bundle or a random track selector.
 
 ## Isolated runtime and upstream pin
 

@@ -38,8 +38,10 @@ direction; those files govern facts, geometry, and executable QA.
   architectural diagram over generic stock footage.
 - Use generated footage only as a plate. Render exact text, Korean captions,
   numbers, charts, maps, and brand marks in deterministic layers.
-- Give each scene purposeful continuous motion tied to the argument. Do not add
-  glowing objects or unrelated machinery merely to keep pixels moving.
+- Give the sequence explanatory changes as defined in `../SKILL.md`. Plan
+  different views or progressively reveal relationships; one photo under
+  changing labels is insufficient. Do not add arbitrary drift, glowing objects,
+  or unrelated machinery merely to keep pixels moving.
 - Render a single master MP4 long enough for the locked narration and hold the
   last frame briefly. Leave the caption band visually quiet.
 
@@ -50,8 +52,9 @@ concatenation, a clip duration at least as long as the Short, and transitions
 disabled. This prevents the upstream local-material splitter from truncating,
 reordering, or repeating a directed timeline.
 
-Use the bundled Korean font and no background music unless the user supplies a
-rights-cleared track. Keep social upload disabled.
+Use the bundled Korean font and follow the sound plan in `../SKILL.md` for a
+quiet rights-cleared bed, narration ducking, or deliberate silence. Review the
+final mix by listening. Keep social upload disabled.
 
 ## 5. Verify the finished artifact
 

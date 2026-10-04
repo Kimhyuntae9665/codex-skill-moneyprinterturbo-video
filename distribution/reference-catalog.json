@@ -1,0 +1,2972 @@
+{
+  "note": "Exact links extracted from bundled documentation/code, with referring files. Links are references; linked content is not redistributed or automatically licensed. This catalog is not a live availability or factual-truth assertion.",
+  "references": [
+    {
+      "url": "http://localhost",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-cli/references/preview-render.md",
+        "plugins/mpt/skills/hyperframes-core/references/review-loop.md"
+      ]
+    },
+    {
+      "url": "http://localhost:3017/#project/codex-openai-video",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-cli/references/preview-render.md"
+      ]
+    },
+    {
+      "url": "http://localhost:8723/.hyperframes/pick-design.html",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-creative/references/design-picker.md"
+      ]
+    },
+    {
+      "url": "http://scripts.sil.org/OFL",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-creative/frame-presets/code-editorial/fonts/OFL-eb-garamond.txt",
+        "plugins/mpt/skills/hyperframes-creative/frame-presets/code-editorial/fonts/OFL-inter.txt",
+        "plugins/mpt/skills/hyperframes-creative/frame-presets/code-editorial/fonts/OFL-jetbrains-mono.txt"
+      ]
+    },
+    {
+      "url": "http://www.adobe.com/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/assets/fonts/OFL.txt"
+      ]
+    },
+    {
+      "url": "http://www.w3.org/1999/xlink",
+      "referenced_by": [
+        "plugins/mpt/skills/logo-flow-infographics/scripts/render_logo_flow.py"
+      ]
+    },
+    {
+      "url": "http://www.w3.org/2000/svg",
+      "referenced_by": [
+        "plugins/mpt/skills/glassmorphism/references/glass-recipes.md",
+        "plugins/mpt/skills/hyperframes-animation/rules/avatar-cloud-network.md",
+        "plugins/mpt/skills/hyperframes-animation/rules/svg-icon-enrichment.md",
+        "plugins/mpt/skills/hyperframes-animation/rules/svg-path-draw.md",
+        "plugins/mpt/skills/logo-flow-infographics/scripts/render_logo_flow.py"
+      ]
+    },
+    {
+      "url": "https://aistudio.google.com/app/apikey",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://animejs.com/documentation/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/animejs.md",
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://animejs.com/documentation/svg/createmotionpath/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://animejs.com/documentation/timeline/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://animejs.com/documentation/utilities/stagger/stagger-parameters/stagger-grid/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://api.elevenlabs.io/v1/text-to-speech/SAz9YHcvj6GT2YYXdXww",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/audio/references/tts.md"
+      ]
+    },
+    {
+      "url": "https://api.groq.com/openai/v1/audio/transcriptions",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/audio/references/captions/transcript-handling.md"
+      ]
+    },
+    {
+      "url": "https://api.heygen.com",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-cli/references/cloud.md"
+      ]
+    },
+    {
+      "url": "https://api.openai.com/v1/audio/transcriptions",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/audio/references/captions/transcript-handling.md"
+      ]
+    },
+    {
+      "url": "https://api.pexels.com/v1/collections?per_page=1",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://app.runwayml.com/watch",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/reference-to-production.md"
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/global-infrastructure/innovation/",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/example-angles.md"
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/ai/machine-learning/trainium/customers/",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/example-angles.md"
+      ]
+    },
+    {
+      "url": "https://blenderartists.org/t/create-cinematic-shots-in-minutes-with-blender-octane-and-a-bit-of-ai/1611033",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/photoreal-production.md"
+      ]
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md",
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/director-example.md"
+      ]
+    },
+    {
+      "url": "https://ca.investing.com/equities/mcdonalds-historical-data",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v8.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/animejs@4.5.0/+esm",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/animejs.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/animejs@4.5.0/dist/bundles/anime.umd.min.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/animejs.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/MotionPathPlugin.min.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/techniques.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/TextPlugin.min.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/rules/gsap-effects.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js",
+      "referenced_by": [
+        "plugins/mpt/skills/embedded-captions/modes/standard/_anatomy.md",
+        "plugins/mpt/skills/hyperframes-animation/adapters/gsap.md",
+        "plugins/mpt/skills/hyperframes-animation/transitions/catalog.md",
+        "plugins/mpt/skills/hyperframes-core/references/composition-patterns.md",
+        "plugins/mpt/skills/hyperframes-core/references/minimal-composition.md",
+        "plugins/mpt/skills/hyperframes-registry/references/demo-html-pattern.md",
+        "plugins/mpt/skills/hyperframes-registry/references/templates.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-registry/references/templates.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "referenced_by": [
+        "plugins/mpt/skills/slideshow/references/standalone-harness.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.181.2/+esm",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/html-in-canvas-patterns.md",
+        "plugins/mpt/skills/hyperframes-animation/adapters/three.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.181.2/build/three.module.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/three.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.181.2/examples/jsm/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/three.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.181.2/examples/jsm/postprocessing/EffectComposer.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/html-in-canvas-patterns.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.181.2/examples/jsm/postprocessing/RenderPass.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/html-in-canvas-patterns.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.181.2/examples/jsm/postprocessing/ShaderPass.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/html-in-canvas-patterns.md"
+      ]
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.181.2/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/html-in-canvas-patterns.md"
+      ]
+    },
+    {
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/lottie.md",
+        "plugins/mpt/skills/hyperframes-animation/techniques.md",
+        "plugins/mpt/skills/remotion-to-hyperframes/references/lottie.md"
+      ]
+    },
+    {
+      "url": "https://chartexchange.com/symbol/nyse-mcd/historical/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v3.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v8.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources.md"
+      ]
+    },
+    {
+      "url": "https://civitai.com/videos",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/reference-to-production.md"
+      ]
+    },
+    {
+      "url": "https://commons.wikimedia.org/",
+      "referenced_by": [
+        "tests/test_skill.py"
+      ]
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Historic_Downey_McDonalds_and_Museum.jpg",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/assets/ATTRIBUTION.md",
+        "plugins/mpt/skills/mpt/ex/mcd/assets/asset-manifest.json"
+      ]
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:McDonalds_River_Rd_Bethesda_MD_2021-11-28_10-28-06_1.jpg",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/assets/ATTRIBUTION.md",
+        "plugins/mpt/skills/mpt/ex/mcd/assets/asset-manifest.json"
+      ]
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/User:Lorax",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/assets/asset-manifest.json"
+      ]
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/User:Northwalker",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/assets/asset-manifest.json"
+      ]
+    },
+    {
+      "url": "https://console.volcengine.com/ark/region:ark+cn-beijing/apikey",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/2026%20Q1%20Dividend%20Release%20.pdf",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v4.md"
+      ]
+    },
+    {
+      "url": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/Q326%20Dividend%20Release.pdf",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v8.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources.md"
+      ]
+    },
+    {
+      "url": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/Q4_25_Dividend_Release.pdf",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v8.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources.md"
+      ]
+    },
+    {
+      "url": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/Q2-2026-results.html",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v8.md"
+      ]
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/assets/ATTRIBUTION.md",
+        "plugins/mpt/skills/mpt/ex/mcd/assets/asset-manifest.json"
+      ]
+    },
+    {
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/assets/ATTRIBUTION.md",
+        "plugins/mpt/skills/mpt/ex/mcd/assets/asset-manifest.json"
+      ]
+    },
+    {
+      "url": "https://curiousrefuge.com/ai-film-gallery",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/reference-to-production.md"
+      ]
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK##########/us-gaap/",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK##########.json",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/scripts/us_stock_research.py"
+      ]
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK##########.json",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/waapi.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/currentTime",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/waapi.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/css-animations.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/css-animations.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/mask",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/perspective",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://developers.heygen.com/cli",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/references/setup-providers.md"
+      ]
+    },
+    {
+      "url": "https://developers.heygen.com/image-to-video",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/references/operations.md"
+      ]
+    },
+    {
+      "url": "https://developers.lottiefiles.com/docs/dotlottie-player/dotlottie-web/methods",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/lottie.md"
+      ]
+    },
+    {
+      "url": "https://docs.astral.sh/uv/getting-started/installation/",
+      "referenced_by": [
+        "docs/INSTALL.md"
+      ]
+    },
+    {
+      "url": "https://docs.manim.community/en/stable/guides/configuration.html",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://docs.manim.community/en/stable/installation.html",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://docs.manim.community/en/stable/installation/linux.html",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://docs.manim.community/en/stable/reference/manim.cli.render.html",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://docs.nvidia.com/dsx/facilities-infra/reference-design-overview)는",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://docs.openbb.co/platform/",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://download.blender.org/pypi/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md",
+        "plugins/mpt/skills/huggingface-spaces/references/3d-outputs.md"
+      ]
+    },
+    {
+      "url": "https://download.pytorch.org/whl/cu130",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/scripts/us_stock_research.py"
+      ]
+    },
+    {
+      "url": "https://example.com",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-cli/references/init-and-scaffold.md",
+        "plugins/mpt/skills/remotion-to-hyperframes/references/media.md"
+      ]
+    },
+    {
+      "url": "https://example.com/context",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/assets/templates/story-packet-v2.json"
+      ]
+    },
+    {
+      "url": "https://example.com/hf-hook",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-cli/references/cloud.md"
+      ]
+    },
+    {
+      "url": "https://example.com/person.jpg",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/references/operations.md"
+      ]
+    },
+    {
+      "url": "https://ffmpeg.org/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://ffmpeg.org/download.html",
+      "referenced_by": [
+        "docs/EXTERNAL_DEPENDENCIES.md",
+        "docs/INSTALL.md"
+      ]
+    },
+    {
+      "url": "https://filmvibes.io/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://finance.yahoo.com/quote/MCD/history/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/scene-manifest-v8.json"
+      ]
+    },
+    {
+      "url": "https://finance.yahoo.com/quote/QQQ/history/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/scene-manifest-v8.json"
+      ]
+    },
+    {
+      "url": "https://fonts.google.com/metadata/fonts",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-creative/references/typography.md"
+      ]
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/references/fonts.md"
+      ]
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/references/fonts.md"
+      ]
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-registry/references/templates.md"
+      ]
+    },
+    {
+      "url": "https://fonts.gstatic.com",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/references/fonts.md"
+      ]
+    },
+    {
+      "url": "https://fred.stlouisfed.org/docs/api/fred/",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://fullratio.com/stocks/nyse-mcd/pe-ratio",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources.md"
+      ]
+    },
+    {
+      "url": "https://git-scm.com/downloads",
+      "referenced_by": [
+        "docs/INSTALL.md"
+      ]
+    },
+    {
+      "url": "https://github.com/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-cuda-extensions.md"
+      ]
+    },
+    {
+      "url": "https://github.com/7ohnson/VLM-Generation-Harness",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/7ohnson/VLM-Generation-Harness.git",
+      "referenced_by": [
+        "plugins/mpt/skills/greybox-harness/README.en.md",
+        "plugins/mpt/skills/greybox-harness/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Aaryan-Kapoor/video-production-skill",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Anil-matcha/zack-d-films-ai-video-generator",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Breakthrough/PySceneDetect",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Dao-AILab/flash-attention/releases",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/requirements.md",
+        "plugins/mpt/skills/huggingface-zerogpu/references/cuda-and-deps.md"
+      ]
+    },
+    {
+      "url": "https://github.com/EasternJournalist/utils3d.git@9a4eb15e4021b67b12c460c7057d642626897ec8",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://github.com/JetBrains/JetBrainsMono",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-creative/frame-presets/code-editorial/fonts/OFL-jetbrains-mono.txt"
+      ]
+    },
+    {
+      "url": "https://github.com/Kimhyuntae9665",
+      "referenced_by": [
+        "plugins/mpt/.codex-plugin/plugin.json"
+      ]
+    },
+    {
+      "url": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video",
+      "referenced_by": [
+        "plugins/mpt/.codex-plugin/plugin.json"
+      ]
+    },
+    {
+      "url": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video.git",
+      "referenced_by": [
+        "README.md",
+        "docs/INSTALL.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.2.0/plugins/mpt/skills/mpt",
+      "referenced_by": [
+        "docs/INSTALL.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.2.0/plugins/mpt/skills/mpt)입니다",
+      "referenced_by": [
+        "README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/LDYang694/Storages/releases/download/rtxpro6000/cumesh-0.0.1%2Btorch2.11.0.cu130-cp312-cp312-linux_x86_64.whl",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://github.com/LDYang694/Storages/releases/download/rtxpro6000/flex_gemm-1.0.0%2Btorch2.11.0.cu130-cp312-cp312-linux_x86_64.whl",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://github.com/LDYang694/Storages/releases/download/rtxpro6000/nvdiffrast-0.4.0%2Btorch2.11.0.cu130-cp312-cp312-linux_x86_64.whl",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://github.com/LDYang694/Storages/releases/download/rtxpro6000/nvdiffrec_render-0.0.0%2Btorch2.11.0.cu130-cp312-cp312-linux_x86_64.whl",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://github.com/LDYang694/Storages/releases/download/rtxpro6000/o_voxel-0.0.1%2Btorch2.11.0.cu130-cp312-cp312-linux_x86_64.whl",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Lightricks/LTX-2",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Lightricks/LTX-Video",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/MCKRUZ/ComfyUI-Expert",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ManimCommunity/manim",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ManimCommunity/manim/blob/v0.21.0/LICENSE",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ManimCommunity/manim/blob/v0.21.0/LICENSE.community",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ManimCommunity/manim/releases/tag/v0.21.0",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ManimCommunity/manim/tree/v0.21.0",
+      "referenced_by": [
+        "THIRD_PARTY_NOTICES.md",
+        "plugins/mpt/THIRD_PARTY_NOTICES.md",
+        "plugins/mpt/skills/mpt/THIRD_PARTY_NOTICES.md"
+      ]
+    },
+    {
+      "url": "https://github.com/MartinDelophy/ai-video-editor/blob/main/skills/edit-timeline-studio/SKILL.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/3d-animation-short-generator/SKILL.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/OpenClip-App/agent-skills",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Pluviobyte/video-production-skills",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Pluviobyte/video-production-skills/blob/main/ai-motion-director/SKILL.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Pluviobyte/video-production-skills/blob/main/reference-video-replica-qc/SKILL.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/SamurAIGPT/open-ai-video-agent",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/WICG/html-in-canvas",
+      "referenced_by": [
+        "plugins/mpt/skills/webmotion/docs/ARCHITECTURE.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Z-Anatomy/Models-of-human-anatomy",
+      "referenced_by": [
+        "plugins/mpt/skills/make-blender-education-video/SKILL.md",
+        "plugins/mpt/skills/make-blender-education-video/references/github-workflow-discovery.md"
+      ]
+    },
+    {
+      "url": "https://github.com/adithyaxx/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu13torch2.11cxx11abiTRUE-cp312-cp312-linux_x86_64.whl",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://github.com/airbnb/lottie-web",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/lottie.md"
+      ]
+    },
+    {
+      "url": "https://github.com/airbnb/lottie-web/wiki/loadAnimation-options",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/lottie.md"
+      ]
+    },
+    {
+      "url": "https://github.com/airbnb/lottie/blob/master/after-effects.md",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/references/lottie.md"
+      ]
+    },
+    {
+      "url": "https://github.com/apple/ml-sharp.git@",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-gsplat.md"
+      ]
+    },
+    {
+      "url": "https://github.com/dgrauet/ltx-2-mlx",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/references/setup-providers.md"
+      ]
+    },
+    {
+      "url": "https://github.com/dylantarre/animation-principles",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/facebookresearch/demucs",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/known-errors.md",
+        "plugins/mpt/skills/huggingface-spaces/references/requirements.md"
+      ]
+    },
+    {
+      "url": "https://github.com/google-labs-code/design.md",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-creative/references/design-picker.md"
+      ]
+    },
+    {
+      "url": "https://github.com/google/fonts/blob/ade3d1533e06b2b1462ffcde8e08b129627ca360/ofl/notosanskr/OFL.txt",
+      "referenced_by": [
+        "THIRD_PARTY_NOTICES.md",
+        "plugins/mpt/THIRD_PARTY_NOTICES.md",
+        "plugins/mpt/skills/mpt/THIRD_PARTY_NOTICES.md"
+      ]
+    },
+    {
+      "url": "https://github.com/gpac/mp4box.js",
+      "referenced_by": [
+        "plugins/mpt/skills/webmotion/docs/VIDEO.md"
+      ]
+    },
+    {
+      "url": "https://github.com/graphdeco-inria/diff-gaussian-rasterization.git",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-gsplat.md"
+      ]
+    },
+    {
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo.git",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo/tree/eb8c23757e098a07bbcd93b3b50e252fc8d1869a",
+      "referenced_by": [
+        "THIRD_PARTY_NOTICES.md",
+        "docs/EXTERNAL_DEPENDENCIES.md",
+        "plugins/mpt/THIRD_PARTY_NOTICES.md",
+        "plugins/mpt/skills/mpt/THIRD_PARTY_NOTICES.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v8.md"
+      ]
+    },
+    {
+      "url": "https://github.com/heygen-com/heygen-cli",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-cli/references/cloud.md"
+      ]
+    },
+    {
+      "url": "https://github.com/heygen-com/hyperframes",
+      "referenced_by": [
+        "docs/EXTERNAL_DEPENDENCIES.md",
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/heygen-com/hyperframes/blob/main/docs/guides/hyperframes-vs-remotion.mdx",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/references/media.md"
+      ]
+    },
+    {
+      "url": "https://github.com/heygen-com/hyperframes/blob/main/packages/core/src/runtime/adapters/lottie.ts",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/references/lottie.md"
+      ]
+    },
+    {
+      "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/motion-graphics/SKILL.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/heygen-com/hyperframes/pull/214",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/SKILL.md",
+        "plugins/mpt/skills/remotion-to-hyperframes/references/api-map.md",
+        "plugins/mpt/skills/remotion-to-hyperframes/references/escape-hatch.md"
+      ]
+    },
+    {
+      "url": "https://github.com/huggingface/hf-mount",
+      "referenced_by": [
+        "plugins/mpt/skills/hf-cli/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://github.com/huggingface/hf-mount/releases",
+      "referenced_by": [
+        "plugins/mpt/skills/hf-cli/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://github.com/huggingface/skills",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/huggingface/skills/tree/main/skills/huggingface-spaces",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/iart-ai/data-animation-skills/blob/main/skills/chart-animation/SKILL.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/iart-ai/map-animation-skills/blob/main/skills/map-animation/SKILL.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/iart-ai/motion-skills",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/iart-ai/tiktok-video-skills/blob/main/skills/short-form-video/SKILL.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/juliangarnier/anime/wiki/Migrating-from-v3-to-v4",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/animejs.md"
+      ]
+    },
+    {
+      "url": "https://github.com/lllyasviel/FramePack",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/framepack-probe.md"
+      ]
+    },
+    {
+      "url": "https://github.com/m-bain/whisperX",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://github.com/motion-canvas/motion-canvas",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md",
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://github.com/motion-canvas/motion-canvas/blob/v3.17.2/LICENSE",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://github.com/motion-canvas/motion-canvas/releases/tag/v3.17.2",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://github.com/nopefallacy/vertical-video-editing-skills",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/notedit/vtake-skills",
+      "referenced_by": [
+        "plugins/mpt/skills/talking-head-recut/NOTICE.md"
+      ]
+    },
+    {
+      "url": "https://github.com/notofonts/noto-cjk",
+      "referenced_by": [
+        "THIRD_PARTY_NOTICES.md",
+        "plugins/mpt/THIRD_PARTY_NOTICES.md",
+        "plugins/mpt/skills/mpt/THIRD_PARTY_NOTICES.md"
+      ]
+    },
+    {
+      "url": "https://github.com/octaviopardo/EBGaramond12",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-creative/frame-presets/code-editorial/fonts/OFL-eb-garamond.txt"
+      ]
+    },
+    {
+      "url": "https://github.com/owner/repository",
+      "referenced_by": [
+        "plugins/mpt/skills/make-blender-education-video/assets/github_resource_review.template.json"
+      ]
+    },
+    {
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://github.com/pixel-point/animate-text",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/animate-text.md"
+      ]
+    },
+    {
+      "url": "https://github.com/prime-skills/runcomfy-agent-skills",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/promptwhat/promptwhat-soul2-skill)에서",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://github.com/pytorch/torchcodec",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/requirements.md",
+        "plugins/mpt/skills/huggingface-zerogpu/references/cuda-and-deps.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md)는",
+      "referenced_by": [
+        "docs/EXTERNAL_DEPENDENCIES.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/remotion/blob/main/packages/skills/README.md",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills",
+      "referenced_by": [
+        "distribution/source-inventory.json",
+        "docs/EXTERNAL_DEPENDENCIES.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/blob/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/README.md",
+      "referenced_by": [
+        "docs/EXTERNAL_DEPENDENCIES.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-best-practices",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-captions",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-create",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-docs",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-interactivity",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-maps",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-markup",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-multimedia",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-render",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-saas",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-studio",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/remotion-dev/skills/tree/0b5db9daae40f42c73544d1cc0a8c733bd530eaa/skills/remotion-upgrade",
+      "referenced_by": [
+        "docs/SKILLS.md"
+      ]
+    },
+    {
+      "url": "https://github.com/rsms/inter",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-creative/frame-presets/code-editorial/fonts/OFL-inter.txt"
+      ]
+    },
+    {
+      "url": "https://github.com/signup",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-registry/references/contributing.md"
+      ]
+    },
+    {
+      "url": "https://github.com/sunxiayi/make-blender-education-video-skill",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/superhq-ai/webmotion",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/tatsy/torchmcubes.git",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://github.com/tsensei/OpenReels",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/docs/v3/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/gsap.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/docs/v3/GSAP/CorePlugins/CSS/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/docs/v3/GSAP/Timeline/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/docs/v3/GSAP/Timeline/pause%28%29/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/gsap.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/docs/v3/Plugins/DrawSVGPlugin/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/docs/v3/Plugins/Flip/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/docs/v3/Plugins/MorphSVGPlugin/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/docs/v3/Plugins/MotionPathPlugin/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/docs/v3/Plugins/SplitText/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://gsap.com/resources/keyframes/",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://help.elevenlabs.io/hc/en-us/articles/13313564601361-Can-I-publish-the-content-I-generate-on-the-platform)는",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/generative-component-selection.md"
+      ]
+    },
+    {
+      "url": "https://help.pexels.com/hc/en-us/articles/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://help.runwayml.com/hc/en-us/articles/50404627334547-Free-plan-details)는",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/generative-component-selection.md"
+      ]
+    },
+    {
+      "url": "https://help.yahoo.com/kb/SLN28256.html",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/recompute_v3.py",
+        "plugins/mpt/skills/mpt/ex/mcd/research/v3_metrics.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v3.md"
+      ]
+    },
+    {
+      "url": "https://hf.co/cli/install.sh",
+      "referenced_by": [
+        "plugins/mpt/skills/hf-cli/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/debugging.md",
+        "plugins/mpt/skills/huggingface-tool-builder/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-best/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/.well-known/openapi.json",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-tool-builder/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/Lightricks/LTX-Video",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/TencentARC/SCoPE",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/api/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-tool-builder/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-best/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/api/datasets?filter=benchmark:official&limit=500",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-best/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/api/models/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/inference-providers.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/api/models/org/model1",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-best/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/api/models?limit={limit}",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-tool-builder/references/baseline_hf_api.py"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/api/spaces/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/debugging.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/blog/zerogpu-aoti",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/zerogpu.md",
+        "plugins/mpt/skills/huggingface-zerogpu/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/buckets/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/buckets.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/buckets/{BUCKET_ID}/resolve",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/buckets.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-cuda-extensions.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/multimodalart/zerogpu-blackwell-wheels",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/requirements.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/multimodalart/zerogpu-blackwell-wheels/resolve/main/wheels/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/requirements.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/multimodalart/zerogpu-blackwell-wheels/resolve/main/wheels/pt212-cu130-cp310/flash_attn-2.8.3-cp310-cp310-linux_x86_64.whl",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/requirements.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/multimodalart/zerogpu-blackwell-wheels/resolve/main/wheels/pt212-cu130-cp310/xformers-0.0.34+3da0fc92.d20260528-cp39-abi3-linux_x86_64.whl",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/requirements.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/multimodalart/zerogpu-blackwell-wheels/tree/main/wheels",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/diffusers/controlnet-canny-sdxl-1.0",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/gpu-quality.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs",
+      "referenced_by": [
+        "docs/EXTERNAL_DEPENDENCIES.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/diffusers/en/optimization/memory)에",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/remote-gpu.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/diffusers/en/using-diffusers/controlnet",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/scene-integrity-and-next-steps.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/diffusers/en/using-diffusers/img2img",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/gpu-quality.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/diffusers/main/en/using-diffusers/svd",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/photoreal-production.md",
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/scene-integrity-and-next-steps.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/en/spaces-agents",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/en/spaces-mcp-servers",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/spaces-config-reference",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/spaces-gpus",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/spaces-overview",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/spaces-sdks-docker",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/spaces-sdks-static",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/spaces-zerogpu",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/known-errors.md",
+        "plugins/mpt/skills/huggingface-spaces/references/zerogpu.md",
+        "plugins/mpt/skills/huggingface-zerogpu/SKILL.md",
+        "plugins/mpt/skills/huggingface-zerogpu/references/how-quota-works.md",
+        "plugins/mpt/skills/huggingface-zerogpu/references/how-zerogpu-works.md",
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/storage-buckets",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/buckets.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/huggingface_hub/en/guides/jobs",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-best/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/huggingface_hub/guides/cli#getting-started",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/README.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/kernels-community",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/requirements.md",
+        "plugins/mpt/skills/huggingface-zerogpu/references/cuda-and-deps.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/org/name",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-best/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/settings/keys",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/debugging.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/settings/tokens",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/spaces/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/SKILL.md",
+        "plugins/mpt/skills/huggingface-spaces/references/3d-models.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/spaces/Lightricks/ltx-video-distilled)에서",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/generative-tests.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/spaces/Lightricks/ltx-video-distilled)의",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/spaces/diffusers/unofficial-SDXL-Turbo-i2i-t2i",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/zerogpu.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/spaces/huggingface-projects/rf-detr-realtime-webcam",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/gradio.md",
+        "plugins/mpt/skills/huggingface-spaces/references/zerogpu.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/spaces/multimodalart/qwen-image-multiple-angles-3d-camera",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/gradio.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/spaces/victor/ace-step-jam",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/buckets.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/spaces/{id}/raw/main/{path}",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/3d-generation.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0)의",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/remote-gpu.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/gpu-quality.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/storage",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/buckets.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/tencent/HunyuanVideo-1.5/blob/main/LICENSE",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://hyperframes.heygen.com/catalog",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/audio/references/captions/authoring.md"
+      ]
+    },
+    {
+      "url": "https://hyperframes.heygen.com/catalog/blocks",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/references/api-map.md",
+        "plugins/mpt/skills/remotion-to-hyperframes/references/transitions.md"
+      ]
+    },
+    {
+      "url": "https://hyperframes.heygen.com/concepts/frame-adapters",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/references/media.md"
+      ]
+    },
+    {
+      "url": "https://hyperframes.heygen.com/schema/hyperframes.json",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-registry/references/install-locations.md"
+      ]
+    },
+    {
+      "url": "https://hyperframes.heygen.com/schema/registry-item.json",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-registry/references/templates.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=ad-video-skills&utm_content=skill_footer&utm_term=launch-video)**",
+      "referenced_by": [
+        "plugins/mpt/skills/launch-video/references/launch-structure.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=kinetic-typography-skills&utm_content=skill_footer&utm_term=kinetic-typography)**",
+      "referenced_by": [
+        "plugins/mpt/skills/kinetic-typography/references/reveal-recipes.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=manim-skills&utm_content=skill_footer&utm_term=manim)**",
+      "referenced_by": [
+        "plugins/mpt/skills/manim/references/3d-and-camera.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=map-animation-skills&utm_content=skill_footer&utm_term=map-animation)**",
+      "referenced_by": [
+        "plugins/mpt/skills/map-animation/references/vector-maps.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=motion-design-skills&utm_content=skill_footer&utm_term=after-effects)**",
+      "referenced_by": [
+        "plugins/mpt/skills/after-effects/references/project-hygiene.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=motion-design-skills&utm_content=skill_footer&utm_term=animation-principles)**",
+      "referenced_by": [
+        "plugins/mpt/skills/animation-principles/references/twelve-principles.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=tiktok-video-skills&utm_content=skill_footer&utm_term=caption-animation)**",
+      "referenced_by": [
+        "plugins/mpt/skills/caption-animation/README.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=tiktok-video-skills&utm_content=skill_footer&utm_term=lower-thirds)**",
+      "referenced_by": [
+        "plugins/mpt/skills/lower-thirds/README.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=tiktok-video-skills&utm_content=skill_footer&utm_term=short-form-video)**",
+      "referenced_by": [
+        "plugins/mpt/skills/short-form-video/README.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=web-animation-skills&utm_content=skill_footer&utm_term=glassmorphism)**",
+      "referenced_by": [
+        "plugins/mpt/skills/glassmorphism/references/glass-recipes.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=web-animation-skills&utm_content=skill_footer&utm_term=gsap-web)**",
+      "referenced_by": [
+        "plugins/mpt/skills/gsap-web/references/scrolltrigger-lenis.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=readme&utm_campaign=web-animation-skills&utm_content=skill_footer&utm_term=micro-interaction)**",
+      "referenced_by": [
+        "plugins/mpt/skills/micro-interaction/references/framer-motion-recipes.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=reference&utm_campaign=data-animation-skills&utm_content=ref_footer&utm_term=animated-infographic",
+      "referenced_by": [
+        "plugins/mpt/skills/animated-infographic/references/sequenced-infographic.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=reference&utm_campaign=data-animation-skills&utm_content=ref_footer&utm_term=chart-animation",
+      "referenced_by": [
+        "plugins/mpt/skills/chart-animation/references/data-pipeline.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=reference&utm_campaign=motion-design-skills&utm_content=ref_footer&utm_term=motion-art-direction",
+      "referenced_by": [
+        "plugins/mpt/skills/motion-art-direction/references/direction-playbook.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=reference&utm_campaign=tiktok-video-skills&utm_content=ref_footer&utm_term=caption-animation",
+      "referenced_by": [
+        "plugins/mpt/skills/caption-animation/references/word-timed-captions.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=reference&utm_campaign=tiktok-video-skills&utm_content=ref_footer&utm_term=lower-thirds",
+      "referenced_by": [
+        "plugins/mpt/skills/lower-thirds/references/lower-third-component.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=reference&utm_campaign=tiktok-video-skills&utm_content=ref_footer&utm_term=short-form-video",
+      "referenced_by": [
+        "plugins/mpt/skills/short-form-video/references/retention-pacing.md"
+      ]
+    },
+    {
+      "url": "https://iart.ai/?utm_source=github&utm_medium=reference&utm_campaign=youtube-video-skills&utm_content=ref_footer&utm_term=audiogram",
+      "referenced_by": [
+        "plugins/mpt/skills/audiogram/references/waveform-render.md"
+      ]
+    },
+    {
+      "url": "https://inkscape.org/release/",
+      "referenced_by": [
+        "docs/EXTERNAL_DEPENDENCIES.md"
+      ]
+    },
+    {
+      "url": "https://intercom.help/leonardo-ai/en/articles/8044018-commercial-usage)는",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/generative-component-selection.md"
+      ]
+    },
+    {
+      "url": "https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/example-angles.md"
+      ]
+    },
+    {
+      "url": "https://linear.app",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-cli/references/init-and-scaffold.md"
+      ]
+    },
+    {
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://motioncanvas.io/docs/quickstart/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://motioncanvas.io/docs/rendering/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://motioncanvas.io/docs/rendering/video/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/tool-evaluation/decision.md"
+      ]
+    },
+    {
+      "url": "https://movin.design/)·[easing](https://movin.design/easings/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://openai.com/index/amazon-partnership/",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/example-angles.md"
+      ]
+    },
+    {
+      "url": "https://other-domain.com/x.png",
+      "referenced_by": [
+        "plugins/mpt/skills/remotion-to-hyperframes/references/limitations.md"
+      ]
+    },
+    {
+      "url": "https://pixabay.com/service/license-summary/",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/audio/assets/sfx/CREDITS.md"
+      ]
+    },
+    {
+      "url": "https://pixabay.com/sound-effects/",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/audio/assets/sfx/CREDITS.md"
+      ]
+    },
+    {
+      "url": "https://platform.deepseek.com/api_keys",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://platform.kimi.com?track_id=track-2f5441d6ffd84c509dd079d78e9db5dc&aff=moneyprinterturbo",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://platform.minimax.io/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://platform.openai.com/api-keys",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://platform.xiaomimimo.com/docs/zh-CN/quick-start/first-api-call",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://polyhaven.com/license",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/photoreal-production.md"
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-spaces/references/requirements.md",
+        "plugins/mpt/skills/huggingface-zerogpu/references/cuda-and-deps.md"
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/recompute_v3.py"
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/recompute_v4.py"
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1199145600&period2=1787875200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/v4_metrics.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v4.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v8.md"
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1630022400&period2=1787875200&interval=1wk&events=history&includeAdjustedClose=true",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/v3_metrics.json"
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1756339200&period2=1787875200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/evidence.md",
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json"
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ?period1=1630022400&period2=1787875200&interval=1wk&events=history&includeAdjustedClose=true",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/v3_metrics.json"
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1630022400&period2=1787875200&interval=1wk&events=history&includeAdjustedClose=true",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/v3_metrics.json"
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/recompute_v6.py"
+      ]
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/{ticker}",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/scripts/us_stock_research.py"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/main/registry",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-registry/SKILL.md",
+        "plugins/mpt/skills/hyperframes-registry/references/install-locations.md"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/main/registry/registry.json",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-registry/SKILL.md",
+        "plugins/mpt/skills/hyperframes-registry/references/discovery.md"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/motion/mcd_short_v8.py"
+      ]
+    },
+    {
+      "url": "https://replace.example/primary-source",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/assets/templates/shorts-scene-contract-v1.json"
+      ]
+    },
+    {
+      "url": "https://scripts.sil.org/OFL",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/assets/fonts/OFL.txt"
+      ]
+    },
+    {
+      "url": "https://seedance-emotion-direction.vercel.app/)는",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://site.financialmodelingprep.com/developer/docs",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://site.frameset.app/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://static.heygen.ai/luts/",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/luts/README.md"
+      ]
+    },
+    {
+      "url": "https://static.heygen.ai/luts/bleach-bypass.cube",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/luts/index.json"
+      ]
+    },
+    {
+      "url": "https://static.heygen.ai/luts/film-fade.cube",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/luts/index.json"
+      ]
+    },
+    {
+      "url": "https://static.heygen.ai/luts/teal-orange-blockbuster.cube",
+      "referenced_by": [
+        "plugins/mpt/skills/media-use/luts/index.json"
+      ]
+    },
+    {
+      "url": "https://stooq.com/db/h/",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://stooq.com/q/d/l/",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/scripts/us_stock_research.py"
+      ]
+    },
+    {
+      "url": "https://stripe.com",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-cli/references/init-and-scaffold.md"
+      ]
+    },
+    {
+      "url": "https://suno.com/blog/suno-updates-tos)는",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/generative-component-selection.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/flow/answer/16353334?hl=en)은",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/flow/answer/16526234?hl=en)의",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/youtube/answer/11914225?co=YOUTUBE._YTVideoType%3Dshorts&hl=en-GB",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/creator-learning-20261003.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/youtube/answer/12220281?hl=en",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/scene-integrity-and-next-steps.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/youtube/answer/12220281?hl=en)에서",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/youtube/answer/1311392",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/youtube/answer/14328491",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://tapirconvert.com/video-upscaler",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://tgmcharts.com/stocks/MCD/pe-ratio",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources.md"
+      ]
+    },
+    {
+      "url": "https://threejs.org/docs/#api/en/animation/AnimationMixer",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://threejs.org/docs/#api/en/materials/ShaderMaterial",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://threejs.org/docs/#api/en/objects/InstancedMesh",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-keyframes/references/keyframe-patterns.md"
+      ]
+    },
+    {
+      "url": "https://threejs.org/docs/pages/AnimationMixer.html",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/three.md"
+      ]
+    },
+    {
+      "url": "https://threejs.org/docs/pages/WebGLRenderer.html",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/three.md"
+      ]
+    },
+    {
+      "url": "https://typecast.ai/kr/learn/typecast-new-editor-characters/)에서",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://unpkg.com/@lottiefiles/dotlottie-web",
+      "referenced_by": [
+        "plugins/mpt/skills/hyperframes-animation/adapters/lottie.md",
+        "plugins/mpt/skills/remotion-to-hyperframes/references/lottie.md"
+      ]
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/McDonalds_River_Rd_Bethesda_MD_2021-11-28_10-28-06_1.jpg",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/assets/ATTRIBUTION.md",
+        "plugins/mpt/skills/mpt/ex/mcd/assets/asset-manifest.json"
+      ]
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Historic_Downey_McDonalds_and_Museum.jpg",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/assets/ATTRIBUTION.md",
+        "plugins/mpt/skills/mpt/ex/mcd/assets/asset-manifest.json"
+      ]
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Award-star-gold-3d.svg",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://vvsvs.pro/cinematique",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/story-aligned-miniatures.md"
+      ]
+    },
+    {
+      "url": "https://www.aicameramovements.com/)를",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.alphavantage.co/documentation/",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/story-aligned-miniatures.md"
+      ]
+    },
+    {
+      "url": "https://www.blender.org/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.blender.org/download/",
+      "referenced_by": [
+        "docs/EXTERNAL_DEPENDENCIES.md",
+        "plugins/mpt/skills/make-blender-education-video/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.digrin.com/stocks/detail/MCD/price",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json"
+      ]
+    },
+    {
+      "url": "https://www.financecharts.com/compare/MCD/dividends/dividend-yield",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/blocks-and-event-listeners",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/controlling-layout",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/custom-CSS-and-JS",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/custom-HTML-components",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md",
+        "plugins/mpt/skills/huggingface-spaces/references/gradio.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/getting-started-with-the-js-client",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/getting-started-with-the-python-client",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/more-blocks-features",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/quickstart",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/sharing-your-app",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/streaming-inputs",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/streaming-outputs",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.gradio.app/guides/the-interface-class",
+      "referenced_by": [
+        "plugins/mpt/skills/huggingface-gradio/SKILL.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md",
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/Dc0WzRPOwEO/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/Dc29-Z7ucEm/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md",
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/Dc2DxX4uydj/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/Dc3k0CPuHUJ/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md",
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/Dc4h8UUuiSb/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md",
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/Dcu5flvO76K/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/DcvqUc1OQ8k/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/Dcw-FBiuOUl/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/DcxPjwuOtYG/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/DcxubaKukqA/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/Dcz_SmkudC4/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/archi_trivia1/reel/Dczw_30uiXu/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-12-study.md"
+      ]
+    },
+    {
+      "url": "https://www.invesco.com/qqq-etf/en/home.html",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/recompute_v3.py",
+        "plugins/mpt/skills/mpt/ex/mcd/research/v3_metrics.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v3.md"
+      ]
+    },
+    {
+      "url": "https://www.manim.community/",
+      "referenced_by": [
+        "docs/EXTERNAL_DEPENDENCIES.md"
+      ]
+    },
+    {
+      "url": "https://www.nasdaqtrader.com/trader.aspx?id=symboldirdefs",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://www.pexels.com/api/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://www.python.org/downloads/",
+      "referenced_by": [
+        "docs/INSTALL.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1twg8v8/ltx_23_iclora_union_depth_map_bleeding_into_video/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/aivideo/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/reference-to-production.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/comfyui/comments/1s2v55m/nvidia_video_generation_guide_full_workflow_from/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/comfyui/comments/1t4iqrr/i_used_blender_as_a_layout_tool_for_ai_video/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/comfyui/comments/1v2i0ab/blender_depth_to_final_video_with_ltx23_iclora/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/comfyui/comments/1vsgewj/made_a_90second_ai_short_film_locally_in_about_3/",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/tool-report.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/generativeAI/comments/1s3bwz2/ive_been_trying_to_make_cinematic_ai_shots_using/",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/photoreal-production.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/stocks/comments/example/",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/assets/templates/story-packet-v2.json"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/daily-index/xbrl/companyfacts.zip",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/R17.htm",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/example-angles.md"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/example-angles.md"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000114036125036118/ny20053122x6_s4a.htm",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/example-angles.md"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000044/crwv-20260123.htm",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/example-angles.md"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd-2025/sources.md",
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/scene-manifest-v8.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v3.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v4.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v8.md"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/R26.htm",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/scene-manifest-v8.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v3.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources.md"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/scene-manifest-v8.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v3.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v4.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v8.md",
+        "plugins/mpt/skills/mpt/ex/mcd/sources.md"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/example",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/assets/templates/story-packet-v2.json"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/files/company_tickers.json",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md",
+        "plugins/mpt/skills/us-stock-research/scripts/us_stock_research.py"
+      ]
+    },
+    {
+      "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "referenced_by": [
+        "plugins/mpt/skills/us-stock-research/references/data-sources.md"
+      ]
+    },
+    {
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/recompute_v3.py",
+        "plugins/mpt/skills/mpt/ex/mcd/research/v3_metrics.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources-v3.md"
+      ]
+    },
+    {
+      "url": "https://www.stockresearch.app/stocks/MCD/valuation",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/ex/mcd/research/facts.json",
+        "plugins/mpt/skills/mpt/ex/mcd/sources.md"
+      ]
+    },
+    {
+      "url": "https://www.volcengine.com/activity/ai618?utm_source=MoneyPrinterTurbo",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/scripts/mpt_agent.py"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/@%EC%8B%A0%EB%B9%84%ED%95%9C_%EA%B1%B4%EC%B6%95%EC%82%AC%EC%A0%84_1",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/channel-motion-study.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/@%EC%8B%A0%EB%B9%84%ED%95%9C_%EA%B1%B4%EC%B6%95%EC%82%AC%EC%A0%84_1/shorts",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/-Y77gSSxE-o",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/followup-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/2fjMwiJAoFQ",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/53VD5FIzmrQ",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/5amYD9P069Q",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md",
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/channel-motion-study.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/AJUFCjV_NCs",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/followup-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/CTl6pO0R-Ts",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/Ht6FCXabKYM",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/LI4oSY5yhDA",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md",
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/channel-motion-study.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/OUAgBbOZjyA",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/followup-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/Rjab1i_TSxE",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/followup-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/Tv9-_EN-bSw",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/ZvyfhgP1rn0",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/e_MMkAeuSx8",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md",
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/channel-motion-study.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/gACcDDKnGp4",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md",
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/channel-motion-study.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/geJgA80UK60",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/o04umMr4pg4",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/oNFDYXMtHy4",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/followup-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/qSb-wqW36ws",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/followup-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/sOSWgDZEOSs",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md",
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/channel-motion-study.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/t2Dgbt8NIns",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/tAKU083F3WQ",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md",
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/channel-motion-study.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/uUN1Bw0elY8",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/wILg-0Rbmls",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/followup-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/wp1rARzDA9c",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/followup-direction.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6FYfDgr-EIo",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=8yMUiWS-8ms",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ObvCtB1ATnA",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rUQmHaXYN6k",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    },
+    {
+      "url": "https://x.com/.../status/",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/source-harvest.md"
+      ]
+    },
+    {
+      "url": "https://x.com/02jason88/status/2095869112950157730",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/source-harvest.md"
+      ]
+    },
+    {
+      "url": "https://x.com/BBBang9900/status/2099513501832331735",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/reference-to-production.md"
+      ]
+    },
+    {
+      "url": "https://x.com/BBBang9900/status/2101974718886936678",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/generative-component-selection.md"
+      ]
+    },
+    {
+      "url": "https://x.com/BourbonCap/status/2095985387814465747",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/source-harvest.md"
+      ]
+    },
+    {
+      "url": "https://x.com/DimitryNakhla/status/2095527148370923717",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/source-harvest.md"
+      ]
+    },
+    {
+      "url": "https://x.com/HaowenAI/status/2091429414760292739)은",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://x.com/VJNCapital/status/2095935101909570003",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/references/source-harvest.md"
+      ]
+    },
+    {
+      "url": "https://x.com/VibeEverything/status/2077030433972490426)과",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://x.com/VibeEverything/status/2077030437080506640)는",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://x.com/VibeEverything/status/2091399782678020100)의",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://x.com/VibeEverything/status/2091431567164145984)에도",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://x.com/VibeEverything/status/2091762776402477390",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://x.com/VibeEverything/status/2094379012303077431)의",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://x.com/VibeEverything/status/2095076490270642552)는",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://x.com/VibeEverything/status/2099076532719464724)의",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/reference-to-blender-direction.md"
+      ]
+    },
+    {
+      "url": "https://x.com/example/status/1",
+      "referenced_by": [
+        "plugins/mpt/skills/wallstreet-edge-shorts/assets/templates/story-packet-v2.json"
+      ]
+    },
+    {
+      "url": "https://x.com/mad_dogdebt/status/2096376375389360247)은",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-study.md"
+      ]
+    },
+    {
+      "url": "https://x.com/mung99933",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/creator-learning-20261003.md"
+      ]
+    },
+    {
+      "url": "https://x.com/mung99933/status/2095742698028511326",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/creator-learning-20261003.md"
+      ]
+    },
+    {
+      "url": "https://x.com/mung99933/status/2101220953573487043",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/creator-learning-20261003.md"
+      ]
+    },
+    {
+      "url": "https://x.com/mung99933/status/2105980367979364617",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/references/creator-learning-20261003.md"
+      ]
+    },
+    {
+      "url": "https://x.com/nowlovepan/status/2096386930825134268)은",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/references/archi-trivia-study.md"
+      ]
+    },
+    {
+      "url": "https://x.com/roadotom)에",
+      "referenced_by": [
+        "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
+      ]
+    }
+  ]
+}

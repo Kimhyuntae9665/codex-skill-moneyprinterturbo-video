@@ -17,11 +17,17 @@ REQUIRED_FILES = (
     "scripts/burn_subtitles.py",
     "scripts/validate_scene_manifest.py",
     "scripts/probe_scene_frames.py",
+    "scripts/check_environment.py",
+    "scripts/audit_audio_silence.py",
+    "scripts/validate_delivery.py",
+    "assets/fonts/OFL.txt",
+    "references/portable-install.md",
 )
 
 
 def candidate_skill_roots() -> list[Path]:
-    roots: list[Path] = []
+    # Companions live beside mpt in a plugin, or beside the standalone skill.
+    roots: list[Path] = [Path(__file__).resolve().parents[2]]
     codex_home = os.environ.get("CODEX_HOME")
     if codex_home:
         roots.append(Path(codex_home) / "skills")
@@ -53,7 +59,7 @@ def inspect(mode: str) -> dict[str, object]:
     roots = candidate_skill_roots()
     companions = {
         "us-stock-research": find_skill("us-stock-research", roots),
-        "infographic-creator": find_skill("infographic-creator", roots),
+        "logo-flow-infographics": find_skill("logo-flow-infographics", roots),
     }
     errors: list[str] = []
     warnings: list[str] = []
@@ -63,9 +69,9 @@ def inspect(mode: str) -> dict[str, object]:
     errors.extend(f"missing bundled file: {name}" for name, present in files.items() if not present)
     if mode == "us-equity" and not companions["us-stock-research"]:
         errors.append("missing companion Skill: us-stock-research")
-    if mode == "us-equity" and not companions["infographic-creator"]:
+    if mode == "us-equity" and not companions["logo-flow-infographics"]:
         warnings.append(
-            "infographic-creator is unavailable; use a validated custom chart or install the companion Skill"
+            "logo-flow-infographics is unavailable; relationship scenes need the companion Skill or an explicitly documented fallback; quantitative scenes use validated custom charts"
         )
     return {
         "status": "pass" if not errors else "fail",

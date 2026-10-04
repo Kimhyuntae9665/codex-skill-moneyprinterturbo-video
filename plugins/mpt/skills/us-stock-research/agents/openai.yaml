@@ -1,0 +1,4 @@
+interface:
+  display_name: "US Stock Research"
+  short_description: "US stock screening and valuation research"
+  default_prompt: "Use $us-stock-research to screen S&P 500 stocks for quality, valuation, dividend yield, and recent news."

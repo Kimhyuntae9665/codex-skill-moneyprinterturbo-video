@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.csv
+*.jsonl
+*.xlsx
+output/
+*-output/
+

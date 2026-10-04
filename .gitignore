@@ -8,6 +8,10 @@ __pycache__/
 config.toml
 *.log
 *.mp4
+!plugins/mpt/skills/greybox-harness/examples/boutique/out/model.mp4
+!plugins/mpt/skills/greybox-harness/examples/boutique/out/review.mp4
+!plugins/mpt/skills/greybox-harness/examples/pair/generated.mp4
+!plugins/mpt/skills/greybox-harness/examples/pair/greybox.mp4
 moneyprinterturbo-video/examples/*/generated-materials/
 moneyprinterturbo-video/examples/*/qa-frames/
 runtime/

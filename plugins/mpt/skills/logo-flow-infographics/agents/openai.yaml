@@ -1,0 +1,14 @@
+interface:
+  display_name: Logo Flow Infographics
+  short_description: Dark logo-first flows with short technology labels
+  default_prompt: Use $logo-flow-infographics to draw a compact logo-first flow with
+    short technology names.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
