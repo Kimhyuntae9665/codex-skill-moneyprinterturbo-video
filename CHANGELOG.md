@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.2 — main snapshot (2026-10-30)
+
+- Sync the current MoneyPrinterTurbo Video SKILL.md byte-for-byte and update its production, verification, delivery, and supporting references.
+- Keep the user-authored skill entrypoint unchanged; omit a private conversation link from one supporting migration note for public distribution.
+- Update the installer manifest and source hashes, document the current default-branch installation path, and retain the previous v1.2.1 tag unchanged.
+- Add synthetic contract tests for delivery/footage/news and validation behavior. Tests do not claim that a real video was rendered, watched, or licensed.
+
 ## v1.2.1 - 2026-10-04
 
 - Correct ZIP-install test hygiene: verify declared package files rather than

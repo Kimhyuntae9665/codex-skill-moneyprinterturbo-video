@@ -14,6 +14,8 @@ us-stock-research
 
 The first four stages produce an evidence packet. Video production may read that packet but must not mutate it.
 
+For news-explainer or general-explainer, retain primary-source verification of the actual claims; valuation-denominator/history/price-case tasks apply when those claims or an investment conclusion are part of the request. A ticker mention alone does not require a recommendation.
+
 ## 1. Run us-stock-research
 
 Invoke the installed `us-stock-research` Skill and define these items before drafting the hook:

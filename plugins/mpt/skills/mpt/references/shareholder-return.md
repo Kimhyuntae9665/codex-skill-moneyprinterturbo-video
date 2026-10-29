@@ -1,5 +1,7 @@
 # S&P 500 shareholder-return research and video gate
 
+Apply the editorial-route table in `../SKILL.md`. News/company explanations need evidence for the financial claims they actually make, but do not require a ten-year valuation scene or investment verdict unless making an investment case.
+
 Use this reference after `us-equity-research-gate.md` whenever a Short screens or explains S&P 500 companies using dividends, repurchases, shareholder yield, payout quality, capital allocation, or total shareholder return.
 
 The goal is to explain how cash reaches shareholders, whether per-share ownership actually improves, and whether the return can continue. Do not reduce “shareholder friendly” to a high dividend yield or a large repurchase announcement.
@@ -133,7 +135,7 @@ Do not use a donut when dividends and repurchases are being divided by different
 
 ## 6. End with an explicit verdict and measurable condition
 
-Every stock Short must select one editorial verdict: `추천`, `관망`, or `비추천`. State it in the narration and end card. For a recommendation, show the dated current price and a reproducible valuation case before saying `추천합니다`. For `관망`, name the supported entry level or the specific missing confirmation. For `비추천`, name the failed premise or excessive price.
+Every investment-analysis Short must select one editorial verdict: `추천`, `관망`, or `비추천`. State it in the narration and end card. For a recommendation, show the dated current price and a reproducible valuation case before saying `추천합니다`. For `관망`, name the supported entry level or the specific missing confirmation. For `비추천`, name the failed premise or excessive price.
 
 Use a direct final form:
 

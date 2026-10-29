@@ -477,9 +477,9 @@ class RepositoryHygieneTests(unittest.TestCase):
         )
         version = manifest["version"]
         self.assertIn(f"MoneyPrinterTurbo Video v{version}", readme)
-        self.assertIn(f"--ref v{version}", readme)
-        self.assertIn(f"tree/v{version}/plugins/mpt/skills/mpt", readme)
-        self.assertIn(r".\plugins\mpt\skills\mpt\scripts\check_environment.py", readme)
+        self.assertIn("--ref main", readme)
+        self.assertIn("tree/main/plugins/mpt/skills/mpt", readme)
+        self.assertIn("plugins/mpt/skills/mpt/scripts/check_environment.py", readme)
         self.assertNotIn(r".\plugins\mpt-video", readme)
 
     def test_no_runtime_outputs_or_credentials_are_committed(self) -> None:

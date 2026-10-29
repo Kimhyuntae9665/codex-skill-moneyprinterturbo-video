@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -28,6 +29,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--height", type=int, default=1920)
     parser.add_argument("--min-duration", type=float, default=45.0)
     parser.add_argument("--max-duration", type=float, default=60.0)
+    parser.add_argument("--duration-profile", choices=("focused", "full", "custom"))
     parser.add_argument("--video-codec", default="h264")
     parser.add_argument("--audio-codec", default="aac")
     parser.add_argument("--silence-floor-db", type=float, default=-55.0)
@@ -36,7 +38,15 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="skip prepared-local checks for LLM, stock, paid-video, and posting calls",
     )
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.duration_profile in {"focused", "full"}:
+        args.min_duration, args.max_duration = (
+            (25.0, 35.0) if args.duration_profile == "focused" else (45.0, 60.0)
+        )
+    if not (math.isfinite(args.min_duration) and math.isfinite(args.max_duration)
+            and 0 < args.min_duration <= args.max_duration):
+        parser.error("duration bounds must be finite and 0 < minimum <= maximum")
+    return args
 
 
 def _tool(name: str) -> str:
@@ -262,10 +272,14 @@ def main(argv: list[str] | None = None) -> int:
         print(f"MPT_VIDEO_INVALID={exc}", file=sys.stderr)
         return 1
 
+    with video.open("rb") as stream:
+        video_sha256 = hashlib.file_digest(stream, "sha256").hexdigest()
     payload = {
         "pass": True,
         "status": "valid",
         "video": str(video),
+        "video_sha256": video_sha256,
+        "duration_profile": args.duration_profile or "legacy-full",
         **summary,
         "mean_volume_db": mean_volume,
         "review_frames": [str(path) for path in frames],

@@ -145,11 +145,10 @@ impossible geometry before use.
 ## MoneyPrinterTurbo assembly
 
 Use the directed master as a single local material. Set sequential concat,
-`video-count 1`, transition mode `none`, and a clip duration not shorter than
-the narration. Apply the sound plan in `../SKILL.md`: use a quiet, cleared
+`video-count 1`, transition mode `none`, and a clip budget derived from the measured master and approved audio under `../SKILL.md`. Pass that exact approved narration through `--custom-audio-file` instead of synthesizing it again. Disable MPT automatic subtitles with `--no-subtitle-enabled`, then burn the reviewed audio-aligned SRT once. Apply the sound plan in `../SKILL.md`: use a quiet, cleared
 instrumental bed when suitable, or record the reason for silence. A narration-only
 assembly is intermediate when the plan calls for BGM; verify the final mix.
-Use MoneyPrinterTurbo for the pinned execution, narration, and final assembly;
+Use MoneyPrinterTurbo for the pinned execution and final assembly of the approved narration;
 do not let its generic material splitter restructure the directed timeline.
 
 If Edge TTS does not return reliable Korean subtitle boundaries, preserve the

@@ -539,6 +539,24 @@
       ]
     },
     {
+      "url": "https://example.org/demo",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/tests/test_contract_gates.py"
+      ]
+    },
+    {
+      "url": "https://example.org/demo.mp4",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/tests/test_contract_gates.py"
+      ]
+    },
+    {
+      "url": "https://example.org/news",
+      "referenced_by": [
+        "plugins/mpt/skills/mpt/tests/test_contract_gates.py"
+      ]
+    },
+    {
       "url": "https://ffmpeg.org/",
       "referenced_by": [
         "plugins/mpt/skills/cinematic-mechanism-shorts/README.md"
@@ -689,7 +707,8 @@
     {
       "url": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video",
       "referenced_by": [
-        "plugins/mpt/.codex-plugin/plugin.json"
+        "plugins/mpt/.codex-plugin/plugin.json",
+        "plugins/mpt/skills/mpt/references/editorial-production.md"
       ]
     },
     {
@@ -700,15 +719,16 @@
       ]
     },
     {
-      "url": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.2.1/plugins/mpt/skills/mpt",
+      "url": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/blob/main/plugins/mpt/skills/mpt/SKILL.md",
       "referenced_by": [
-        "docs/INSTALL.md"
+        "README.md"
       ]
     },
     {
-      "url": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.2.1/plugins/mpt/skills/mpt)입니다",
+      "url": "https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/main/plugins/mpt/skills/mpt",
       "referenced_by": [
-        "README.md"
+        "README.md",
+        "docs/INSTALL.md"
       ]
     },
     {

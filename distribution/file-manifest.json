@@ -1,5 +1,5 @@
 {
-  "version": "1.2.1",
+  "version": "1.2.2",
   "algorithm": "SHA-256",
   "excludes": [
     "This manifest itself; Git metadata; caches and virtual environments"
@@ -12,8 +12,8 @@
     },
     {
       "path": ".gitattributes",
-      "bytes": 98,
-      "sha256": "8adfeab8ab0985f7d0b8816b3abd497489e3c1801ecfbff8031fa285feff528a"
+      "bytes": 194,
+      "sha256": "d74afc26dd71703c74b59a77a6fd669434a856400ec6d9752d4d1c7f23757cc0"
     },
     {
       "path": ".github/workflows/ci.yml",
@@ -27,18 +27,18 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1945,
-      "sha256": "1817ca51b7312529d82b2f6bf4164a1d154b54601ef7b4b235b8b98f50c7ac5a"
+      "bytes": 2584,
+      "sha256": "4701c2761105377f288b001214b53a9c8499d71b8c4e515c9e946ae018e932f0"
     },
     {
       "path": "distribution/reference-catalog.json",
-      "bytes": 99702,
-      "sha256": "2b9ed02d2dd8d41c2d15e84cb0d0a6704aff4e18289c7f0416348b7e7d9e5298"
+      "bytes": 100238,
+      "sha256": "19ad0276f520fb38228d7a6b25a5d2659f6b0515547df70d182943670a31c2f3"
     },
     {
       "path": "distribution/source-inventory.json",
-      "bytes": 489907,
-      "sha256": "1aa6898bee73872b337cbe4335e15c4d1d3d89778f36aec8d0e8361251576085"
+      "bytes": 492385,
+      "sha256": "d91e20b7f3f6577144f4facd73f2be864c5789bdb43f8fc2c6cbb53f79af5d07"
     },
     {
       "path": "docs/EXTERNAL_DEPENDENCIES.md",
@@ -47,8 +47,8 @@
     },
     {
       "path": "docs/INSTALL.md",
-      "bytes": 5180,
-      "sha256": "5ace22921a854cc455cca0162c1577770df58dd4ea60e4ace1844c50487e1170"
+      "bytes": 5160,
+      "sha256": "ee9ad6d510778d333e22abea641ddf1401ed82cf7d77544697a510bf4df818c9"
     },
     {
       "path": "docs/SKILLS.md",
@@ -63,7 +63,7 @@
     {
       "path": "plugins/mpt/.codex-plugin/plugin.json",
       "bytes": 1507,
-      "sha256": "77df982775509a9dc3b456d6d5d6405833e8bd634e592810c36942ea83adb9c1"
+      "sha256": "c132a3df6e929ae5629abfcdb74d316795c4c95c5b7cfb0408bb33a4d96201be"
     },
     {
       "path": "plugins/mpt/LICENSE",
@@ -5272,8 +5272,8 @@
     },
     {
       "path": "plugins/mpt/skills/mpt/references/channel-growth-loop.md",
-      "bytes": 4800,
-      "sha256": "6d02c0a87f8766b350368d399171ec3c972d1d5ada0cdb3782b7db24257c43de"
+      "bytes": 6412,
+      "sha256": "98016039d4601d86e59ad19fdccee1a20f6a10730ff1d034d376e4552268bfaf"
     },
     {
       "path": "plugins/mpt/skills/mpt/references/company-signature-thesis.md",
@@ -5292,8 +5292,8 @@
     },
     {
       "path": "plugins/mpt/skills/mpt/references/evidence-motion-workflow.md",
-      "bytes": 9865,
-      "sha256": "1884baa49e19c7f49c557299d65c5359ef179868c1d416fd44344a3d0830d0c4"
+      "bytes": 10126,
+      "sha256": "a15a16b324532791ea1b2c5b6bb220e6460119046c71c0c5ca47b450b7df4e37"
     },
     {
       "path": "plugins/mpt/skills/mpt/references/generative-component-selection.md",
@@ -5302,8 +5302,8 @@
     },
     {
       "path": "plugins/mpt/skills/mpt/references/historical-valuation-user-economics.md",
-      "bytes": 8167,
-      "sha256": "28951edd51c59f88007f0b7ebfc108dc1128eddb6f7559d48af0357e73f82c21"
+      "bytes": 8425,
+      "sha256": "5dbe9ef2aae162d3ed94555e8825f8c4e392118932d334df5238fd616f8f7da6"
     },
     {
       "path": "plugins/mpt/skills/mpt/references/infographic-motion-bridge.md",
@@ -5317,13 +5317,13 @@
     },
     {
       "path": "plugins/mpt/skills/mpt/references/modes.md",
-      "bytes": 4714,
-      "sha256": "7629e171d8fe4cba8bd714045657ba99244fd6f9e066bfb7c4e0e5bc1a2d4eba"
+      "bytes": 4978,
+      "sha256": "b9bc4127bacb366bb37e775a267b37208908744959c24390a896144de1b88610"
     },
     {
       "path": "plugins/mpt/skills/mpt/references/official-footage-production.md",
-      "bytes": 7245,
-      "sha256": "32883970822ef141c881c80024cfbaa2f0d1373d9d4c1ee396d4698fb4cd0ff7"
+      "bytes": 7473,
+      "sha256": "95d1e8ff28e152338102256f64385868fa30a8c2d683355bfd0837ee85b956a8"
     },
     {
       "path": "plugins/mpt/skills/mpt/references/portable-install.md",
@@ -5332,8 +5332,8 @@
     },
     {
       "path": "plugins/mpt/skills/mpt/references/production-source.md",
-      "bytes": 5294,
-      "sha256": "a5df451fc8478973f68131e845c56997257406ecf4dc4bda941db61272a66ef5"
+      "bytes": 12188,
+      "sha256": "4441a8107e870952afd9a8526baf3b18fab1229e98b942c89a289a601b31f26b"
     },
     {
       "path": "plugins/mpt/skills/mpt/references/professional-motion.md",
@@ -5347,18 +5347,18 @@
     },
     {
       "path": "plugins/mpt/skills/mpt/references/scene-contract.md",
-      "bytes": 8614,
-      "sha256": "6359b97630f03ab94cf49900464a0b9e65cf4031212aee8c64f10cef3e1d1afd"
+      "bytes": 8764,
+      "sha256": "64ad48ccf734c89b2407f7c3d5b142de5536f5195445ec1725fe1d4124cbaf92"
     },
     {
       "path": "plugins/mpt/skills/mpt/references/shareholder-return.md",
-      "bytes": 14987,
-      "sha256": "75191c35977ea02c986324e76fbfad48af962a49d1463d7f3abe136820059a09"
+      "bytes": 15239,
+      "sha256": "bc5be2a3cbf19a2761af6f142d341c903ec3271db0f9ea105c6d28aa5e12253a"
     },
     {
       "path": "plugins/mpt/skills/mpt/references/us-equity-research-gate.md",
-      "bytes": 8305,
-      "sha256": "3ec73a7d1f7c36826b7008c4ad300cadf2bfe4c3c1792a4c9787268322bf6e50"
+      "bytes": 8586,
+      "sha256": "bd14628b1af3f532120b4712b4a353dcf1495112bcb192e422ff048552d24ad7"
     },
     {
       "path": "plugins/mpt/skills/mpt/references/visual-quality-gate.md",
@@ -5387,13 +5387,13 @@
     },
     {
       "path": "plugins/mpt/skills/mpt/scripts/probe_scene_frames.py",
-      "bytes": 17648,
-      "sha256": "1f06367579ea332c65b6d5dd225d8c2d10832257636625529a92621d53cba2c8"
+      "bytes": 21162,
+      "sha256": "71b9aa1b069fe929da5108b2f703237c8f883aba1351652de063dac7a34e8e47"
     },
     {
       "path": "plugins/mpt/skills/mpt/scripts/validate_delivery.py",
-      "bytes": 5340,
-      "sha256": "f51bce0b4aa64849559c7831142909f365cb20580dc214e0331be3e1e567e578"
+      "bytes": 13745,
+      "sha256": "b9183a4cfbe693b35153ba9ebfc15b6b938f354cf4cb9403dc33e78ef7a3eb1d"
     },
     {
       "path": "plugins/mpt/skills/mpt/scripts/validate_scene_manifest.py",
@@ -5402,13 +5402,13 @@
     },
     {
       "path": "plugins/mpt/skills/mpt/scripts/validate_video.py",
-      "bytes": 9816,
-      "sha256": "ac607a0a4cafa239991bb495f1031652e0b623efb6d5601d760e7bdffba42392"
+      "bytes": 10566,
+      "sha256": "bb46defdb213201d31d7fe7a1970cc58339503138aad63db5f73808149ee90fa"
     },
     {
       "path": "plugins/mpt/skills/mpt/SKILL.md",
-      "bytes": 64586,
-      "sha256": "5803801d6d47886eeebb1b17b54d9f87bc9fd4d95ee52a0a7a438b931f8a93dc"
+      "bytes": 16371,
+      "sha256": "16dbd5337a1c88967fe0fe535d3b48b7c26083623cfee52d1c90d784624f8bd7"
     },
     {
       "path": "plugins/mpt/skills/mpt/THIRD_PARTY_NOTICES.md",
@@ -7177,8 +7177,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6650,
-      "sha256": "1b7cfe20b7b208997ad94f29e6d4d2ecc2b41afaccce8bf413a2286f603ad5d9"
+      "bytes": 14421,
+      "sha256": "38e6396d6a2de3d656c03a18873176660e1a74f588c8c51acc41db2fc43cde5d"
     },
     {
       "path": "scripts/audit_bundle.py",
@@ -7197,8 +7197,8 @@
     },
     {
       "path": "tests/test_skill.py",
-      "bytes": 21978,
-      "sha256": "af9aa7f091fd96aac895b32d69e28b2238edc957796db0b0eab15e56bf93909a"
+      "bytes": 21961,
+      "sha256": "be26f4021521d6bfa9ddad3cc68bf56fe5c24f8cb0f2ae9fe7d385f99e785242"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -7209,6 +7209,26 @@
       "path": "uv.lock",
       "bytes": 38856,
       "sha256": "05eb67291e7dfe3a2ecc385671f851c05e5ed473c174d7c12d97387ff4eba2fb"
+    },
+    {
+      "path": "plugins/mpt/skills/mpt/references/editorial-production.md",
+      "bytes": 4451,
+      "sha256": "e269f8fa3a4d2043c57cca173381f221d8b8f23df27ab49201069dff95ff7e3b"
+    },
+    {
+      "path": "plugins/mpt/skills/mpt/references/production-guide.md",
+      "bytes": 48651,
+      "sha256": "0098a4c3ea3c96eb23932cd7c1f640b16e6f6186c2d3584ac44ce12e4bc92f5c"
+    },
+    {
+      "path": "plugins/mpt/skills/mpt/references/verification-guide.md",
+      "bytes": 7818,
+      "sha256": "d89175a68834e5db7af5526b128d827c93b5acf05336664b73e932e8e5ff2409"
+    },
+    {
+      "path": "plugins/mpt/skills/mpt/tests/test_contract_gates.py",
+      "bytes": 9366,
+      "sha256": "8c1c8f607165cc528eb0a15539eb9308b061bbd153814193afac6d3e26f86226"
     }
   ]
 }

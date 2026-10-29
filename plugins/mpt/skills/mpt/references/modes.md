@@ -21,7 +21,7 @@ Use the evidence-motion submode when the local material is a directed data or
 brand explainer rather than a set of interchangeable clips. Freeze the claim
 ledger, narration, SRT, scene manifest, and renderer before calling the helper.
 Pass one master MP4, use sequential concat, disable transitions, and set the
-clip duration at least as long as the Short. Run the scene-manifest and
+clip duration derived from the measured master and approved narration; follow the coverage-margin and `--custom-audio-file` instructions in `../SKILL.md`. Reuse the exact edited audio, disable automatic subtitles, and burn the reviewed SRT once. A fixed 60s example does not cover a longer continuous master. Run the scene-manifest and
 boundary-frame gates described in `evidence-motion-workflow.md` in addition to
 the normal prepared-local validation.
 

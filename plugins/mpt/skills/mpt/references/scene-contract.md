@@ -86,7 +86,7 @@ Manim, Motion Canvas, Three.js, Blender, or another deterministic tool.
 
 ### Thumbnail cold-open scene
 
-For a company or stock Short, represent the thumbnail cold open as an ordinary
+Embedding is optional. For a standalone-only thumbnail, record `STANDALONE_ONLY` and do not add a cover scene or silent hold. When an embedded cover is selected because it strengthens the spoken hook, represent it as an ordinary
 first scene or the first stable state of the hook scene; do not invent schema
 fields that the validator cannot check. Its stable interval begins at 0.0
 seconds and lasts at least 0.5 seconds. Declare the logo or mark as a

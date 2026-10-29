@@ -11,7 +11,7 @@ Before drafting, assign a stable `strategy_id` and record:
 - `series` and the channel promise reinforced by the episode;
 - `topic_hypothesis`: why the subject is timely or broadly understandable;
 - three evidence-compatible hooks and the selected `hook_variant`;
-- one complete payoff and the final verdict;
+- one complete payoff; investment-analysis additionally needs the price-aware verdict under `../SKILL.md`;
 - `duration_profile`: `focused` (about 25-35 seconds), `full` (about 45-60 seconds), or a justified custom duration;
 - two or three hero numbers and any supporting claims moved to the description;
 - one production variable being tested. Keep the other major choices stable where practical.
@@ -44,6 +44,14 @@ Store when available:
 - stayed-to-watch rate, average view duration, average percentage viewed, subscribers gained, likes, comments, and traffic-source shares;
 - audience-retention points or drop intervals and any relevant market/news event;
 - missing or unavailable metrics as null, not zero.
+
+Record the report surface/filter, exact reporting window and observation time separately from a video's publication time. Studio content-list totals, realtime estimates, selected-period analytics and same-age snapshots can differ; do not silently merge them. For stayed-to-watch, retain shown-in-feed/exposure counts when available and otherwise mark that denominator unknown. Small high-percentage samples cannot be ranked as winners against much larger samples merely by percentage.
+
+When average percentage viewed exceeds 100%, record the value as displayed; repeat viewing/loops may contribute. It does not mean every person completed the video, and it does not replace the feed-entry rate. A high engaged-view average with a low stayed-to-watch rate calls for separate opening and after-entry hypotheses.
+
+When channel access is provided for a skill review, inventory all visible uploads but distinguish that from the representative clips/frames actually inspected and from actual audio listening. Do not claim to have watched every upload from titles or thumbnails. Do not send private Studio analytics to external reviewers without authorization for that data and destination. Use current cumulative observations as current observations; do not reconstruct missing 24h/72h/7d history.
+
+Link future observations to the exact skill/render version and production strategy ID. A channel made with an evolving skill does not establish that its current revision produced older episodes. Keep historical version unknown when no build record exists.
 
 Average view duration and average percentage viewed among engaged viewers do not diagnose the initial swipe by themselves. Read stayed-to-watch and retention together. Keep Shorts-feed behavior separate from thumbnail impressions and click-through rate on surfaces where a thumbnail is shown.
 

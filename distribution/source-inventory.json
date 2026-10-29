@@ -1,5 +1,5 @@
 {
-  "version": "1.2.1",
+  "version": "1.2.2",
   "snapshot_date": "2026-10-04",
   "skills": [
     {
@@ -6805,7 +6805,7 @@
         "webmotion"
       ],
       "source_kind": "installed-skill-snapshot",
-      "snapshot_date": "2026-10-04",
+      "snapshot_date": "2026-10-30",
       "files": [
         {
           "path": "agents/openai.yaml",
@@ -7283,9 +7283,9 @@
         },
         {
           "path": "references/channel-growth-loop.md",
-          "source_sha256": "6d02c0a87f8766b350368d399171ec3c972d1d5ada0cdb3782b7db24257c43de",
+          "source_sha256": "98016039d4601d86e59ad19fdccee1a20f6a10730ff1d034d376e4552268bfaf",
           "modifications": [],
-          "bundled_sha256": "6d02c0a87f8766b350368d399171ec3c972d1d5ada0cdb3782b7db24257c43de"
+          "bundled_sha256": "98016039d4601d86e59ad19fdccee1a20f6a10730ff1d034d376e4552268bfaf"
         },
         {
           "path": "references/company-signature-thesis.md",
@@ -7307,9 +7307,11 @@
         },
         {
           "path": "references/evidence-motion-workflow.md",
-          "source_sha256": "1884baa49e19c7f49c557299d65c5359ef179868c1d416fd44344a3d0830d0c4",
-          "modifications": [],
-          "bundled_sha256": "1884baa49e19c7f49c557299d65c5359ef179868c1d416fd44344a3d0830d0c4"
+          "source_sha256": "33a26b6f323261eb1ee367657ba56666164d91e45dcd6fbbfbb02cb900c83131",
+          "modifications": [
+            "Line endings normalized to LF for portable distribution; content otherwise unchanged."
+          ],
+          "bundled_sha256": "a15a16b324532791ea1b2c5b6bb220e6460119046c71c0c5ca47b450b7df4e37"
         },
         {
           "path": "references/generative-component-selection.md",
@@ -7319,9 +7321,11 @@
         },
         {
           "path": "references/historical-valuation-user-economics.md",
-          "source_sha256": "28951edd51c59f88007f0b7ebfc108dc1128eddb6f7559d48af0357e73f82c21",
-          "modifications": [],
-          "bundled_sha256": "28951edd51c59f88007f0b7ebfc108dc1128eddb6f7559d48af0357e73f82c21"
+          "source_sha256": "ff6f02a481f7db2eef5a01d9d45a2450cf518182ca75f040171972916ab3d717",
+          "modifications": [
+            "Line endings normalized to LF for portable distribution; content otherwise unchanged."
+          ],
+          "bundled_sha256": "5dbe9ef2aae162d3ed94555e8825f8c4e392118932d334df5238fd616f8f7da6"
         },
         {
           "path": "references/infographic-motion-bridge.md",
@@ -7339,15 +7343,19 @@
         },
         {
           "path": "references/modes.md",
-          "source_sha256": "7629e171d8fe4cba8bd714045657ba99244fd6f9e066bfb7c4e0e5bc1a2d4eba",
-          "modifications": [],
-          "bundled_sha256": "7629e171d8fe4cba8bd714045657ba99244fd6f9e066bfb7c4e0e5bc1a2d4eba"
+          "source_sha256": "1839b95fe24e758e4669b86543dedc25e15694e311b0ebb3f2ac1a15604ba692",
+          "modifications": [
+            "Line endings normalized to LF for portable distribution; content otherwise unchanged."
+          ],
+          "bundled_sha256": "b9bc4127bacb366bb37e775a267b37208908744959c24390a896144de1b88610"
         },
         {
           "path": "references/official-footage-production.md",
-          "source_sha256": "32883970822ef141c881c80024cfbaa2f0d1373d9d4c1ee396d4698fb4cd0ff7",
-          "modifications": [],
-          "bundled_sha256": "32883970822ef141c881c80024cfbaa2f0d1373d9d4c1ee396d4698fb4cd0ff7"
+          "source_sha256": "b140e4301a582f1931cb38e4fccb8feb769dc9fad3164a2801ea0308f8bb8437",
+          "modifications": [
+            "Line endings normalized to LF for portable distribution; content otherwise unchanged."
+          ],
+          "bundled_sha256": "95d1e8ff28e152338102256f64385868fa30a8c2d683355bfd0837ee85b956a8"
         },
         {
           "path": "references/portable-install.md",
@@ -7359,9 +7367,11 @@
         },
         {
           "path": "references/production-source.md",
-          "source_sha256": "a5df451fc8478973f68131e845c56997257406ecf4dc4bda941db61272a66ef5",
-          "modifications": [],
-          "bundled_sha256": "a5df451fc8478973f68131e845c56997257406ecf4dc4bda941db61272a66ef5"
+          "source_sha256": "51325908525199d6f22a6f05a65ddb8994ea73b390cbd376910f0c9175d6c3e9",
+          "modifications": [
+            "Line endings normalized to LF for portable distribution; content otherwise unchanged."
+          ],
+          "bundled_sha256": "4441a8107e870952afd9a8526baf3b18fab1229e98b942c89a289a601b31f26b"
         },
         {
           "path": "references/professional-motion.md",
@@ -7377,21 +7387,27 @@
         },
         {
           "path": "references/scene-contract.md",
-          "source_sha256": "6359b97630f03ab94cf49900464a0b9e65cf4031212aee8c64f10cef3e1d1afd",
-          "modifications": [],
-          "bundled_sha256": "6359b97630f03ab94cf49900464a0b9e65cf4031212aee8c64f10cef3e1d1afd"
+          "source_sha256": "237d3e37767294ca9fdb000272069fb274134dd75cdb2a2390b24978ecdb3c40",
+          "modifications": [
+            "Line endings normalized to LF for portable distribution; content otherwise unchanged."
+          ],
+          "bundled_sha256": "64ad48ccf734c89b2407f7c3d5b142de5536f5195445ec1725fe1d4124cbaf92"
         },
         {
           "path": "references/shareholder-return.md",
-          "source_sha256": "75191c35977ea02c986324e76fbfad48af962a49d1463d7f3abe136820059a09",
-          "modifications": [],
-          "bundled_sha256": "75191c35977ea02c986324e76fbfad48af962a49d1463d7f3abe136820059a09"
+          "source_sha256": "bc053aba6f3f5dd9b6650489fc5f6ed173811be6dd7909d17a05422d1cd4d3bc",
+          "modifications": [
+            "Line endings normalized to LF for portable distribution; content otherwise unchanged."
+          ],
+          "bundled_sha256": "bc5be2a3cbf19a2761af6f142d341c903ec3271db0f9ea105c6d28aa5e12253a"
         },
         {
           "path": "references/us-equity-research-gate.md",
-          "source_sha256": "3ec73a7d1f7c36826b7008c4ad300cadf2bfe4c3c1792a4c9787268322bf6e50",
-          "modifications": [],
-          "bundled_sha256": "3ec73a7d1f7c36826b7008c4ad300cadf2bfe4c3c1792a4c9787268322bf6e50"
+          "source_sha256": "2b553dd1a8388d11c26f400d3c6a3df8b230e9684ea6be6e457185ba09770ba3",
+          "modifications": [
+            "Line endings normalized to LF for portable distribution; content otherwise unchanged."
+          ],
+          "bundled_sha256": "bd14628b1af3f532120b4712b4a353dcf1495112bcb192e422ff048552d24ad7"
         },
         {
           "path": "references/visual-quality-gate.md",
@@ -7429,15 +7445,15 @@
         },
         {
           "path": "scripts/probe_scene_frames.py",
-          "source_sha256": "1f06367579ea332c65b6d5dd225d8c2d10832257636625529a92621d53cba2c8",
+          "source_sha256": "71b9aa1b069fe929da5108b2f703237c8f883aba1351652de063dac7a34e8e47",
           "modifications": [],
-          "bundled_sha256": "1f06367579ea332c65b6d5dd225d8c2d10832257636625529a92621d53cba2c8"
+          "bundled_sha256": "71b9aa1b069fe929da5108b2f703237c8f883aba1351652de063dac7a34e8e47"
         },
         {
           "path": "scripts/validate_delivery.py",
-          "source_sha256": "f51bce0b4aa64849559c7831142909f365cb20580dc214e0331be3e1e567e578",
+          "source_sha256": "b9183a4cfbe693b35153ba9ebfc15b6b938f354cf4cb9403dc33e78ef7a3eb1d",
           "modifications": [],
-          "bundled_sha256": "f51bce0b4aa64849559c7831142909f365cb20580dc214e0331be3e1e567e578"
+          "bundled_sha256": "b9183a4cfbe693b35153ba9ebfc15b6b938f354cf4cb9403dc33e78ef7a3eb1d"
         },
         {
           "path": "scripts/validate_scene_manifest.py",
@@ -7447,29 +7463,62 @@
         },
         {
           "path": "scripts/validate_video.py",
-          "source_sha256": "ac607a0a4cafa239991bb495f1031652e0b623efb6d5601d760e7bdffba42392",
+          "source_sha256": "bb46defdb213201d31d7fe7a1970cc58339503138aad63db5f73808149ee90fa",
           "modifications": [],
-          "bundled_sha256": "ac607a0a4cafa239991bb495f1031652e0b623efb6d5601d760e7bdffba42392"
+          "bundled_sha256": "bb46defdb213201d31d7fe7a1970cc58339503138aad63db5f73808149ee90fa"
         },
         {
           "path": "SKILL.md",
-          "source_sha256": "301cdb53564af6b238fdfe070ffdbde0dc65e7437f74f6be2ee2ac58bd7bb66e",
-          "modifications": [
-            "Portable invocation wording or relative script path."
-          ],
-          "bundled_sha256": "5803801d6d47886eeebb1b17b54d9f87bc9fd4d95ee52a0a7a438b931f8a93dc"
+          "source_sha256": "16dbd5337a1c88967fe0fe535d3b48b7c26083623cfee52d1c90d784624f8bd7",
+          "modifications": [],
+          "bundled_sha256": "16dbd5337a1c88967fe0fe535d3b48b7c26083623cfee52d1c90d784624f8bd7"
         },
         {
           "path": "THIRD_PARTY_NOTICES.md",
           "source_sha256": "5ba5cca0cea435e6768db7baf74a1ee807b111286d4fc70f8db751603368d194",
           "modifications": [],
           "bundled_sha256": "5ba5cca0cea435e6768db7baf74a1ee807b111286d4fc70f8db751603368d194"
+        },
+        {
+          "path": "references/editorial-production.md",
+          "source_sha256": "5f50be7a82ef0d6a764d5171d2d9060b508ed57ea8fd591a9cbbd6fb960ccc79",
+          "modifications": [
+            "Private shared-conversation URL omitted from public distribution."
+          ],
+          "bundled_sha256": "e269f8fa3a4d2043c57cca173381f221d8b8f23df27ab49201069dff95ff7e3b"
+        },
+        {
+          "path": "references/production-guide.md",
+          "source_sha256": "c1b1cb7782f75893d580898d7bdf5156f0f21d43a94a2e5fcc5b4a13424bf389",
+          "modifications": [
+            "Line endings normalized and trailing blank line removed for portable distribution."
+          ],
+          "bundled_sha256": "0098a4c3ea3c96eb23932cd7c1f640b16e6f6186c2d3584ac44ce12e4bc92f5c"
+        },
+        {
+          "path": "references/verification-guide.md",
+          "source_sha256": "a99a8539b15db778847fb74d0d5dfebe5e89ab7053e303d65d147cec03ac1b93",
+          "modifications": [
+            "Line endings normalized to LF for portable distribution; content otherwise unchanged."
+          ],
+          "bundled_sha256": "d89175a68834e5db7af5526b128d827c93b5acf05336664b73e932e8e5ff2409"
+        },
+        {
+          "path": "tests/test_contract_gates.py",
+          "source_sha256": "8c1c8f607165cc528eb0a15539eb9308b061bbd153814193afac6d3e26f86226",
+          "modifications": [],
+          "bundled_sha256": "8c1c8f607165cc528eb0a15539eb9308b061bbd153814193afac6d3e26f86226"
         }
       ],
       "distribution": "bundled",
       "path": "plugins/mpt/skills/mpt",
       "license": "MIT",
-      "added_files": []
+      "added_files": [
+        "references/editorial-production.md",
+        "references/production-guide.md",
+        "references/verification-guide.md",
+        "tests/test_contract_gates.py"
+      ]
     },
     {
       "name": "motion-art-direction",

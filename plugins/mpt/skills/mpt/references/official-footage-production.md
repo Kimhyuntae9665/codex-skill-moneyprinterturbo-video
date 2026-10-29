@@ -18,7 +18,7 @@ source-end padding, hidden/tiny inserts, and loops inserted solely to fill time.
 Photos, ranking captures, self-made logo flows/charts, generated video, and
 unofficial footage may be useful supplements but contribute zero to this quota.
 Preserve technical freeze reports separately; this source-use measure does not
-convert a failed motion/technical check into PASS.
+automatically convert a failed motion/technical check into PASS. Inspect native waits individually using the final-hash-bound freeze-review procedure in `production-source.md`; preserve raw detections and keep unexpected freezes on HOLD.
 
 Merge overlapping qualifying output intervals, sum their union length, and divide
 by the entire final MP4 duration, including cover, reading holds, and silent padding.
@@ -97,7 +97,7 @@ and output quality; it does not replace sourcing, editorial decisions, or review
 
 Create `official-video-report.json` from the final measured timeline. Include
 `duration_s`, `official_video_s`, `official_video_share`, `minimum_share: 0.60`,
-`pass`, and `intervals`. Each interval records `scene_id`, `asset_id`,
+`pass`, `video_sha256` for the actual final MP4, and `intervals`. Each interval records `scene_id`, `asset_id`,
 `official_publisher`, `source_page_url`, `source_media_url`, `source_in_s`,
 `source_out_s`, `output_start_s`, `output_end_s`, `narration_match`, and
 `review_evidence`. Preserve source hashes and use basis in the asset ledger.

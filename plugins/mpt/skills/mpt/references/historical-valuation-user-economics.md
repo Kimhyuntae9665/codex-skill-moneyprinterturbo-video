@@ -1,6 +1,8 @@
 # Historical valuation and user-economics Shorts
 
-Use this reference for every listed-company Short. The ten-year reported P/E chart is the viewer's required valuation first impression even when the main thesis is dividends, buybacks, real estate, insurance, user economics, or another operating story. It is especially important when a popular label such as `M7`, `tech`, or `consumer internet` groups companies with different revenue models and capital intensity.
+Apply the editorial-route table in `../SKILL.md`. News/company explanations need evidence for the financial claims they actually make, but do not require a ten-year valuation scene or investment verdict unless making an investment case.
+
+Use this reference for every listed-company investment-analysis Short. The ten-year reported P/E chart is the viewer's required valuation first impression even when the main thesis is dividends, buybacks, real estate, insurance, user economics, or another operating story. It is especially important when a popular label such as `M7`, `tech`, or `consumer internet` groups companies with different revenue models and capital intensity.
 
 ## Comparator hierarchy
 

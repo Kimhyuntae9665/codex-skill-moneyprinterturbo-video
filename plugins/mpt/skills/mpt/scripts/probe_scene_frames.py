@@ -9,6 +9,7 @@ does not edit the video. It prints JSON and exits nonzero on a required failure.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import re
@@ -347,10 +348,59 @@ def detect_freezes(ffmpeg: str, video: Path, threshold: float) -> tuple[dict[str
         duration = finite(event.get("duration_s"))
         if duration is None or duration >= threshold:
             errors.append(f"freeze_{index}_at_least_{threshold:.2f}s")
-    if result.returncode != 0 and not events:
+    if result.returncode != 0:
         detail = (result.stderr or result.stdout).strip().replace("\n", " ")
         errors.append(f"freezedetect_failed:{detail[-500:]}")
     return {"pass": not errors, "threshold_s": threshold, "events": events}, errors
+
+
+def review_freezes(raw: dict[str, Any], raw_errors: list[str], review_path: Path | None,
+                   video_sha256: str, duration: float) -> tuple[dict[str, Any], list[str]]:
+    """Retain raw detection; allow only individually reviewed, file-bound holds."""
+    if review_path is None:
+        return raw, raw_errors
+    errors = [item for item in raw_errors if not re.fullmatch(r"freeze_\d+_at_least_[0-9.]+s", item)]
+    try:
+        review = json.loads(review_path.read_text(encoding="utf-8"))
+        if not isinstance(review, dict) or review.get("video_sha256") != video_sha256:
+            raise ValueError("freeze review must match the actual final MP4 SHA-256")
+        rows = review.get("intervals")
+        if not isinstance(rows, list):
+            raise ValueError("freeze review intervals must be a list")
+        approved = []
+        for row in rows:
+            if not isinstance(row, dict):
+                raise ValueError("freeze review interval must be an object")
+            a, b = row.get("start_s"), row.get("end_s")
+            if (isinstance(a, bool) or isinstance(b, bool) or finite(a) is None or finite(b) is None
+                    or not 0 <= float(a) < float(b) <= duration):
+                raise ValueError("freeze review interval outside final duration")
+            if row.get("kind") not in {"source_native_wait", "reading_hold"}:
+                raise ValueError("only native source waits or deliberate reading holds may be reviewed")
+            for key in ("reviewer", "reason", "evidence"):
+                if not isinstance(row.get(key), str) or not row[key].strip():
+                    raise ValueError(f"freeze review {key} must identify actual review evidence")
+            if row["kind"] == "source_native_wait" and not row.get("asset_id"):
+                raise ValueError("native source wait review requires its source asset_id")
+            approved.append(row)
+    except (OSError, ValueError, TypeError) as exc:
+        return {"pass": False, "raw": raw, "review": str(review_path)}, raw_errors + [f"freeze_review_invalid:{exc}"]
+    for index, event in enumerate(raw.get("events", [])):
+        a, b = event.get("start_s"), event.get("end_s")
+        # Match one observed interval, not a broad whole-video waiver.
+        matches = [row for row in approved if b is not None and
+                   abs(float(row["start_s"]) - float(a)) <= 0.05 and
+                   abs(float(row["end_s"]) - float(b)) <= 0.05]
+        if len(matches) != 1:
+            errors.append(f"freeze_{index}_requires_one_matching_performed_review")
+    for row in approved:
+        if not any(event.get("end_s") is not None and
+                   abs(float(row["start_s"]) - float(event["start_s"])) <= 0.05 and
+                   abs(float(row["end_s"]) - float(event["end_s"])) <= 0.05
+                   for event in raw.get("events", [])):
+            errors.append("freeze_review_contains_unmatched_interval")
+    return {"pass": not errors, "raw": raw, "review": str(review_path),
+            "reviewed_exceptions": approved}, errors
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -362,6 +412,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--ffmpeg")
     parser.add_argument("--ffprobe")
     parser.add_argument("--freeze-threshold", type=float, default=1.0)
+    parser.add_argument("--freeze-review", type=Path, help="performed review of individual detected holds, tied to final MP4 hash")
     parser.add_argument("--duration-tolerance", type=float, default=0.5)
     parser.add_argument("--require-audio", action="store_true")
     return parser.parse_args(argv)
@@ -397,6 +448,9 @@ def main(argv: list[str] | None = None) -> int:
     if errors or manifest is None or ffmpeg is None or ffprobe is None:
         print(json.dumps(payload, ensure_ascii=False, indent=2))
         return 1
+    with video.open("rb") as stream:
+        video_sha256 = hashlib.file_digest(stream, "sha256").hexdigest()
+    payload["video_sha256"] = video_sha256
     output_dir.mkdir(parents=True, exist_ok=True)
 
     metadata, metadata_errors, metadata_warnings = probe_metadata(
@@ -453,6 +507,8 @@ def main(argv: list[str] | None = None) -> int:
         errors.append(f"contact_sheet:{contact_error}")
 
     freezes, freeze_errors = detect_freezes(ffmpeg, video, max(0.01, args.freeze_threshold))
+    freezes, freeze_errors = review_freezes(freezes, freeze_errors, args.freeze_review,
+        video_sha256, finite(actual.get("duration_s")) or 0.0)
     payload["checks"]["freezes"] = freezes
     errors.extend(freeze_errors)
     payload["pass"] = not errors

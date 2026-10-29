@@ -6,7 +6,7 @@ Git, Python 3.11 이상을 설치한 뒤 저장소를 받습니다. 경로가 �
 환경에서는 짧은 폴더에 내려받으세요.
 
 ```text
-git clone --branch v1.2.1 https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video.git mpt-video
+git clone https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video.git mpt-video
 cd mpt-video
 python scripts/install_bundle.py --profile core --dry-run
 python scripts/install_bundle.py --profile core
@@ -46,7 +46,7 @@ python scripts/install_bundle.py --profile all --with-external
 해당 명령을 지원하는 Codex 버전에서:
 
 ```text
-codex plugin marketplace add Kimhyuntae9665/codex-skill-moneyprinterturbo-video --ref v1.2.1
+codex plugin marketplace add Kimhyuntae9665/codex-skill-moneyprinterturbo-video --ref main
 codex plugin add mpt-video@mpt-video
 ```
 
@@ -54,7 +54,7 @@ Codex 버전에 따라 플러그인 UI/명령 지원이 다를 수 있습니다.
 위 Python 설치기를 사용하세요. 개별 스킬 설치용 경로도 유지했습니다:
 
 ```text
-$skill-installer Install https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/v1.2.1/plugins/mpt/skills/mpt
+$skill-installer Install https://github.com/Kimhyuntae9665/codex-skill-moneyprinterturbo-video/tree/main/plugins/mpt/skills/mpt
 ```
 
 개별 설치는 관련 스킬을 자동으로 설치하지 않습니다. 미국 주식 영상에는
@@ -91,7 +91,7 @@ Blender, Manim, Remotion, HyperFrames, Inkscape, Hugging Face 모델은 선택�
 
 ## English quick start
 
-Clone the tagged release and run `python scripts/install_bundle.py --profile core`.
+Clone the default branch and run `python scripts/install_bundle.py --profile core`.
 It verifies SHA-256 hashes and installs three core skills into `$CODEX_HOME/skills`
 or `~/.codex/skills`. Use `--profile all` for 53 bundled workflows, and explicitly
 add `--with-external` to fetch 12 official Remotion skills at the locked commit.
